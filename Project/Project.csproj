@@ -34,6 +34,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DY.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DY.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=5.0.3.0, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net40-client\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,13 +59,118 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Communication\PDCA\AllData.cs" />
+    <Compile Include="Communication\PDCA\DataType.cs" />
+    <Compile Include="Communication\PDCA\PDCA.cs" />
+    <Compile Include="Communication\PDCA\WPDCA.cs" />
+    <Compile Include="Communication\Socket\IPConfig.cs" />
+    <Compile Include="Communication\Socket\SocketClient.cs" />
+    <Compile Include="Config\SolderConfig.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Log\LogDataBase.cs" />
+    <Compile Include="Log\LogManage.cs" />
+    <Compile Include="Log\MessageBoxLog.cs" />
+    <Compile Include="Motion\GGAO\gts.cs" />
+    <Compile Include="Motion\GGAO\NewCtRLCard_gts.cs" />
+    <Compile Include="Motion\KEYENCE\DeviceData.cs" />
+    <Compile Include="Motion\KEYENCE\MeasureData.cs" />
+    <Compile Include="Motion\KEYENCE\NativeMethods.cs" />
+    <Compile Include="Motion\KEYENCE\ProfileData.cs" />
+    <Compile Include="Motion\KEYENCE\Utility.cs" />
+    <Compile Include="Motion\LEISAI\Dmc1000.cs" />
+    <Compile Include="Motion\LEISAI\LTDMC.cs" />
+    <Compile Include="Motion\LEISAI\NewCtrlCard_DMC1000B.cs" />
+    <Compile Include="Motion\LEISAI\NewCtrlCard_DMC1000B_A.cs" />
+    <Compile Include="Motion\LEISAI\NewCtrlCard_DMC3000.cs" />
+    <Compile Include="Motion\LEISAI\NewCtrlCard_DMC3000_a.cs" />
+    <Compile Include="Motion\LEISAI\NewCtrlCard_IO3224.cs" />
+    <Compile Include="Motion\SrMotionApi\AxisConfig.cs" />
+    <Compile Include="Motion\SrMotionApi\BinarySerializer.cs" />
+    <Compile Include="Motion\SrMotionApi\CardManager.cs" />
+    <Compile Include="Motion\SrMotionApi\GoHome.cs" />
+    <Compile Include="Motion\SrMotionApi\MotionCardManufacturer.cs" />
+    <Compile Include="Motion\SrMotionApi\NewCtrlCard_Base.cs" />
+    <Compile Include="Script\BraceFoldingStrategy.cs" />
+    <Compile Include="Script\Code.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Script\Code.Designer.cs">
+      <DependentUpon>Code.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Script\CodeEditor.xaml.cs">
+      <DependentUpon>CodeEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Script\MyCompletionData.cs" />
+    <Compile Include="UIControl\LogOutControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\LogOutControl.Designer.cs">
+      <DependentUpon>LogOutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\NetSocketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\NetSocketControl.Designer.cs">
+      <DependentUpon>NetSocketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\MessageBoxShowUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\MessageBoxShowUI.Designer.cs">
+      <DependentUpon>MessageBoxShowUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\MessageBoxUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\MessageBoxUI.Designer.cs">
+      <DependentUpon>MessageBoxUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkManage\Manual.cs" />
+    <Compile Include="WorkManage\WorkBase.cs" />
+    <EmbeddedResource Include="Script\Code.resx">
+      <DependentUpon>Code.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\LogOutControl.resx">
+      <DependentUpon>LogOutControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\NetSocketControl.resx">
+      <DependentUpon>NetSocketControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\MessageBoxShowUI.resx">
+      <DependentUpon>MessageBoxShowUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\MessageBoxUI.resx">
+      <DependentUpon>MessageBoxUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Motion\SrMotionApi\NewCtrlCard_Base_2.cs" />
+    <Compile Include="Motion\SrMotionApi\NewCtrlCard_IO.cs" />
+    <None Include="Motion\SrMotionApi\NewCtrlCard_IO_2.cs" />
+    <Compile Include="Motion\SrMotionApi\NewCtrlCard_V0.cs" />
+    <None Include="Motion\SrMotionApi\NewCtrlCard_V0_2.cs" />
+    <Compile Include="Motion\SrMotionApi\pointMotion.cs" />
+    <Compile Include="Motion\SrMotionApi\StationManage.cs" />
+    <Compile Include="Motion\SrMotionApi\StationSet.cs" />
+    <Compile Include="Motion\ZWX\adt8940a1m.cs" />
+    <Compile Include="Motion\ZWX\adt8960m.cs" />
+    <Compile Include="Motion\ZWX\adtIO3224.cs" />
+    <Compile Include="Motion\ZWX\NewCtrlCard_IO3224.cs" />
+    <Compile Include="Motion\ZWX\NewCtrlCard_ZWX8940.cs" />
+    <Compile Include="Motion\ZWX\NewCtrlCard_ZWX8960m.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\MainUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\MainUI.Designer.cs">
+      <DependentUpon>MainUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,10 +179,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="UIForm\MainUI.resx">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,6 +192,304 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DY.Core.dll" />
+    <Content Include="Motion\LEISAI\Dmc1000.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\135.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Alarm.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Alarm_sel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\b_Auto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\b_folder4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\b_Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\b_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\bigbk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\bigbk_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\bigbk_sel .ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Chart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Chart_sel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\gohome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\GoHome_Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Home_sel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Home1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\led-green-on-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\led-off-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\mm-Play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\mm-Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Note-Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Pause.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Pause-Gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Run.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Run-Gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\SaveErrorCode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\SaveToExcel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Set.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Set _sel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\smbk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\smbk_sel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\sr.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Stop-Gray.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\User_sel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Vision.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\Vision_sel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\VisionFile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\帮助B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\帮助W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\报警界面B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\报警界面W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\工单管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\工单管理1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\继续.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\继续1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\继续B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\继续G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\紧急停止.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\紧急停止1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\紧急停止R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\紧急停止W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\皮带线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\启动运行.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\启动运行1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\启动运行B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\启动运行G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\手动.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\手动1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\手动B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\手动G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\手动调试.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\手动调试1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\数据目录B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\数据目录W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\调试界面B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\调试界面W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\退出B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\退出W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\系统键盘B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\系统键盘W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\用户登录B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\用户登录W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\暂停.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\暂停1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\暂停B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\暂停G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\照明.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\照明B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\照明G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\照明Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\整机复位.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\整机复位1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\整机复位B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\整机复位G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\主界面.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\主界面1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\主界面B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\主界面W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\自动.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\自动1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\自动B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UIImage\自动G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Script\CodeEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class MainUI : Form
+	{
+		public MainUI()
+		{
+			InitializeComponent();
+		}
+
+		private void MainUI_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
