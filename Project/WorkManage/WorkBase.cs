@@ -12,11 +12,11 @@ namespace Project
 		/// <summary>
 		/// 
 		/// </summary>
-		public Manual tag_manual = new Manual(0);
+		public Manual tag_Manual = new Manual(0);
 		/// <summary>
 		/// 是否工作中 0表示没工作，1表示工作
 		/// </summary>
-		public int tag_isWork;
+		public int tag_IsWork;
 
 		//public int tag_laserIsWork;
 
@@ -103,20 +103,6 @@ namespace Project
 				return true;
 			}
 			return false;
-			if (Global.WorkVar.tag_StopState == 2)
-			{
-				return true;
-			}
-			if (Global.WorkVar.tag_IsExit == 1)
-			{
-
-
-				return true;
-			}
-
-
-			return false;
 		}
-
 	}
 }

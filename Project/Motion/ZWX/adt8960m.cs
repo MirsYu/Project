@@ -688,7 +688,7 @@ namespace Project
 		//                   外部信号驱动                     //
 		//----------------------------------------------------//
 		[DllImport("adt8960m.dll")]
-		public static extern Int32 adt8960_manual_continue(Int32 cardno, Int32 axis);
+		public static extern Int32 adt8960_Manual_continue(Int32 cardno, Int32 axis);
 		/*******************功能：外部信号连续驱动*********************
 		cardno	   卡号
 		axis		轴号
@@ -697,7 +697,7 @@ namespace Project
 			 (2)可以使用普通按钮,也可以接手轮
 		******************************************************************/
 		[DllImport("adt8960m.dll")]
-		public static extern Int32 adt8960_manual_pmove(Int32 cardno, Int32 axis, Int32 pos);
+		public static extern Int32 adt8960_Manual_pmove(Int32 cardno, Int32 axis, Int32 pos);
 		/*******************功能：外部信号定量驱动*********************
 		cardno	   卡号
 		axis		轴号
@@ -706,7 +706,7 @@ namespace Project
 			 (2)可以使用普通按钮,也可以接手轮
 		******************************************************************/
 		[DllImport("adt8960m.dll")]
-		public static extern Int32 adt8960_manual_disable(Int32 cardno, Int32 axis);
+		public static extern Int32 adt8960_Manual_disable(Int32 cardno, Int32 axis);
 		/***********************关闭外部信号驱动使能***********************
 		功能:关闭外部信号驱动使能
 		参数：

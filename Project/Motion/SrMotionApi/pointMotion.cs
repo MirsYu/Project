@@ -233,7 +233,7 @@ namespace Project
 		/// <param name="StationName"></param>
 		/// <param name="InductionIoName"></param>
 		/// <returns></returns>
-		public static short WaitIoMutIoTrigger(PointAggregate pa, manual man)
+		public static short WaitIoMutIoTrigger(PointAggregate pa, Manual man)
 		{
 			bool io_status = false;
 			int i = 0;
@@ -294,7 +294,7 @@ namespace Project
 					else
 					{
 						Global.WorkVar.tag_StopState = 2;
-						if (MessageBoxLog.Show("第" + man.tag_stepName + "步：" + pa.strName + "\r\n" + "运行过程中：\r\n\t" + iop.tag_IniO1.tag_IOName + "(IO口)\t执行错误.\r\n 解决方法：\r\n\t1:请检查伺服驱动\r\n\t2:重新检测点位配置！", "错误") == DialogResult.OK)
+						if (MessageBoxLog.Show("第" + man.tag_StepName + "步：" + pa.strName + "\r\n" + "运行过程中：\r\n\t" + iop.tag_IniO1.tag_IOName + "(IO口)\t执行错误.\r\n 解决方法：\r\n\t1:请检查伺服驱动\r\n\t2:重新检测点位配置！", "错误") == DialogResult.OK)
 						{
 
 						}
@@ -314,7 +314,7 @@ namespace Project
 					{
 						man.tag_SuspendFun(null);
 					}
-					DialogResult showRet = MessageBoxLog.Show("第" + man.tag_stepName + "步：" + pa.strName + "\r\n" + "运行过程中：\r\n\t" + iostr + "(IO口)\t超时\r\n是否继续执行,点忽略继续，点终止急停处理，并需要复位", "警告", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Question);
+					DialogResult showRet = MessageBoxLog.Show("第" + man.tag_StepName + "步：" + pa.strName + "\r\n" + "运行过程中：\r\n\t" + iostr + "(IO口)\t超时\r\n是否继续执行,点忽略继续，点终止急停处理，并需要复位", "警告", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Question);
 					if (showRet == DialogResult.Retry)
 					{
 						if (man != null && man.tag_ContinueFun != null)
@@ -355,7 +355,7 @@ namespace Project
 		/// <param name="StationName"></param>
 		/// <param name="InductionIoName"></param>
 		/// <returns></returns>
-		public static short WaitIoTrigger(string StationName, string InductionIoName, bool var, long outtime, string PointName, manual man)
+		public static short WaitIoTrigger(string StationName, string InductionIoName, bool var, long outtime, string PointName, Manual man)
 		{
 			bool io_status = false;
 			int i = 0;
@@ -397,7 +397,7 @@ namespace Project
 				else
 				{
 					Global.WorkVar.tag_StopState = 2;
-					if (MessageBoxLog.Show(StationName + "\r\n第" + man.tag_stepName + "步：" + PointName + "\r\n" + "运行过程中：\r\n\t" + InductionIoName + "(IO口)\t执行错误.\r\n 解决方法：\r\n\t1:请检查伺服驱动\r\n\t2:重新检测点位配置！", "错误") == DialogResult.OK)
+					if (MessageBoxLog.Show(StationName + "\r\n第" + man.tag_StepName + "步：" + PointName + "\r\n" + "运行过程中：\r\n\t" + InductionIoName + "(IO口)\t执行错误.\r\n 解决方法：\r\n\t1:请检查伺服驱动\r\n\t2:重新检测点位配置！", "错误") == DialogResult.OK)
 					{
 
 					}
@@ -416,7 +416,7 @@ namespace Project
 					{
 						man.tag_SuspendFun(null);
 					}
-					DialogResult showRet = MessageBoxLog.Show(StationName + "\r\n第" + man.tag_stepName + "步：" + PointName + "\r\n" + "运行过程中：\r\n\t" + InductionIoName + "(IO口)\t超时\r\n是否继续执行,\r\n1.点忽略继续，\r\n2.点取终止停处理，并需要复位\t", "警告", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Question);
+					DialogResult showRet = MessageBoxLog.Show(StationName + "\r\n第" + man.tag_StepName + "步：" + PointName + "\r\n" + "运行过程中：\r\n\t" + InductionIoName + "(IO口)\t超时\r\n是否继续执行,\r\n1.点忽略继续，\r\n2.点取终止停处理，并需要复位\t", "警告", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Question);
 					if (showRet == DialogResult.Retry)
 					{
 						if (man != null && man.tag_ContinueFun != null)
@@ -470,14 +470,14 @@ namespace Project
 		}
 		/// <summary>
 		///  感应器是否触发，station工位名称，OutIoName 输出点位名称，var 高低电平，inPutIoName 输入点位名称，varI 判断是否到达汽缸位置,
-		/// _manual 步骤名称
+		/// _Manual 步骤名称
 		/// </summary>
 		/// <param name="station"></param>
 		/// <param name="OutIoName"></param>
 		/// <param name="var"></param>
 		/// <param name="inPutIoName"></param>
 		/// <param name="varI"></param>
-		/// <param name="_manual"></param>
+		/// <param name="_Manual"></param>
 		/// <returns></returns>
 		public static short IoTrigger(string station, string OutIoName, bool var)
 		{
@@ -522,16 +522,16 @@ namespace Project
 		}
 		/// <summary>
 		///  感应器是否触发，station工位名称，OutIoName 输出点位名称，var 高低电平，inPutIoName 输入点位名称，varI 判断是否到达汽缸位置,
-		/// _manual 步骤名称
+		/// _Manual 步骤名称
 		/// </summary>
 		/// <param name="station"></param>
 		/// <param name="OutIoName"></param>
 		/// <param name="var"></param>
 		/// <param name="inPutIoName"></param>
 		/// <param name="varI"></param>
-		/// <param name="_manual"></param>
+		/// <param name="_Manual"></param>
 		/// <returns></returns>
-		public static short IoTrigger(string station, string OutIoName, bool var, string stepName, manual man)
+		public static short IoTrigger(string station, string OutIoName, bool var, string stepName, Manual man)
 		{
 
 			short ret = WaitIoTrigger(station, OutIoName, var, 0, stepName, man);
@@ -547,7 +547,7 @@ namespace Project
 			if (ret == 1)
 			{
 				Global.WorkVar.tag_SuspendState = 1;
-				DialogResult showRet = MessageBoxLog.Show(station + "\r\n第" + man.tag_stepName + "步：" + stepName + "\r\n" + "运行过程中：\r\n\t" + OutIoName + "(IO口)\t没有触发，影响安全，是否继续执行,\r\n点\"中止\"急停处理，并需要复位", "警告", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Question);
+				DialogResult showRet = MessageBoxLog.Show(station + "\r\n第" + man.tag_StepName + "步：" + stepName + "\r\n" + "运行过程中：\r\n\t" + OutIoName + "(IO口)\t没有触发，影响安全，是否继续执行,\r\n点\"中止\"急停处理，并需要复位", "警告", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Question);
 
 				if (showRet == DialogResult.Ignore)
 				{
@@ -576,14 +576,14 @@ namespace Project
 
 		/// <summary>
 		/// 汽缸上升或则下降，station工位名称，OutIoName 输出点位名称，var 高低电平，inPutIoName 输入点位名称，varI 判断是否到达汽缸位置
-		/// _manual 步骤名称
+		/// _Manual 步骤名称
 		/// </summary>
 		/// <param name="station"></param>
 		/// <param name="OutIoName"></param>
 		/// <param name="var"></param>
 		/// <param name="inPutIoName"></param>
 		/// <param name="varI"></param>
-		/// <param name="_manual"></param>
+		/// <param name="_Manual"></param>
 		/// <returns></returns>
 		public static short OutIoUpOrDown(string station, string OutIoName, short var)
 		{
@@ -620,14 +620,14 @@ namespace Project
 		}
 		/// <summary>
 		/// 汽缸上升或则下降，station工位名称，OutIoName 输出点位名称，var 高低电平，inPutIoName 输入点位名称，varI 判断是否到达汽缸位置
-		/// _manual 步骤名称
+		/// _Manual 步骤名称
 		/// </summary>
 		/// <param name="station"></param>
 		/// <param name="OutIoName"></param>
 		/// <param name="var"></param>
 		/// <param name="inPutIoName"></param>
 		/// <param name="varI"></param>
-		/// <param name="_manual"></param>
+		/// <param name="_Manual"></param>
 		/// <returns></returns>
 		public static short OutIoUpOrDown(string station, string OutIoName, short var, string StepName)
 		{
@@ -667,7 +667,7 @@ namespace Project
 		/// </summary>
 		/// <param name="pa"></param>
 		/// <returns></returns>
-		public static short IORunMut(PointAggregate pa, manual man)//
+		public static short IORunMut(PointAggregate pa, Manual man)//
 		{
 			string strStationName = null;
 			short ret = 0;
@@ -779,13 +779,13 @@ namespace Project
 					{
 						if (io_status != io.tag_IniO2.tag_var)
 						{
-							UserControl_LogOut.OutLog(pa.strStationName + "-" + pa.strName + "运动不安全，" + io.tag_IniO2.tag_IOName + ",没有到位", 0);
+							LogOutControl.OutLog(pa.strStationName + "-" + pa.strName + "运动不安全，" + io.tag_IniO2.tag_IOName + ",没有到位", 0);
 							return -1;
 						}
 					}
 					else
 					{
-						UserControl_LogOut.OutLog(pa.strStationName + "-" + pa.strName + "运动不安全，" + io.tag_IniO2.tag_IOName + ",执行异常", 0);
+						LogOutControl.OutLog(pa.strStationName + "-" + pa.strName + "运动不安全，" + io.tag_IniO2.tag_IOName + ",执行异常", 0);
 
 						return -2;
 					}
@@ -799,7 +799,7 @@ namespace Project
 		/// </summary>
 		/// <param name="pa"></param>
 		/// <returns></returns>
-		public static short IORun(PointAggregate pa, OutIOParameterPoint io, manual man)//
+		public static short IORun(PointAggregate pa, OutIOParameterPoint io, Manual man)//
 		{
 			short ret = 0;
 			string strStationName = null;
@@ -886,7 +886,7 @@ namespace Project
 				}
 				return ret;
 			}
-			catch (Exception ex)
+			catch (Exception )
 			{
 				Global.WorkVar.tag_StopState = 2;
 
@@ -1438,12 +1438,12 @@ namespace Project
 		/// </summary>
 		/// <param name="pa"></param>
 		/// <returns></returns>
-		public static short pointRun(object o, object name, manual _man)
+		public static short pointRun(object o, object name, Manual _man)
 		{
-			manual man = null;
+			Manual man = null;
 			if (_man == null)
 			{
-				man = new manual(0);
+				man = new Manual(0);
 			}
 			else
 			{
@@ -1459,7 +1459,7 @@ namespace Project
 				StationName = Global.WorkVar.tag_ExePointAggregate.strStationName;
 			}
 			int stationindex = StationManage.getStationIndex(StationName);
-			UserControl_LogOut.OutLog(StationName + "->" + pa.strName, 1);
+			LogOutControl.OutLog(StationName + "->" + pa.strName, 1);
 			if (pa.tag_isEnable)
 			{
 				return 0;
@@ -1499,7 +1499,7 @@ namespace Project
 			}
 			if (pa.tag_isAxisStop)
 			{
-				if ((ret = stepMovePointAxisStop(pa.strStationName, pa.strName)) != 0) ;
+				if ((ret = stepMovePointAxisStop(pa.strStationName, pa.strName)) != 0) { }
 				return ret;
 			}
 			{
@@ -1667,7 +1667,7 @@ namespace Project
 			}
 			catch (Exception mes)
 			{
-				UserControl_LogOut.OutLog(mes.Message, 0);
+				LogOutControl.OutLog(mes.Message, 0);
 				Global.WorkVar.tag_StopState = 2;
 			}
 			return 0;
@@ -1677,7 +1677,7 @@ namespace Project
 		/// </summary>
 		/// <param name="pa"></param>
 		/// <returns></returns>
-		public static short StationRun(string StationName, manual man)
+		public static short StationRun(string StationName, Manual man)
 		{
 			short ret = 0;
 			StationModule station = StationManage.FindStation(StationName);
@@ -1685,15 +1685,15 @@ namespace Project
 			{
 				return -21;
 			}
-			if (man.tag_induction)
+			if (man.tag_Induction)
 			{
 				return 0;
 			}
 			try
 			{
-				while (man.tag_stepName < station.arrPoint.Count)
+				while (man.tag_StepName < station.arrPoint.Count)
 				{
-					PointAggregate pointA = station.arrPoint[man.tag_stepName];
+					PointAggregate pointA = station.arrPoint[man.tag_StepName];
 					if (Global.WorkVar.tag_StopState == 1)
 					{
 						return -3;
@@ -1703,7 +1703,7 @@ namespace Project
 
 						return 0;
 					}
-					if (Global.WorkVar.tag_SuspendState == 1 || man.tag_isSuspend)
+					if (Global.WorkVar.tag_SuspendState == 1 || man.tag_IsSuspend)
 					{
 						Thread.Sleep(10);
 
@@ -1735,7 +1735,7 @@ namespace Project
 								return 0;
 							}
 
-							if (Global.WorkVar.tag_SuspendState == 1 || man.tag_isSuspend)
+							if (Global.WorkVar.tag_SuspendState == 1 || man.tag_IsSuspend)
 							{
 								Thread.Sleep(10);
 								continue;
@@ -1777,7 +1777,7 @@ namespace Project
 								Thread.Sleep(10);
 								return 0;
 							}
-							if (Global.WorkVar.tag_SuspendState == 1 || man.tag_isSuspend)
+							if (Global.WorkVar.tag_SuspendState == 1 || man.tag_IsSuspend)
 							{
 								Thread.Sleep(10);
 								continue;
@@ -1801,14 +1801,14 @@ namespace Project
 							i++;
 						}
 					}
-					man.tag_stepName++;
+					man.tag_StepName++;
 					Thread.Sleep(10);
 				}
 
 			}
 			catch (Exception mes)
 			{
-				UserControl_LogOut.OutLog(mes.Message, 0);
+				LogOutControl.OutLog(mes.Message, 0);
 				Global.WorkVar.tag_StopState = 2;
 			}
 			return 0;

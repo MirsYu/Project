@@ -833,7 +833,6 @@ namespace Project
 		public short HomeFindLimit(AxisConfig axisC)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
 			bool pIo = false;
 			int AxisState = 0;
 			adt8940a1m.adt8940a1_set_startv(axisC.CardNum, axisC.AxisNum + 1, (int)axisC.StartSpeed);        //
@@ -917,10 +916,7 @@ namespace Project
 					_SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
 					return 3;
 				}
-				Thread.Sleep(1);
 			}
-			_SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
-			return 4;
 		}
 
 		/// <summary>
@@ -931,8 +927,6 @@ namespace Project
 		public short HomeMoveTwoDis(AxisConfig axisC)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
-			bool pIo = false;
 			int AxisState = 0;
 			adt8940a1m.adt8940a1_set_startv(axisC.CardNum, axisC.AxisNum + 1, (int)axisC.StartSpeed);        //
 			adt8940a1m.adt8940a1_set_speed(axisC.CardNum, axisC.AxisNum + 1, (int)axisC.Speed);         //
@@ -961,16 +955,12 @@ namespace Project
 					_SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
 					return 0;
 				}
-				Thread.Sleep(1);
 			}
-			_SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
-			return 4;
 		}
 
 		public short HomeFindHomeIO(AxisConfig axisC)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
 			bool pIo = false;
 			int AxisState = 0;
 			int pos = 0;
@@ -1056,7 +1046,6 @@ namespace Project
 		public short HomeFindHomeSinge(AxisConfig axisC, int pos1)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
 			bool pIo = false;
 			int AxisState = 0;
 			PointModule point = new PointModule();
@@ -1106,14 +1095,11 @@ namespace Project
 				}
 				Thread.Sleep(1);
 			}
-			_SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
-			return 4;
 		}
 
 		public short HomeFindOneHomeIO(AxisConfig axisC)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
 			bool pIo = false;
 			int AxisState = 0;
 

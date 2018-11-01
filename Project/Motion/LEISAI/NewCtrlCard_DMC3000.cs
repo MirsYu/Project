@@ -164,7 +164,6 @@ namespace Project
                                            返回值：错误代码*/
 			ushort el_enable = 0;
 			ushort el_logic = 0;
-			ushort el_mode = 0;
 			if (v1 == 1 && v2 == 1)
 			{
 				el_enable = 0;
@@ -359,7 +358,6 @@ namespace Project
 		public short _SR_LineMulticoorMove(AxisConfig[] axisC, PointModule[] point, short crd, short posi_mode)
 		{
 			int i = 0;
-			short cardId = 0;
 			if (axisC.Length == 0)
 			{
 				return 0;
@@ -650,7 +648,6 @@ namespace Project
 		/// <returns></returns>
 		public short _SR_GetAlarmInput(short card, short axisNum, out bool pValue)
 		{
-			short shrResult;
 			pValue = false;
 			if (tag_CardCount < 1 || card >= tag_CardCount)
 			{
@@ -679,7 +676,6 @@ namespace Project
 		/// <returns></returns>
 		public short _SR_GetLimitPInput(short card, short axisNum, out bool pValue)
 		{
-			short shrResult;
 			pValue = false;
 			if (tag_CardCount < 1 || card >= tag_CardCount)
 			{
@@ -689,7 +685,6 @@ namespace Project
 
 			if (card == 0 && axisNum == 0)
 			{
-				int i = 0;
 			}
 
 			int bit = (int)Math.Pow(2, 1);
@@ -719,7 +714,6 @@ namespace Project
 			uint status = LTDMC.dmc_axis_io_status((ushort)tag_cardids[card], (ushort)axisNum);
 			if (card == 0 && axisNum == 0)
 			{
-				int i = 0;
 			}
 			int bit = (int)Math.Pow(2, 2);
 			if ((status & bit) == bit)
@@ -749,7 +743,6 @@ namespace Project
 			uint status = LTDMC.dmc_axis_io_status((ushort)tag_cardids[card], (ushort)axisNum);
 			if (card == 0 && axisNum == 0)
 			{
-				int i = 0;
 			}
 			int bit = (int)Math.Pow(2, 4);
 			if ((status & bit) == bit)

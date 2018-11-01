@@ -13,19 +13,19 @@ namespace Project
 		/// <summary>
 		/// 屏蔽作用
 		/// </summary>
-		public bool tag_induction;
+		public bool tag_Induction;
 		/// <summary>
 		/// 单步运行，
 		/// </summary>
-		public int tag_stepName;
+		public int tag_StepName;
 		/// <summary>
 		/// 单步调试开关
 		/// </summary>
-		public int tag_step;
+		public int tag_Step;
 		/// <summary>
 		/// 是否暂停
 		/// </summary>
-		public bool tag_isSuspend;
+		public bool tag_IsSuspend;
 		/// <summary>
 		/// 暂停函数
 		/// </summary>
@@ -46,7 +46,7 @@ namespace Project
 		/// <param name="ndStep"></param>
 		public Manual(int ndStep)
 		{
-			tag_stepName = ndStep;
+			tag_StepName = ndStep;
 		}
 	}
 }

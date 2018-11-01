@@ -33,7 +33,7 @@ namespace Project
 
 				case MotionCardManufacturer.MotionCardManufacturer_8940:
 					return "8940";
-					break;
+
 				case MotionCardManufacturer.MotionCardManufacturer_8960m:
 					return "8960m";
 
@@ -46,13 +46,10 @@ namespace Project
 					return "DMC3400";
 				case MotionCardManufacturer.MotionCardManufacturer_DMC1000B:
 					return "DMC1000B";
-					break;
 				case MotionCardManufacturer.MotionCardManufacturer_gts:
 					return "GTS400";
-					break;
 				case MotionCardManufacturer.MotionCardManufacturer_IO3224:
 					return "IO3224 ";
-					break;
 			}
 			return "设置卡错误\r\n";
 		}
@@ -367,7 +364,6 @@ namespace Project
 		public short HomeFindLimit(AxisConfig axisC)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
 			bool pIo = false;
 			int AxisState = 0;
 			PointModule point = new PointModule(true, false, 0, axisC.Speed, axisC.Acc, axisC.Dec, axisC.tag_accTime, axisC.tag_delTime, axisC.StartSpeed, axisC.tag_S_Time, axisC.tag_StopSpeed);
@@ -486,10 +482,7 @@ namespace Project
 					}
 					return 3;
 				}
-				//   Thread.Sleep(1);
 			}
-			SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
-			return 4;
 		}
 
 		/// <summary>
@@ -500,8 +493,6 @@ namespace Project
 		public short HomeMoveTwoDis(AxisConfig axisC)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
-			bool pIo = false;
 			int AxisState = 0;
 			PointModule point = new PointModule(true, false, 0, axisC.Speed, axisC.Acc, axisC.Dec, axisC.tag_accTime, axisC.tag_delTime, axisC.StartSpeed, axisC.tag_S_Time, axisC.tag_StopSpeed);
 
@@ -538,16 +529,12 @@ namespace Project
 					SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
 					return 0;
 				}
-				Thread.Sleep(1);
 			}
-			SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
-			return 4;
 		}
 
 		public short HomeFindHomeIO(AxisConfig axisC)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
 			bool pIo = false;
 			int AxisState = 0;
 
@@ -700,7 +687,6 @@ namespace Project
 		public short HomeFindHomeSinge(AxisConfig axisC, int pos1)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
 			bool pIo = false;
 			int AxisState = 0;
 			PointModule point = new PointModule(true, false, 0, axisC.Speed, axisC.Acc, axisC.Dec, axisC.tag_accTime, axisC.tag_delTime, axisC.StartSpeed, axisC.tag_S_Time, axisC.tag_StopSpeed);
@@ -749,10 +735,7 @@ namespace Project
 					SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
 					return -3;
 				}
-				Thread.Sleep(1);
 			}
-			SR_AxisEmgStop(axisC.CardNum, (short)(axisC.AxisNum));
-			return -4;
 		}
 
 		/// <summary>
@@ -763,11 +746,6 @@ namespace Project
 		public short MutHomeFindHomeSinge(AxisConfig axisC1, int count)
 		{
 			int stepPos = (int)axisC1.intFirstFindOriginDis;
-
-			int i = 0;
-
-
-
 			if (HomeFindHomeSinge(axisC1, stepPos) == 0)
 			{
 				if (stepPos < 0)
@@ -802,7 +780,6 @@ namespace Project
 		public short HomeFindOneHomeIO(AxisConfig axisC)
 		{
 			short shrResult = 0;
-			int Isfined = 0;
 			bool pIo = false;
 			int AxisState = 0;
 			PointModule point = new PointModule(true, false, 0, axisC.HomeSpeed, axisC.Acc, axisC.Dec, axisC.tag_accTime, axisC.tag_delTime, axisC.StartSpeed, axisC.tag_S_Time, axisC.tag_StopSpeed);

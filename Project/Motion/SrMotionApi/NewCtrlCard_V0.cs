@@ -118,7 +118,6 @@ namespace Project
 				MessageBoxLog.Show(NewCtrlCardBase.GetManufacturerName((int)axisC.tag_MotionCardManufacturer) + "控制卡初始化失败!");
 				return shrFail;
 			}
-			short ret = 0;
 			if (axisC == null)
 			{
 				return shrFail;
@@ -147,7 +146,6 @@ namespace Project
 				MessageBoxLog.Show(NewCtrlCardBase.GetManufacturerName((int)axisC.tag_MotionCardManufacturer) + "控制卡初始化失败!");
 				return shrFail;
 			}
-			short ret = 0;
 			if (axisC == null)
 			{
 				return shrFail;
@@ -173,7 +171,6 @@ namespace Project
 				MessageBoxLog.Show(NewCtrlCardBase.GetManufacturerName((int)axisC.tag_MotionCardManufacturer) + "控制卡初始化失败!");
 				return shrFail;
 			}
-			short ret = 0;
 			if (axisC == null)
 			{
 				return shrFail;
@@ -200,7 +197,6 @@ namespace Project
 				MessageBoxLog.Show(NewCtrlCardBase.GetManufacturerName((int)axisC.tag_MotionCardManufacturer) + "控制卡初始化失败!");
 				return shrFail;
 			}
-			short ret = 0;
 			if (axisC == null)
 			{
 				return shrFail;
@@ -251,7 +247,6 @@ namespace Project
 				MessageBoxLog.Show(NewCtrlCardBase.GetManufacturerName((int)axisC.tag_MotionCardManufacturer) + "控制卡初始化失败!");
 				return shrFail;
 			}
-			short ret = 0;
 			if (axisC == null)
 			{
 				return shrFail;
@@ -350,7 +345,6 @@ namespace Project
 				MessageBoxLog.Show(NewCtrlCardBase.GetManufacturerName((int)axisC.tag_MotionCardManufacturer) + "控制卡初始化失败!");
 				return shrFail;
 			}
-			short ret = 0;
 			do
 			{
 				//程序是否正常运行
@@ -381,7 +375,6 @@ namespace Project
 		public static short SR_GetPrfPos(int Cardtype, short card, short axis, ref double pos)
 		{
 			short shrResult;
-			int posV = 0;
 			NewCtrlCardBase Base_ = tag_NewCtrlCardBase[Cardtype];
 			if (Base_ == null || Base_.SR_GetPrfPos == null)
 			{
@@ -429,7 +422,6 @@ namespace Project
 		public static short SR_AxisEmgStop(int Cardtype, short card, short axis)
 		{
 			short shrResult;
-			int posV = 0;
 			NewCtrlCardBase Base_ = tag_NewCtrlCardBase[Cardtype];
 			if (Base_ == null || Base_.SR_AxisEmgStop == null)
 			{
@@ -683,7 +675,6 @@ namespace Project
 				MessageBoxLog.Show(NewCtrlCardBase.GetManufacturerName((int)axisC[0].tag_MotionCardManufacturer) + "控制卡初始化失败!");
 				return shrFail;
 			}
-			int i = 0;
 
 			if (Base_.SR_LineMulticoorMove != null)
 			{

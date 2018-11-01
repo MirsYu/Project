@@ -33,6 +33,24 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DY.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -44,6 +62,8 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net40-client\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -51,6 +71,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,14 +88,25 @@
     <Compile Include="Communication\PDCA\DataType.cs" />
     <Compile Include="Communication\PDCA\PDCA.cs" />
     <Compile Include="Communication\PDCA\WPDCA.cs" />
+    <Compile Include="Communication\SerialPort\JSerialPort.cs" />
+    <Compile Include="Communication\SerialPort\PortParameter.cs" />
     <Compile Include="Communication\Socket\IPConfig.cs" />
     <Compile Include="Communication\Socket\SocketClient.cs" />
-    <Compile Include="Config\SolderConfig.cs" />
+    <Compile Include="Configs\AxisSafe.cs" />
+    <Compile Include="Configs\AxisSafeManage.cs" />
+    <Compile Include="Configs\Config.cs" />
+    <Compile Include="Configs\PrivateSave.cs" />
+    <Compile Include="Configs\SolderConfig.cs" />
+    <Compile Include="File\CFile.cs" />
+    <Compile Include="Flow\Rest.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Log\Log.cs" />
     <Compile Include="Log\LogDataBase.cs" />
     <Compile Include="Log\LogManage.cs" />
     <Compile Include="Log\MessageBoxLog.cs" />
+    <Compile Include="Message\FormMessage.cs" />
+    <Compile Include="Message\HintMessageInfo.cs" />
+    <Compile Include="Message\ShowInfo.cs" />
     <Compile Include="Motion\GGAO\gts.cs" />
     <Compile Include="Motion\GGAO\NewCtRLCard_gts.cs" />
     <Compile Include="Motion\KEYENCE\DeviceData.cs" />
@@ -85,10 +117,11 @@
     <Compile Include="Motion\LEISAI\Dmc1000.cs" />
     <Compile Include="Motion\LEISAI\LTDMC.cs" />
     <Compile Include="Motion\LEISAI\NewCtrlCard_DMC1000B.cs" />
-    <Compile Include="Motion\LEISAI\NewCtrlCard_DMC1000B_A.cs" />
+    <Compile Include="WorkManage\WorkObjectManager.cs" />
+    <None Include="Motion\LEISAI\NewCtrlCard_DMC1000B_A.cs" />
     <Compile Include="Motion\LEISAI\NewCtrlCard_DMC3000.cs" />
-    <Compile Include="Motion\LEISAI\NewCtrlCard_DMC3000_a.cs" />
-    <Compile Include="Motion\LEISAI\NewCtrlCard_IO3224.cs" />
+    <None Include="Motion\LEISAI\NewCtrlCard_DMC3000_a.cs" />
+    <None Include="Motion\LEISAI\NewCtrlCard_IO3224.cs" />
     <Compile Include="Motion\SrMotionApi\AxisConfig.cs" />
     <Compile Include="Motion\SrMotionApi\BinarySerializer.cs" />
     <Compile Include="Motion\SrMotionApi\CardManager.cs" />
@@ -106,6 +139,18 @@
       <DependentUpon>CodeEditor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Script\MyCompletionData.cs" />
+    <Compile Include="UIControl\AxisMoveDebugControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\AxisMoveDebugControl.Designer.cs">
+      <DependentUpon>AxisMoveDebugControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\ListInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\ListInfoControl.Designer.cs">
+      <DependentUpon>ListInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\LogOutControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +162,24 @@
     </Compile>
     <Compile Include="UIControl\NetSocketControl.Designer.cs">
       <DependentUpon>NetSocketControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\DebugUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\DebugUI.Designer.cs">
+      <DependentUpon>DebugUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\MainUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\MainUI.Designer.cs">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\MessageBoxHintUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\MessageBoxHintUI.Designer.cs">
+      <DependentUpon>MessageBoxHintUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIForm\MessageBoxShowUI.cs">
       <SubType>Form</SubType>
@@ -131,15 +194,31 @@
       <DependentUpon>MessageBoxUI.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkManage\Manual.cs" />
+    <Compile Include="WorkManage\Work.cs" />
     <Compile Include="WorkManage\WorkBase.cs" />
     <EmbeddedResource Include="Script\Code.resx">
       <DependentUpon>Code.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\AxisMoveDebugControl.resx">
+      <DependentUpon>AxisMoveDebugControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\ListInfoControl.resx">
+      <DependentUpon>ListInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\LogOutControl.resx">
       <DependentUpon>LogOutControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\NetSocketControl.resx">
       <DependentUpon>NetSocketControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\DebugUI.resx">
+      <DependentUpon>DebugUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\MainUI.resx">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\MessageBoxHintUI.resx">
+      <DependentUpon>MessageBoxHintUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\MessageBoxShowUI.resx">
       <DependentUpon>MessageBoxShowUI.cs</DependentUpon>
@@ -166,11 +245,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UIForm\MainUI.cs">
+    <Compile Include="UIForm\FrameUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIForm\MainUI.Designer.cs">
-      <DependentUpon>MainUI.cs</DependentUpon>
+    <Compile Include="UIForm\FrameUI.Designer.cs">
+      <DependentUpon>FrameUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -179,8 +258,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIForm\MainUI.resx">
-      <DependentUpon>MainUI.cs</DependentUpon>
+    <EmbeddedResource Include="UIForm\FrameUI.resx">
+      <DependentUpon>FrameUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -195,7 +274,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DY.Core.dll" />
-    <Content Include="Motion\LEISAI\Dmc1000.dll" />
+    <Content Include="LogConfig.xml" />
+    <None Include="Motion\LEISAI\Dmc1000.dll" />
   </ItemGroup>
   <ItemGroup>
     <None Include="UIImage\135.ICO" />

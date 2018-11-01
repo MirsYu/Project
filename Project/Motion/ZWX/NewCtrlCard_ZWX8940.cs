@@ -241,15 +241,8 @@ namespace Project
 		public short _SR_GetInputBit(short card, short ioBit, out bool bStatus)
 		{
 			short shrResult;
-			int intValue = 0;
-			ushort ushortValue = 0;
-			int iioBit = 0;
 			bStatus = false;
 
-			if (ioBit > 32)
-			{
-				ioBit = ioBit;
-			}
 			shrResult = (short)adt8940a1m.adt8940a1_read_bit(card, ioBit);
 			if (shrResult < 0)
 			{

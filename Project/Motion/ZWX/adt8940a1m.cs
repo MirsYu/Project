@@ -490,7 +490,7 @@ namespace Project
 		//               外部驱动                    //
 		//*********************************************//
 		[DllImport("8940a1m.dll")]
-		public static extern Int32 adt8940a1_manual_pmove(Int32 cardno, Int32 axis, Int32 pos);
+		public static extern Int32 adt8940a1_Manual_pmove(Int32 cardno, Int32 axis, Int32 pos);
 		/************************外部信号定量驱动函数**********************
 		功能:外部信号定量驱动函数
 		参数:
@@ -502,7 +502,7 @@ namespace Project
 				 (2)可以使用普通按钮,也可以接手轮
 		******************************************************************/
 		[DllImport("8940a1m.dll")]
-		public static extern Int32 adt8940a1_manual_continue(Int32 cardno, Int32 axis);
+		public static extern Int32 adt8940a1_Manual_continue(Int32 cardno, Int32 axis);
 		/************************外部信号连续驱动函数**********************
 		功能:外部信号连续驱动函数
 		参数:
@@ -513,7 +513,7 @@ namespace Project
 				 (2)可以使用普通按钮,也可以接手轮
 		******************************************************************/
 		[DllImport("8940a1m.dll")]
-		public static extern Int32 adt8940a1_manual_disable(Int32 cardno, Int32 axis);
+		public static extern Int32 adt8940a1_Manual_disable(Int32 cardno, Int32 axis);
 		/***********************关闭外部信号驱动使能***********************
 		功能:关闭外部信号驱动使能
 		参数：

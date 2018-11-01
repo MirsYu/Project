@@ -7,18 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Project
+namespace Project.UIForm
 {
 	public partial class MainUI : Form
 	{
 		public MainUI()
 		{
 			InitializeComponent();
-		}
-
-		private void MainUI_Load(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

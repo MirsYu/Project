@@ -57,8 +57,6 @@
 		public short _SR_GetInputBit(short card, short ioBit, out bool bStatus)
 		{
 			short shrResult = 0;
-			int intValue = 0;
-			ushort ushortValue = 0;
 			int iioBit = 0;
 			bStatus = false;
 
@@ -92,7 +90,6 @@
 			short shrResult;
 			outputIoStatus = false;
 			int iioBit = 0;
-			bool blnOutStatus;
 			shrResult = (short)adtIO3224.adtIO3224_read_out(card, out iioBit);
 			int s = iioBit & (1 << ioBit);
 			if (shrResult != shrGtsSuccess)

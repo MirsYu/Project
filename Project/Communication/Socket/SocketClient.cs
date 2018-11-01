@@ -253,7 +253,7 @@ namespace Project
 						tag_Socket.ReceiveTimeout = outTime;
 						tag_readLen = tag_Socket.Receive(read, read.Length, 0);
 						string retstr = Encoding.ASCII.GetString(read, 0, tag_readLen);
-						//UserControl_LogOut.OutLog(retstr, 0);
+						//LogOutControl.OutLog(retstr, 0);
 						return retstr;
 					}
 					catch (Exception)
@@ -304,7 +304,7 @@ namespace Project
 						tag_Socket.ReceiveTimeout = outTime;
 						tag_readLen = tag_Socket.Receive(read, read.Length, 0);
 						string retstr = Encoding.ASCII.GetString(read, 0, tag_readLen);
-						//UserControl_LogOut.OutLog(retstr, 0);
+						//LogOutControl.OutLog(retstr, 0);
 						return retstr;
 					}
 					catch (Exception exx)

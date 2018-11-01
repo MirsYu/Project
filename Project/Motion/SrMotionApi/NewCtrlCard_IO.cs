@@ -197,7 +197,6 @@ namespace Project
 							}
 							else
 							{
-								pCardInIO = pCardInIO;
 							}
 							if (bOutio == true)
 							{

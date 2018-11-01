@@ -18,7 +18,7 @@ namespace Project
         }
         public  short CommandResult(string command, short result)
         {
-            UserControl_LogOut.OutLog(command, 0);
+            LogOutControl.OutLog(command, 0);
             return 0;
          }
         /// <summary>

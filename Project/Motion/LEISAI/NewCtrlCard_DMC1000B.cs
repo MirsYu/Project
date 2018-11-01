@@ -69,7 +69,6 @@ namespace Project
 		/// <returns></returns>
 		public short _SR_InitCard()
 		{
-			ushort _num = 0;
 			short returnValue = 0;
 			if (tag_isInit == 0)
 			{
@@ -393,7 +392,6 @@ namespace Project
 		public short _SR_LineMulticoorMove(AxisConfig[] axisC, PointModule[] point, short crd, short posi_mode)
 		{
 			short i = 0;
-			short cardId = 0;
 			if (axisC.Length == 0)
 			{
 				return 0;
@@ -647,7 +645,6 @@ namespace Project
 		/// <returns></returns>
 		public short _SR_GetLimitPInput(short card, short axisNum, out bool pValue)
 		{
-			short shrResult;
 			pValue = false;
 			if (tag_CardCount < 1 || card >= tag_CardCount)
 			{

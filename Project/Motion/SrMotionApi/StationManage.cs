@@ -380,37 +380,14 @@ namespace Project
 		{
 
 			return pointMotion.FindPoint(stationM.strStationName, pointName, 0);
-			if (string.IsNullOrEmpty(pointName))
-			{
-				return null;
-			}
-			if (stationM == null)
-			{
-				return null;
-			}
-			int i = 0;
-			foreach (PointAggregate pointA in stationM.arrPoint)
-			{
-				if (pointA.strName == pointName && i < stationM.intUsePointCount)
-				{
-					return pointA;
-				}
-				i++;
-			}
-			return null;
 		}
 		public static bool OpenSevro(string stationName, string axisName, bool OnOff)
 		{
-
-			AxisConfig acg;
 			return true;
-
 		}
 
 		public static bool AxisStop(string stationName, string axisName)
 		{
-
-			AxisConfig acg;
 			return true;
 		}
 		/// <summary>
@@ -589,7 +566,6 @@ namespace Project
 		public static void GetAllAxis(string filename)
 		{
 			string ret = "";
-			int max = 0;
 			foreach (StationModule sm in _Config.arrWorkStation)
 			{
 				foreach (AxisConfig axis in sm.arrAxis)

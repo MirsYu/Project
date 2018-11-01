@@ -39,7 +39,7 @@ namespace Project
 			InitializeComponent();
 			tag_locker = new object();
 			tag_ShowLogTimer = new System.Windows.Forms.Timer();
-			tag_ShowLogTimer.Tick += new EventHandler(UserControl_LogOut_Show);
+			tag_ShowLogTimer.Tick += new EventHandler(LogOutControl_Show);
 			tag_ShowLogTimer.Interval = 1000;
 			tag_ShowLogTimer.Start();
 		}
@@ -64,7 +64,7 @@ namespace Project
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void UserControl_LogOut_Show(object sender, EventArgs e)
+		private void LogOutControl_Show(object sender, EventArgs e)
 		{
 			try
 			{
@@ -113,7 +113,7 @@ namespace Project
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void UserControl_LogOut_Load(object sender, EventArgs e)
+		private void LogOutControl_Load(object sender, EventArgs e)
 		{
 
 		}
@@ -127,7 +127,7 @@ namespace Project
 			// richTextBox_log.Clear();
 		}
 
-		private void UserControl_LogOut_SizeChanged(object sender, EventArgs e)
+		private void LogOutControl_SizeChanged(object sender, EventArgs e)
 		{
 			tabControl_msg.Location = new Point(0, 0);
 			tabControl_msg.Size = new Size(this.Size.Width - 2, this.Size.Height - 2);
@@ -143,7 +143,7 @@ namespace Project
 
 		private void tag_groupBox_Paint(object sender, PaintEventArgs e)
 		{
-			UserControl_LogOut_SizeChanged(sender, e);
+			LogOutControl_SizeChanged(sender, e);
 		}
 
 		private void checkBox_stop_CheckedChanged(object sender, EventArgs e)

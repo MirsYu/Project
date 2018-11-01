@@ -12,8 +12,8 @@ namespace Project
 
 		public String SN = "";
 		public String Result;
-		public String StarTime;
-		public String EndTime;
+		public String StarTime = " ";
+		public String EndTime = " ";
 		public String SW_Version;
 		public String Reserved;
 
