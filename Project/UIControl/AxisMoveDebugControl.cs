@@ -126,7 +126,7 @@ namespace Project
 						}
 					});
 				}
-				catch (System.Exception ex)
+				catch (System.Exception)
 				{
 
 				}
@@ -156,7 +156,7 @@ namespace Project
 
 					});
 				}
-				catch (System.Exception ex)
+				catch (System.Exception)
 				{
 
 				}
@@ -185,7 +185,7 @@ namespace Project
 						}
 					});
 				}
-				catch (System.Exception ex)
+				catch (System.Exception)
 				{
 
 				}
@@ -212,16 +212,16 @@ namespace Project
 					{
 						if (arrAxis.tag_IoLimtPNHighEnable == 1)
 						{
-							lblPEL.Image = ((cASE.Value & (one << arrAxis.AxisNum)) > 0) ? StrongProject.Properties.Resources.led_green_on_16 : StrongProject.Properties.Resources.led_off_16;
+							lblPEL.Image = ((cASE.Value & (one << arrAxis.AxisNum)) > 0) ? Properties.Resources.led_green_on_16 : Properties.Resources.led_off_16;
 						}
 						else
 						{
-							lblPEL.Image = ((cASE.Value & (one << arrAxis.AxisNum)) == 0) ? StrongProject.Properties.Resources.led_green_on_16 : StrongProject.Properties.Resources.led_off_16;
+							lblPEL.Image = ((cASE.Value & (one << arrAxis.AxisNum)) == 0) ? Properties.Resources.led_green_on_16 : Properties.Resources.led_off_16;
 
 						}
 					});
 				}
-				catch (System.Exception ex)
+				catch (System.Exception)
 				{
 
 				}
@@ -247,17 +247,17 @@ namespace Project
 					{
 						if (arrAxis.tag_IoLimtPNHighEnable == 1)
 						{
-							lblMEL.Image = ((cASE.Value & (one << arrAxis.AxisNum)) > 0) ? StrongProject.Properties.Resources.led_green_on_16 : StrongProject.Properties.Resources.led_off_16;
+							lblMEL.Image = ((cASE.Value & (one << arrAxis.AxisNum)) > 0) ? Properties.Resources.led_green_on_16 : Properties.Resources.led_off_16;
 						}
 						else
 						{
-							lblMEL.Image = ((cASE.Value & (one << arrAxis.AxisNum)) == 0) ? StrongProject.Properties.Resources.led_green_on_16 : StrongProject.Properties.Resources.led_off_16;
+							lblMEL.Image = ((cASE.Value & (one << arrAxis.AxisNum)) == 0) ? Properties.Resources.led_green_on_16 : Properties.Resources.led_off_16;
 
 						}
 
 					});
 				}
-				catch (System.Exception ex)
+				catch (System.Exception)
 				{
 
 				}
@@ -281,11 +281,11 @@ namespace Project
 					{
 						bool VAR = (cASE.Value & (one << arrAxis.AxisNum)) > 0;
 
-						lblORG.Image = VAR ? StrongProject.Properties.Resources.led_green_on_16 : StrongProject.Properties.Resources.led_off_16;
+						lblORG.Image = VAR ? Properties.Resources.led_green_on_16 : Properties.Resources.led_off_16;
 					}
 					else
 					{
-						lblORG.Image = ((cASE.Value & (one << arrAxis.AxisNum)) == 0) ? StrongProject.Properties.Resources.led_green_on_16 : StrongProject.Properties.Resources.led_off_16;
+						lblORG.Image = ((cASE.Value & (one << arrAxis.AxisNum)) == 0) ? Properties.Resources.led_green_on_16 : Properties.Resources.led_off_16;
 
 					}
 
