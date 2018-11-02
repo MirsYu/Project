@@ -141,6 +141,7 @@
 			this.Controls.Add(this.tabControl_msg);
 			this.Name = "LogOutControl";
 			this.Size = new System.Drawing.Size(497, 271);
+			this.Load += new System.EventHandler(this.LogOutControl_Load);
 			this.tabControl_msg.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Alarm)).EndInit();

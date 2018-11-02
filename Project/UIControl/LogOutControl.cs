@@ -21,7 +21,7 @@ namespace Project
 		/// <summary>
 		/// ui定时显示
 		/// </summary>
-		private System.Windows.Forms.Timer tag_ShowLogTimer;//
+		private Timer tag_ShowLogTimer;//
 															/// <summary>
 															/// 
 															/// </summary>
@@ -116,45 +116,6 @@ namespace Project
 		private void LogOutControl_Load(object sender, EventArgs e)
 		{
 
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void button_clean_Click(object sender, EventArgs e)
-		{
-			// richTextBox_log.Clear();
-		}
-
-		private void LogOutControl_SizeChanged(object sender, EventArgs e)
-		{
-			tabControl_msg.Location = new Point(0, 0);
-			tabControl_msg.Size = new Size(this.Size.Width - 2, this.Size.Height - 2);
-
-			dataGridView_Alarm.Location = new Point(0, 0);
-			dataGridView_Alarm.Size = new Size(tabControl_msg.Size.Width - 10, tabControl_msg.Size.Height - tabControl_msg.ItemSize.Height - 20);
-			dataGridView_Alarm.Columns[1].Width = dataGridView_Alarm.Width - dataGridView_Alarm.Columns[0].Width - 2;
-
-			dataGridView_Step.Location = new Point(0, 0);
-			dataGridView_Step.Size = new Size(tabControl_msg.Size.Width - 10, tabControl_msg.Size.Height - tabControl_msg.ItemSize.Height - 20);
-			dataGridView_Step.Columns[1].Width = dataGridView_Step.Width - dataGridView_Step.Columns[0].Width - 2;
-		}
-
-		private void tag_groupBox_Paint(object sender, PaintEventArgs e)
-		{
-			LogOutControl_SizeChanged(sender, e);
-		}
-
-		private void checkBox_stop_CheckedChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void button1_Click(object sender, EventArgs e)
-		{
-			tag_upmsg = null;
-			is_showMsg = 10;
 		}
 	}
 }

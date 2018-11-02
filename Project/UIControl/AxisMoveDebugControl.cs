@@ -331,7 +331,7 @@ namespace Project
 
 
 		//AxisDebugCtrl控件加载
-		private void AxisDebugCtrl_Load(object sender, EventArgs e)
+		private void AxisMoveDebugControl_Load(object sender, EventArgs e)
 		{
 
 			if (arrAxis != null)
@@ -344,21 +344,6 @@ namespace Project
 		//按下停止按钮
 		private void JogSTOPBT_Click(object sender, EventArgs e)
 		{
-			if (arrAxis != null)
-			{
-				//轴急停
-				resutl = NewCtrlCardV0.SR_AxisEmgStop((int)arrAxis.tag_MotionCardManufacturer, arrAxis.CardNum, arrAxis.AxisNum);
-				if (resutl != 0)
-				{
-					MessageBoxLog.Show("轴停止异常");
-				}
-
-			}
-			else
-			{
-				MessageBoxLog.Show("操作轴参数不能为空");
-
-			}
 
 		}
 

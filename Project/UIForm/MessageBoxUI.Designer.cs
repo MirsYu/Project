@@ -92,6 +92,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MessageBoxUI";
 			this.Text = "MessageBoxUI";
+			this.Load += new System.EventHandler(this.MessageBoxUI_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

@@ -42,6 +42,8 @@
 			this.listBoxInfon.Name = "listBoxInfon";
 			this.listBoxInfon.Size = new System.Drawing.Size(391, 244);
 			this.listBoxInfon.TabIndex = 1;
+			this.listBoxInfon.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBoxInfon_DrawItem);
+			this.listBoxInfon.DoubleClick += new System.EventHandler(this.listBoxInfon_DoubleClick);
 			// 
 			// ListInfoControl
 			// 

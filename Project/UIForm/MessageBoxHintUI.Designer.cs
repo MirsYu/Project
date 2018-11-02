@@ -54,6 +54,7 @@
 			this.button_Confirm.TabIndex = 5;
 			this.button_Confirm.Text = "确定";
 			this.button_Confirm.UseVisualStyleBackColor = true;
+			this.button_Confirm.Click += new System.EventHandler(this.button_Confirm_Click);
 			// 
 			// button_Yes
 			// 
@@ -89,6 +90,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "MessageBoxHintUI";
 			this.Text = "MessageBoxHintUI";
+			this.Load += new System.EventHandler(this.MessageBoxHintUI_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

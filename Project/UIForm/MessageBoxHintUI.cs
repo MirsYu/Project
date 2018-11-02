@@ -47,7 +47,7 @@ namespace Project
 
 		}
 
-		private void btnConfim_Click(object sender, EventArgs e)
+		private void button_Confirm_Click(object sender, EventArgs e)
 		{
 			if (sender == button_Yes)
 			{

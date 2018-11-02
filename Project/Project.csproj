@@ -62,7 +62,6 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net40-client\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -117,7 +116,169 @@
     <Compile Include="Motion\LEISAI\Dmc1000.cs" />
     <Compile Include="Motion\LEISAI\LTDMC.cs" />
     <Compile Include="Motion\LEISAI\NewCtrlCard_DMC1000B.cs" />
+    <Compile Include="UIControl\AxisSafetySetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\AxisSafetySetControl.Designer.cs">
+      <DependentUpon>AxisSafetySetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\AxisSetConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\AxisSetConfigControl.Designer.cs">
+      <DependentUpon>AxisSetConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\AxisSetLabelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\AxisSetLabelControl.Designer.cs">
+      <DependentUpon>AxisSetLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\GoHomeParameterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\GoHomeParameterControl.Designer.cs">
+      <DependentUpon>GoHomeParameterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\IOInputSetLabelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOInputSetLabelControl.Designer.cs">
+      <DependentUpon>IOInputSetLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\IOOutputSetLabelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOOutputSetLabelControl.Designer.cs">
+      <DependentUpon>IOOutputSetLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\IOSetPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOSetPanelControl.Designer.cs">
+      <DependentUpon>IOSetPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\PointDetailedSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\PointDetailedSetControl.Designer.cs">
+      <DependentUpon>PointDetailedSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\PointSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\PointSetControl.Designer.cs">
+      <DependentUpon>PointSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\PointSetLabelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\PointSetLabelControl.Designer.cs">
+      <DependentUpon>PointSetLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\AlarmUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\AlarmUI.Designer.cs">
+      <DependentUpon>AlarmUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\AxisManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\AxisManageUI.Designer.cs">
+      <DependentUpon>AxisManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\AxisSafetyManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\AxisSafetyManageUI.Designer.cs">
+      <DependentUpon>AxisSafetyManageUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\ChangePasswordUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\ChangePasswordUI.Designer.cs">
+      <DependentUpon>ChangePasswordUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\GoHomeParameterUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\GoHomeParameterUI.Designer.cs">
+      <DependentUpon>GoHomeParameterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\PointDebugSetUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\PointDebugSetUI.Designer.cs">
+      <DependentUpon>PointDebugSetUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\AxisSetUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\AxisSetUI.Designer.cs">
+      <DependentUpon>AxisSetUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\PointDetailedSetUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\PointDetailedSetUI.Designer.cs">
+      <DependentUpon>PointDetailedSetUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkManage\WorkObjectManager.cs" />
+    <EmbeddedResource Include="UIControl\AxisSafetySetControl.resx">
+      <DependentUpon>AxisSafetySetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\AxisSetConfigControl.resx">
+      <DependentUpon>AxisSetConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\AxisSetLabelControl.resx">
+      <DependentUpon>AxisSetLabelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\GoHomeParameterControl.resx">
+      <DependentUpon>GoHomeParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOInputSetLabelControl.resx">
+      <DependentUpon>IOInputSetLabelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOOutputSetLabelControl.resx">
+      <DependentUpon>IOOutputSetLabelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOSetPanelControl.resx">
+      <DependentUpon>IOSetPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\PointDetailedSetControl.resx">
+      <DependentUpon>PointDetailedSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\PointSetControl.resx">
+      <DependentUpon>PointSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\PointSetLabelControl.resx">
+      <DependentUpon>PointSetLabelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\AlarmUI.resx">
+      <DependentUpon>AlarmUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\AxisManageUI.resx">
+      <DependentUpon>AxisManageUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\AxisSafetyManageUI.resx">
+      <DependentUpon>AxisSafetyManageUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\ChangePasswordUI.resx">
+      <DependentUpon>ChangePasswordUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\GoHomeParameterUI.resx">
+      <DependentUpon>GoHomeParameterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\PointDebugSetUI.resx">
+      <DependentUpon>PointDebugSetUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\AxisSetUI.resx">
+      <DependentUpon>AxisSetUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\PointDetailedSetUI.resx">
+      <DependentUpon>PointDetailedSetUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Motion\LEISAI\NewCtrlCard_DMC1000B_A.cs" />
     <Compile Include="Motion\LEISAI\NewCtrlCard_DMC3000.cs" />
     <None Include="Motion\LEISAI\NewCtrlCard_DMC3000_a.cs" />

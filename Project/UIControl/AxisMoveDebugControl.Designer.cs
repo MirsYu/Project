@@ -133,6 +133,7 @@
 			this.JogSTOPBT.Size = new System.Drawing.Size(60, 28);
 			this.JogSTOPBT.TabIndex = 128;
 			this.JogSTOPBT.UseVisualStyleBackColor = true;
+			this.JogSTOPBT.Click += new System.EventHandler(this.JogSTOPBT_Click);
 			// 
 			// Jog_minusBT
 			// 
@@ -143,6 +144,8 @@
 			this.Jog_minusBT.Size = new System.Drawing.Size(60, 28);
 			this.Jog_minusBT.TabIndex = 125;
 			this.Jog_minusBT.UseVisualStyleBackColor = true;
+			this.Jog_minusBT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Jog_minusBT_MouseDown);
+			this.Jog_minusBT.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Jog_minusBT_MouseUp);
 			// 
 			// Jog_plusBT
 			// 
@@ -154,6 +157,8 @@
 			this.Jog_plusBT.Size = new System.Drawing.Size(60, 28);
 			this.Jog_plusBT.TabIndex = 124;
 			this.Jog_plusBT.UseVisualStyleBackColor = false;
+			this.Jog_plusBT.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Jog_plusBT_MouseDown);
+			this.Jog_plusBT.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Jog_plusBT_MouseUp);
 			// 
 			// lblMEL
 			// 
@@ -197,6 +202,7 @@
 			this.Controls.Add(this.lblORG);
 			this.Name = "AxisMoveDebugControl";
 			this.Size = new System.Drawing.Size(66, 237);
+			this.Load += new System.EventHandler(this.AxisMoveDebugControl_Load);
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
