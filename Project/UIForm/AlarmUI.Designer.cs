@@ -33,7 +33,7 @@
 			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.button1 = new System.Windows.Forms.Button();
+			this.button_Find = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.dateTimePicker_end = new System.Windows.Forms.DateTimePicker();
@@ -70,14 +70,15 @@
 			this.Column4.Name = "Column4";
 			this.Column4.Width = 970;
 			// 
-			// button1
+			// button_Find
 			// 
-			this.button1.Location = new System.Drawing.Point(455, -1);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(63, 23);
-			this.button1.TabIndex = 43;
-			this.button1.Text = "查询";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button_Find.Location = new System.Drawing.Point(451, 2);
+			this.button_Find.Name = "button_Find";
+			this.button_Find.Size = new System.Drawing.Size(63, 23);
+			this.button_Find.TabIndex = 43;
+			this.button_Find.Text = "查询";
+			this.button_Find.UseVisualStyleBackColor = true;
+			this.button_Find.Click += new System.EventHandler(this.button_Find_Click);
 			// 
 			// label3
 			// 
@@ -123,7 +124,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1077, 550);
 			this.Controls.Add(this.dataGridView1);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.button_Find);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.dateTimePicker_end);
@@ -131,6 +132,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "AlarmUI";
 			this.Text = "AlarmUI";
+			this.Load += new System.EventHandler(this.AlarmUI_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -143,7 +145,7 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button button_Find;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.DateTimePicker dateTimePicker_end;

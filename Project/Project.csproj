@@ -224,6 +224,12 @@
     <Compile Include="UIForm\PointDetailedSetUI.Designer.cs">
       <DependentUpon>PointDetailedSetUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIForm\WaitUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\WaitUI.Designer.cs">
+      <DependentUpon>WaitUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkManage\WorkObjectManager.cs" />
     <EmbeddedResource Include="UIControl\AxisSafetySetControl.resx">
       <DependentUpon>AxisSafetySetControl.cs</DependentUpon>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\PointDetailedSetUI.resx">
       <DependentUpon>PointDetailedSetUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\WaitUI.resx">
+      <DependentUpon>WaitUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Motion\LEISAI\NewCtrlCard_DMC1000B_A.cs" />
     <Compile Include="Motion\LEISAI\NewCtrlCard_DMC3000.cs" />
