@@ -282,8 +282,8 @@ namespace Project
 				CommandResult("GT_PrfTrap", sResult);
 				return shrFail;
 			}
-			tprm.acc = axisC.Acc;
-			tprm.dec = axisC.Acc;
+			tprm.acc = (point.dblPonitSpeed / 1000) / axisC.AccTime;
+			tprm.dec = (point.dblPonitSpeed / 1000) / axisC.DecTime;
 			tprm.smoothTime = 0;
 			//设置点位运动参数
 			sResult = mc.GT_SetTrapPrm(card, axis, ref tprm);
@@ -365,9 +365,9 @@ namespace Project
 				CommandResult("GT_PrfTrap", sResult);
 				return shrFail;
 			}
-			tprm.acc = af.Acc;
-			tprm.dec = af.Acc;
-			tprm.smoothTime = 0;
+			tprm.acc = vel / af.AccTime;
+			tprm.dec = vel / af.DecTime;
+			tprm.smoothTime = (short)af.tag_S_Time;
 			//设置点位运动参数
 			sResult = mc.GT_SetTrapPrm(card, axis, ref tprm);
 			if (sResult != shrGtsSuccess)
@@ -458,8 +458,8 @@ namespace Project
 				CommandResult("GT_PrfTrap", sResult);
 				return shrFail;
 			}
-			tprm.acc = axisC.Acc;
-			tprm.dec = axisC.Acc;
+			tprm.acc = (point.dblPonitSpeed / 1000) / axisC.AccTime;
+			tprm.dec = (point.dblPonitSpeed / 1000) / axisC.DecTime;
 			tprm.smoothTime = 0;
 			//设置点位运动参数
 			sResult = mc.GT_SetTrapPrm(card, axis, ref tprm);

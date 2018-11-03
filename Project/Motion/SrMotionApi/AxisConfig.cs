@@ -78,6 +78,25 @@ namespace Project
 
 
 
+		private double accTime = 100;            //加速度
+		public double AccTime
+		{
+			get { return accTime; }
+			set { accTime = value; }
+		}
+
+		private double decTime = 100;              //减速度
+		public double DecTime
+		{
+			get { return decTime; }
+			set { decTime = value; }
+		}
+
+
+
+
+
+
 
 		private double acc = 0.01;            //加速度
 		public double Acc
