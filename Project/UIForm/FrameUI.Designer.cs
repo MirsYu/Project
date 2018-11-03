@@ -43,6 +43,7 @@
 			this.MenuAlarm = new System.Windows.Forms.Button();
 			this.MenuManual = new System.Windows.Forms.Button();
 			this.MenuMain = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.pnlTitle.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -275,11 +276,22 @@
 			this.MenuMain.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.MenuMain.UseVisualStyleBackColor = false;
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(532, 266);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 2;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// FrameUI
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1161, 546);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.pnlTitle);
 			this.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -307,6 +319,7 @@
 		private System.Windows.Forms.Button MenuAlarm;
 		private System.Windows.Forms.Button MenuManual;
 		private System.Windows.Forms.Button MenuMain;
+		private System.Windows.Forms.Button button1;
 	}
 }
 

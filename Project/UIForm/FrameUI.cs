@@ -34,5 +34,13 @@ namespace Project
 		{
 			this.Invoke(new del(ShowMesg), mesg, showYesNO, title);
 		}
+
+
+
+		DebugUI debug = new DebugUI();
+		private void button1_Click(object sender, EventArgs e)
+		{
+			debug.Show();
+		}
 	}
 }

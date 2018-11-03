@@ -28,6 +28,19 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("节点6");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("节点7");
+			System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("节点8");
+			System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("节点9");
+			System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("节点10");
+			System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("节点11");
+			System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("节点5", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6});
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DebugUI));
 			this.tabCtrlDebug = new System.Windows.Forms.TabControl();
 			this.TabPagManual = new System.Windows.Forms.TabPage();
@@ -75,12 +88,17 @@
 			this.tabPage_port = new System.Windows.Forms.TabPage();
 			this.tabPage_Log = new System.Windows.Forms.TabPage();
 			this.textBox_Log = new System.Windows.Forms.TextBox();
+			this.tabPage_Flow = new System.Windows.Forms.TabPage();
+			this.treeView_FlowStruct = new System.Windows.Forms.TreeView();
+			this.comboBox_FlowName = new System.Windows.Forms.ComboBox();
+			this.textBox_FlowInfo = new System.Windows.Forms.TextBox();
 			this.tabCtrlDebug.SuspendLayout();
 			this.TabPagManual.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.PointDistance)).BeginInit();
 			this.CBioMessage.SuspendLayout();
 			this.AXISgroupBox.SuspendLayout();
 			this.tabPage_Log.SuspendLayout();
+			this.tabPage_Flow.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabCtrlDebug
@@ -93,6 +111,7 @@
 			this.tabCtrlDebug.Controls.Add(this.tabPage2);
 			this.tabCtrlDebug.Controls.Add(this.tabPage_port);
 			this.tabCtrlDebug.Controls.Add(this.tabPage_Log);
+			this.tabCtrlDebug.Controls.Add(this.tabPage_Flow);
 			this.tabCtrlDebug.Location = new System.Drawing.Point(3, 3);
 			this.tabCtrlDebug.Name = "tabCtrlDebug";
 			this.tabCtrlDebug.SelectedIndex = 0;
@@ -587,6 +606,59 @@
 			this.textBox_Log.Size = new System.Drawing.Size(796, 419);
 			this.textBox_Log.TabIndex = 0;
 			// 
+			// tabPage_Flow
+			// 
+			this.tabPage_Flow.Controls.Add(this.textBox_FlowInfo);
+			this.tabPage_Flow.Controls.Add(this.comboBox_FlowName);
+			this.tabPage_Flow.Controls.Add(this.treeView_FlowStruct);
+			this.tabPage_Flow.Location = new System.Drawing.Point(4, 22);
+			this.tabPage_Flow.Name = "tabPage_Flow";
+			this.tabPage_Flow.Size = new System.Drawing.Size(964, 544);
+			this.tabPage_Flow.TabIndex = 8;
+			this.tabPage_Flow.Text = "流程配置系统_测试";
+			this.tabPage_Flow.UseVisualStyleBackColor = true;
+			// 
+			// treeView_FlowStruct
+			// 
+			this.treeView_FlowStruct.Location = new System.Drawing.Point(42, 65);
+			this.treeView_FlowStruct.Name = "treeView_FlowStruct";
+			treeNode1.Name = "节点6";
+			treeNode1.Text = "节点6";
+			treeNode2.Name = "节点7";
+			treeNode2.Text = "节点7";
+			treeNode3.Name = "节点8";
+			treeNode3.Text = "节点8";
+			treeNode4.Name = "节点9";
+			treeNode4.Text = "节点9";
+			treeNode5.Name = "节点10";
+			treeNode5.Text = "节点10";
+			treeNode6.Name = "节点11";
+			treeNode6.Text = "节点11";
+			treeNode7.Name = "节点5";
+			treeNode7.Text = "节点5";
+			this.treeView_FlowStruct.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode7});
+			this.treeView_FlowStruct.Size = new System.Drawing.Size(284, 457);
+			this.treeView_FlowStruct.TabIndex = 0;
+			this.treeView_FlowStruct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView_FlowStruct_MouseDown);
+			// 
+			// comboBox_FlowName
+			// 
+			this.comboBox_FlowName.FormattingEnabled = true;
+			this.comboBox_FlowName.Location = new System.Drawing.Point(42, 19);
+			this.comboBox_FlowName.Name = "comboBox_FlowName";
+			this.comboBox_FlowName.Size = new System.Drawing.Size(284, 20);
+			this.comboBox_FlowName.TabIndex = 1;
+			this.comboBox_FlowName.SelectedIndexChanged += new System.EventHandler(this.comboBox_FlowName_SelectedIndexChanged);
+			// 
+			// textBox_FlowInfo
+			// 
+			this.textBox_FlowInfo.Location = new System.Drawing.Point(536, 65);
+			this.textBox_FlowInfo.Multiline = true;
+			this.textBox_FlowInfo.Name = "textBox_FlowInfo";
+			this.textBox_FlowInfo.Size = new System.Drawing.Size(379, 457);
+			this.textBox_FlowInfo.TabIndex = 2;
+			// 
 			// DebugUI
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -607,6 +679,8 @@
 			this.AXISgroupBox.PerformLayout();
 			this.tabPage_Log.ResumeLayout(false);
 			this.tabPage_Log.PerformLayout();
+			this.tabPage_Flow.ResumeLayout(false);
+			this.tabPage_Flow.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -659,5 +733,9 @@
 		private System.Windows.Forms.TabPage tabPage_port;
 		private System.Windows.Forms.TabPage tabPage_Log;
 		private System.Windows.Forms.TextBox textBox_Log;
+		private System.Windows.Forms.TabPage tabPage_Flow;
+		private System.Windows.Forms.ComboBox comboBox_FlowName;
+		private System.Windows.Forms.TreeView treeView_FlowStruct;
+		private System.Windows.Forms.TextBox textBox_FlowInfo;
 	}
 }
