@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Project.UIForm
+namespace Project
 {
 	public partial class AlarmUI : Form
 	{

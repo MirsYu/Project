@@ -134,11 +134,47 @@
     <Compile Include="UIControl\AxisSetLabelControl.Designer.cs">
       <DependentUpon>AxisSetLabelControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIControl\DebugOffsetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\DebugOffsetControl.Designer.cs">
+      <DependentUpon>DebugOffsetControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\GoHomeParameterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIControl\GoHomeParameterControl.Designer.cs">
       <DependentUpon>GoHomeParameterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\IOAllShowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOAllShowControl.Designer.cs">
+      <DependentUpon>IOAllShowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\IOInputSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOInputSetControl.Designer.cs">
+      <DependentUpon>IOInputSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\IOWaitSingleSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOWaitSingleSetControl.Designer.cs">
+      <DependentUpon>IOWaitSingleSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\Panel\IODebugSetPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\Panel\IODebugSetPanelControl.Designer.cs">
+      <DependentUpon>IODebugSetPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\PointAllShowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\PointAllShowControl.Designer.cs">
+      <DependentUpon>PointAllShowControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UIControl\IOInputSetLabelControl.cs">
       <SubType>UserControl</SubType>
@@ -158,6 +194,24 @@
     <Compile Include="UIControl\IOSetPanelControl.Designer.cs">
       <DependentUpon>IOSetPanelControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIControl\ModeSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\ModeSelectControl.Designer.cs">
+      <DependentUpon>ModeSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\Panel\SocketListPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\Panel\SocketListPanelControl.Designer.cs">
+      <DependentUpon>SocketListPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\Panel\StationModelPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\Panel\StationModelPanelControl.Designer.cs">
+      <DependentUpon>StationModelPanelControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\PointDetailedSetControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,6 +229,42 @@
     </Compile>
     <Compile Include="UIControl\PointSetLabelControl.Designer.cs">
       <DependentUpon>PointSetLabelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\Panel\PortSetPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\Panel\PortSetPanelControl.Designer.cs">
+      <DependentUpon>PortSetPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\PointValueControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\PointValueControl.Designer.cs">
+      <DependentUpon>PointValueControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\PortShowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\PortShowControl.Designer.cs">
+      <DependentUpon>PortShowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\StationTrialRunControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\StationTrialRunControl.Designer.cs">
+      <DependentUpon>StationTrialRunControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\WebControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\WebControl.Designer.cs">
+      <DependentUpon>WebControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\_SerialPortControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\_SerialPortControl.Designer.cs">
+      <DependentUpon>_SerialPortControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UIForm\AlarmUI.cs">
       <SubType>Form</SubType>
@@ -200,11 +290,24 @@
     <Compile Include="UIForm\ChangePasswordUI.Designer.cs">
       <DependentUpon>ChangePasswordUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIForm\FormAdaptive.cs" />
     <Compile Include="UIForm\GoHomeParameterUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UIForm\GoHomeParameterUI.Designer.cs">
       <DependentUpon>GoHomeParameterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\HomeWaitUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\HomeWaitUI.Designer.cs">
+      <DependentUpon>HomeWaitUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForm\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIForm\PointDebugSetUI.cs">
       <SubType>Form</SubType>
@@ -224,6 +327,12 @@
     <Compile Include="UIForm\PointDetailedSetUI.Designer.cs">
       <DependentUpon>PointDetailedSetUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIForm\PointIODelaySetUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\PointIODelaySetUI.Designer.cs">
+      <DependentUpon>PointIODelaySetUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIForm\WaitUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,8 +349,26 @@
     <EmbeddedResource Include="UIControl\AxisSetLabelControl.resx">
       <DependentUpon>AxisSetLabelControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\DebugOffsetControl.resx">
+      <DependentUpon>DebugOffsetControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\GoHomeParameterControl.resx">
       <DependentUpon>GoHomeParameterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOAllShowControl.resx">
+      <DependentUpon>IOAllShowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOInputSetControl.resx">
+      <DependentUpon>IOInputSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOWaitSingleSetControl.resx">
+      <DependentUpon>IOWaitSingleSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\Panel\IODebugSetPanelControl.resx">
+      <DependentUpon>IODebugSetPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\PointAllShowControl.resx">
+      <DependentUpon>PointAllShowControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\IOInputSetLabelControl.resx">
       <DependentUpon>IOInputSetLabelControl.cs</DependentUpon>
@@ -252,6 +379,12 @@
     <EmbeddedResource Include="UIControl\IOSetPanelControl.resx">
       <DependentUpon>IOSetPanelControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\ModeSelectControl.resx">
+      <DependentUpon>ModeSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\Panel\SocketListPanelControl.resx">
+      <DependentUpon>SocketListPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\PointDetailedSetControl.resx">
       <DependentUpon>PointDetailedSetControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +393,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\PointSetLabelControl.resx">
       <DependentUpon>PointSetLabelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\Panel\PortSetPanelControl.resx">
+      <DependentUpon>PortSetPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\PointValueControl.resx">
+      <DependentUpon>PointValueControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\PortShowControl.resx">
+      <DependentUpon>PortShowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\StationTrialRunControl.resx">
+      <DependentUpon>StationTrialRunControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\WebControl.resx">
+      <DependentUpon>WebControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\_SerialPortControl.resx">
+      <DependentUpon>_SerialPortControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\AlarmUI.resx">
       <DependentUpon>AlarmUI.cs</DependentUpon>
@@ -276,6 +427,12 @@
     <EmbeddedResource Include="UIForm\GoHomeParameterUI.resx">
       <DependentUpon>GoHomeParameterUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\HomeWaitUI.resx">
+      <DependentUpon>HomeWaitUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIForm\PointDebugSetUI.resx">
       <DependentUpon>PointDebugSetUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +441,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\PointDetailedSetUI.resx">
       <DependentUpon>PointDetailedSetUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\PointIODelaySetUI.resx">
+      <DependentUpon>PointIODelaySetUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\WaitUI.resx">
       <DependentUpon>WaitUI.cs</DependentUpon>
@@ -443,8 +603,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DY.Core.dll" />
-    <Content Include="LogConfig.xml" />
+    <Content Include="DY.Core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LogConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Motion\LEISAI\Dmc1000.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -741,6 +905,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

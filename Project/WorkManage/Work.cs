@@ -46,7 +46,7 @@ namespace Project
 			{
 				tag_JSerialPort.Add(new JSerialPort(null, pp));
 			}
-			foreach (IPConfig pp in _Config.tag_IPAdrrList)
+			foreach (IPConfig pp in _Config.tag_IPConfigList)
 			{
 				tag_SocketClient.Add(new SocketClient(pp));
 			}

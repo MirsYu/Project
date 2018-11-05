@@ -1,4 +1,4 @@
-﻿namespace Project.UIForm
+﻿namespace Project
 {
 	partial class AlarmUI
 	{

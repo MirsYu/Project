@@ -12,8 +12,27 @@ namespace Project
 {
 	public partial class DebugUI : Form
 	{
-		private static readonly ILog log = LogManager.GetLogger("DebugUI.cs");
+		#region 全局
+		public string tag_stationName;
 		public StationModule tag_StationModule;
+		public List<AxisMoveDebugControl> tag_AxisConfigList = new List<AxisMoveDebugControl>();
+
+		public static Work worker;
+		#endregion
+
+		#region 私有
+		private FrameUI frameUI = null;
+		private DebugOffsetControl debugOffsetControl = new DebugOffsetControl();
+		private PointAllShowControl pointAllShowControl = new PointAllShowControl();
+		private PortSetPanelControl portSetPanelControl = new PortSetPanelControl();
+		private SocketListPanelControl socketListPanelControl = new SocketListPanelControl();
+		private StationModelPanelControl stationModelPanelControl = new StationModelPanelControl();
+
+
+		private AxisConfig arrAxis;
+		private IOParameter arrInputIo;
+		private IOParameter arrOutputIo;
+		private PointAggregate tag_PointAggregate;
 
 		/// <summary>
 		/// 父节点
@@ -25,10 +44,80 @@ namespace Project
 		/// </summary>
 		TreeNode chlid;
 
+		private static readonly ILog log = LogManager.GetLogger("DebugUI.cs");
+		#endregion
+
+
 		public DebugUI()
 		{
 			InitializeComponent();
 			this.DoubleBuffered = true;
+		}
+
+		public DebugUI(FrameUI frameUI, Work _work)
+		{
+			this.frameUI = frameUI;
+			worker = _work;
+			InitializeComponent();
+			UiInit();
+			ucL_StationMotion1.tag_Work = worker;
+			userControl1_offset1.tag_work = worker;
+
+			// Input IO点加入
+			for (int i = 0; i < 100; i++)
+			{
+				IOinputStatus pvale = new IOinputStatus(null);
+				pvale.Location = new Point(5, 24 + 28 * i);
+				tag_IOinputStatusList.Add(pvale);
+				pvale.Visible = false;
+				plIOmessage.Controls.Add(pvale);
+			}
+
+			// Outpu IO点加入
+			for (int i = 0; i < 100; i++)
+			{
+				IOoutputStatus pvale = new IOoutputStatus(null, OutIOStationSelect);
+				pvale.Location = new Point(200, 24 + 28 * i);
+				tag_IOIOoutputStatus.Add(pvale);
+				pvale.Visible = false;
+				plIOmessage.Controls.Add(pvale);
+			}
+		}
+
+		public void UiInit()
+		{
+			pointAllShowControl = new IOAllShowControl();
+			userControl_portPerameter1 = new UserCtrl.UserControl_portPerameter();
+			ucL_StationMotion1 = new StrongProject.UCL_StationMotion();
+			userControl_socketList1 = new UserControl_socketList();
+			userControl_configIni1 = new StrongProject.UserControl_configIni();
+			userControl1_offset1 = new StrongProject.UserControl1_offset();
+			ioAllShow1 = new IoAllShow();
+
+			pointAllShowControl.tag_Work = worker;
+			userControl_portPerameter1.tag_Work = worker;
+			userControl_socketList1.tag_Work = worker;
+			ucL_StationMotion1.tag_Work = worker;
+
+			TabPagManual.Controls.Add(userControl_ShowAllPoint1);
+			tabPage_automatic.Controls.Add(ioAllShow1);
+			tabPage1.Controls.Add(ucL_StationMotion1);
+			//userControl1_offset1.tag_work = worker;
+			tabPage_config.Controls.Add(userControl1_offset1);
+			tabPage_PortSetting.Controls.Add(userControl_portPerameter1);
+			TabPagConnect.Controls.Add(userControl_socketList1);
+
+			userControl_portPerameter1.Location = new Point(0, 0);
+			userControl_socketList1.Location = new Point(0, 0);
+			userControl_portPerameter1.Size = new Size(TabPagConnect.Size.Width, TabPagConnect.Size.Height);
+			userControl_socketList1.Size = new Size(TabPagConnect.Size.Width, TabPagConnect.Size.Height);
+
+			ioAllShow1.Location = new Point(0, 0);
+			ioAllShow1.Size = new Size(tabPage_automatic.Size.Width, tabPage_automatic.Size.Height - 10);
+			userControl_ShowAllPoint1.tag_Work = worker;
+			userControl_ShowAllPoint1.Location = new Point(0, CBStnChioce.Location.Y + CBStnChioce.Size.Height + 10);
+			userControl_ShowAllPoint1.Size = new Size(userControl_ShowAllPoint1.Size.Width - 100, tabCtrlDebug.Size.Height + 30);
+			Console.SetOut(new ConsoleOut(textBox_Log));
 		}
 
 		private void comboBox_FlowName_SelectedIndexChanged(object sender, EventArgs e)

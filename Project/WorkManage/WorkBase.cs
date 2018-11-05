@@ -23,10 +23,11 @@ namespace Project
 		/// <summary>
 		/// 判断是否是复位工位,0:不是，1:是
 		/// </summary>
-		public int tag_isRestStation;//
-									 /// <summary>
-									 /// 工位名
-									 /// </summary>
+		public int tag_isRestStation;
+
+		/// <summary>
+		/// 工位名
+		/// </summary>
 		public string tag_stationName;
 
 		/// <summary>

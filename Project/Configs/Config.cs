@@ -59,7 +59,7 @@ namespace Project
 		/// <summary>
 		/// IP列表保存的列表 
 		/// </summary>
-		public List<IPConfig> tag_IPAdrrList;
+		public List<IPConfig> tag_IPConfigList;
 
 		/// <summary>
 		/// 每个项目独自保存的数据
@@ -124,13 +124,13 @@ namespace Project
 			{
 				_Config.tag_PrivateSave = new PrivateSave();
 			}
-			if (_Config.tag_IPAdrrList == null)
+			if (_Config.tag_IPConfigList == null)
 			{
-				_Config.tag_IPAdrrList = new List<IPConfig>();
+				_Config.tag_IPConfigList = new List<IPConfig>();
 				for (int j = 0; j < 2; j++)
 				{
 					IPConfig pp = new IPConfig();
-					_Config.tag_IPAdrrList.Add(pp);
+					_Config.tag_IPConfigList.Add(pp);
 				}
 			}
 			if (_Config.arrWorkStation == null)
@@ -177,13 +177,13 @@ namespace Project
 			{
 				_Config.tag_PrivateSave = new PrivateSave();
 			}
-			if (_Config.tag_IPAdrrList == null)
+			if (_Config.tag_IPConfigList == null)
 			{
-				_Config.tag_IPAdrrList = new List<IPConfig>();
+				_Config.tag_IPConfigList = new List<IPConfig>();
 				for (int j = 0; j < 2; j++)
 				{
 					IPConfig pp = new IPConfig();
-					_Config.tag_IPAdrrList.Add(pp);
+					_Config.tag_IPConfigList.Add(pp);
 				}
 			}
 			if (_Config.arrWorkStation == null)

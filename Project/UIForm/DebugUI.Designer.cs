@@ -85,13 +85,13 @@
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage_config = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.tabPage_port = new System.Windows.Forms.TabPage();
+			this.tabPage_PortSetting = new System.Windows.Forms.TabPage();
 			this.tabPage_Log = new System.Windows.Forms.TabPage();
 			this.textBox_Log = new System.Windows.Forms.TextBox();
 			this.tabPage_Flow = new System.Windows.Forms.TabPage();
-			this.treeView_FlowStruct = new System.Windows.Forms.TreeView();
-			this.comboBox_FlowName = new System.Windows.Forms.ComboBox();
 			this.textBox_FlowInfo = new System.Windows.Forms.TextBox();
+			this.comboBox_FlowName = new System.Windows.Forms.ComboBox();
+			this.treeView_FlowStruct = new System.Windows.Forms.TreeView();
 			this.tabCtrlDebug.SuspendLayout();
 			this.TabPagManual.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.PointDistance)).BeginInit();
@@ -109,7 +109,7 @@
 			this.tabCtrlDebug.Controls.Add(this.tabPage1);
 			this.tabCtrlDebug.Controls.Add(this.tabPage_config);
 			this.tabCtrlDebug.Controls.Add(this.tabPage2);
-			this.tabCtrlDebug.Controls.Add(this.tabPage_port);
+			this.tabCtrlDebug.Controls.Add(this.tabPage_PortSetting);
 			this.tabCtrlDebug.Controls.Add(this.tabPage_Log);
 			this.tabCtrlDebug.Controls.Add(this.tabPage_Flow);
 			this.tabCtrlDebug.Location = new System.Drawing.Point(3, 3);
@@ -578,15 +578,15 @@
 			this.tabPage2.Text = "参数保存";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
-			// tabPage_port
+			// tabPage_PortSetting
 			// 
-			this.tabPage_port.Location = new System.Drawing.Point(4, 22);
-			this.tabPage_port.Name = "tabPage_port";
-			this.tabPage_port.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage_port.Size = new System.Drawing.Size(964, 544);
-			this.tabPage_port.TabIndex = 6;
-			this.tabPage_port.Text = "串口通行配置";
-			this.tabPage_port.UseVisualStyleBackColor = true;
+			this.tabPage_PortSetting.Location = new System.Drawing.Point(4, 22);
+			this.tabPage_PortSetting.Name = "tabPage_PortSetting";
+			this.tabPage_PortSetting.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage_PortSetting.Size = new System.Drawing.Size(964, 544);
+			this.tabPage_PortSetting.TabIndex = 6;
+			this.tabPage_PortSetting.Text = "串口配置";
+			this.tabPage_PortSetting.UseVisualStyleBackColor = true;
 			// 
 			// tabPage_Log
 			// 
@@ -618,6 +618,23 @@
 			this.tabPage_Flow.Text = "流程配置系统_测试";
 			this.tabPage_Flow.UseVisualStyleBackColor = true;
 			// 
+			// textBox_FlowInfo
+			// 
+			this.textBox_FlowInfo.Location = new System.Drawing.Point(536, 65);
+			this.textBox_FlowInfo.Multiline = true;
+			this.textBox_FlowInfo.Name = "textBox_FlowInfo";
+			this.textBox_FlowInfo.Size = new System.Drawing.Size(379, 457);
+			this.textBox_FlowInfo.TabIndex = 2;
+			// 
+			// comboBox_FlowName
+			// 
+			this.comboBox_FlowName.FormattingEnabled = true;
+			this.comboBox_FlowName.Location = new System.Drawing.Point(42, 19);
+			this.comboBox_FlowName.Name = "comboBox_FlowName";
+			this.comboBox_FlowName.Size = new System.Drawing.Size(284, 20);
+			this.comboBox_FlowName.TabIndex = 1;
+			this.comboBox_FlowName.SelectedIndexChanged += new System.EventHandler(this.comboBox_FlowName_SelectedIndexChanged);
+			// 
 			// treeView_FlowStruct
 			// 
 			this.treeView_FlowStruct.Location = new System.Drawing.Point(42, 65);
@@ -641,23 +658,6 @@
 			this.treeView_FlowStruct.Size = new System.Drawing.Size(284, 457);
 			this.treeView_FlowStruct.TabIndex = 0;
 			this.treeView_FlowStruct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView_FlowStruct_MouseDown);
-			// 
-			// comboBox_FlowName
-			// 
-			this.comboBox_FlowName.FormattingEnabled = true;
-			this.comboBox_FlowName.Location = new System.Drawing.Point(42, 19);
-			this.comboBox_FlowName.Name = "comboBox_FlowName";
-			this.comboBox_FlowName.Size = new System.Drawing.Size(284, 20);
-			this.comboBox_FlowName.TabIndex = 1;
-			this.comboBox_FlowName.SelectedIndexChanged += new System.EventHandler(this.comboBox_FlowName_SelectedIndexChanged);
-			// 
-			// textBox_FlowInfo
-			// 
-			this.textBox_FlowInfo.Location = new System.Drawing.Point(536, 65);
-			this.textBox_FlowInfo.Multiline = true;
-			this.textBox_FlowInfo.Name = "textBox_FlowInfo";
-			this.textBox_FlowInfo.Size = new System.Drawing.Size(379, 457);
-			this.textBox_FlowInfo.TabIndex = 2;
 			// 
 			// DebugUI
 			// 
@@ -730,7 +730,7 @@
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.TabPage tabPage_config;
 		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.TabPage tabPage_port;
+		private System.Windows.Forms.TabPage tabPage_PortSetting;
 		private System.Windows.Forms.TabPage tabPage_Log;
 		private System.Windows.Forms.TextBox textBox_Log;
 		private System.Windows.Forms.TabPage tabPage_Flow;

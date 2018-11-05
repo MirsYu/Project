@@ -1,4 +1,4 @@
-﻿namespace Project.UIForm
+﻿namespace Project
 {
 	partial class MainUI
 	{
@@ -31,64 +31,60 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUI));
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.lblStatus = new System.Windows.Forms.Label();
-			this.plFx2 = new System.Windows.Forms.Panel();
-			this.label47 = new System.Windows.Forms.Label();
-			this.plFx10 = new System.Windows.Forms.Panel();
-			this.plFx7 = new System.Windows.Forms.Panel();
-			this.label43 = new System.Windows.Forms.Label();
-			this.plFx6 = new System.Windows.Forms.Panel();
-			this.label40 = new System.Windows.Forms.Label();
-			this.plFx3 = new System.Windows.Forms.Panel();
-			this.plFx4 = new System.Windows.Forms.Panel();
-			this.label42 = new System.Windows.Forms.Label();
-			this.plFx5 = new System.Windows.Forms.Panel();
-			this.label41 = new System.Windows.Forms.Label();
-			this.label46 = new System.Windows.Forms.Label();
-			this.plFx9 = new System.Windows.Forms.Panel();
-			this.label38 = new System.Windows.Forms.Label();
-			this.label25 = new System.Windows.Forms.Label();
-			this.plFx12 = new System.Windows.Forms.Panel();
-			this.label45 = new System.Windows.Forms.Label();
-			this.plFx8 = new System.Windows.Forms.Panel();
-			this.label44 = new System.Windows.Forms.Label();
-			this.label19 = new System.Windows.Forms.Label();
 			this.plFx11 = new System.Windows.Forms.Panel();
+			this.label19 = new System.Windows.Forms.Label();
+			this.label44 = new System.Windows.Forms.Label();
+			this.plFx8 = new System.Windows.Forms.Panel();
+			this.label45 = new System.Windows.Forms.Label();
+			this.plFx6 = new System.Windows.Forms.Panel();
+			this.label43 = new System.Windows.Forms.Label();
+			this.plFx7 = new System.Windows.Forms.Panel();
+			this.plFx10 = new System.Windows.Forms.Panel();
+			this.label47 = new System.Windows.Forms.Label();
+			this.plFx12 = new System.Windows.Forms.Panel();
+			this.label25 = new System.Windows.Forms.Label();
+			this.label38 = new System.Windows.Forms.Label();
+			this.plFx9 = new System.Windows.Forms.Panel();
+			this.label46 = new System.Windows.Forms.Label();
+			this.label41 = new System.Windows.Forms.Label();
+			this.plFx5 = new System.Windows.Forms.Panel();
+			this.label42 = new System.Windows.Forms.Label();
+			this.plFx4 = new System.Windows.Forms.Panel();
+			this.plFx3 = new System.Windows.Forms.Panel();
+			this.label40 = new System.Windows.Forms.Label();
+			this.plFx2 = new System.Windows.Forms.Panel();
+			this.label39 = new System.Windows.Forms.Label();
+			this.plFx1 = new System.Windows.Forms.Panel();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.plTray4 = new System.Windows.Forms.Panel();
+			this.plTray8 = new System.Windows.Forms.Panel();
+			this.plTray12 = new System.Windows.Forms.Panel();
+			this.plTray16 = new System.Windows.Forms.Panel();
+			this.plTray3 = new System.Windows.Forms.Panel();
+			this.plTray7 = new System.Windows.Forms.Panel();
+			this.plTray11 = new System.Windows.Forms.Panel();
+			this.plTray15 = new System.Windows.Forms.Panel();
+			this.plTray2 = new System.Windows.Forms.Panel();
+			this.plTray6 = new System.Windows.Forms.Panel();
+			this.plTray10 = new System.Windows.Forms.Panel();
+			this.plTray14 = new System.Windows.Forms.Panel();
+			this.plTray1 = new System.Windows.Forms.Panel();
+			this.plTray5 = new System.Windows.Forms.Panel();
+			this.plTray9 = new System.Windows.Forms.Panel();
+			this.plTray13 = new System.Windows.Forms.Panel();
+			this.label_Status = new System.Windows.Forms.Label();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-			this.bterrorCODE = new System.Windows.Forms.Button();
-			this.alramTime = new System.Windows.Forms.Button();
-			this.uphCount = new System.Windows.Forms.Button();
-			this.btTossingCount = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.plTray14 = new System.Windows.Forms.Panel();
-			this.txtNgTotal = new System.Windows.Forms.TextBox();
-			this.txtTotal = new System.Windows.Forms.TextBox();
-			this.btnQtyClear = new System.Windows.Forms.Button();
-			this.FormStatus = new System.Windows.Forms.Timer(this.components);
-			this.cbUpBktTrayFinish = new System.Windows.Forms.CheckBox();
+			this.button_Clear = new System.Windows.Forms.Button();
 			this.cbClearBktTrayFinish = new System.Windows.Forms.CheckBox();
-			this.plTray13 = new System.Windows.Forms.Panel();
-			this.plTray9 = new System.Windows.Forms.Panel();
-			this.plTray5 = new System.Windows.Forms.Panel();
-			this.plTray1 = new System.Windows.Forms.Panel();
-			this.plTray10 = new System.Windows.Forms.Panel();
-			this.plFx1 = new System.Windows.Forms.Panel();
-			this.plTray6 = new System.Windows.Forms.Panel();
-			this.plTray2 = new System.Windows.Forms.Panel();
-			this.plTray15 = new System.Windows.Forms.Panel();
-			this.plTray11 = new System.Windows.Forms.Panel();
-			this.plTray7 = new System.Windows.Forms.Panel();
-			this.plTray3 = new System.Windows.Forms.Panel();
-			this.plTray16 = new System.Windows.Forms.Panel();
-			this.plTray12 = new System.Windows.Forms.Panel();
-			this.plTray8 = new System.Windows.Forms.Panel();
-			this.plTray4 = new System.Windows.Forms.Panel();
-			this.label39 = new System.Windows.Forms.Label();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.cbUpBktTrayFinish = new System.Windows.Forms.CheckBox();
+			this.panel_Charts = new System.Windows.Forms.Panel();
+			this.txtTotal = new System.Windows.Forms.TextBox();
+			this.txtNgTotal = new System.Windows.Forms.TextBox();
+			this.FormStatus = new System.Windows.Forms.Timer(this.components);
+			this.groupBox_RunMessage = new System.Windows.Forms.GroupBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
@@ -218,19 +214,27 @@
 			this.lineShape23 = new Microsoft.VisualBasic.PowerPacks.LineShape();
 			this.lineShape24 = new Microsoft.VisualBasic.PowerPacks.LineShape();
 			this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+			this.btTossingCount = new System.Windows.Forms.Button();
+			this.uphCount = new System.Windows.Forms.Button();
+			this.alramTime = new System.Windows.Forms.Button();
+			this.bterrorCODE = new System.Windows.Forms.Button();
+			this.panel_NG = new System.Windows.Forms.Panel();
+			this.label26 = new System.Windows.Forms.Label();
+			this.timer_MainUI = new System.Windows.Forms.Timer(this.components);
 			this.groupBox1.SuspendLayout();
-			this.groupBox3.SuspendLayout();
-			this.plFx2.SuspendLayout();
-			this.plFx10.SuspendLayout();
-			this.plFx6.SuspendLayout();
-			this.plFx3.SuspendLayout();
-			this.plFx5.SuspendLayout();
-			this.plFx9.SuspendLayout();
-			this.plFx12.SuspendLayout();
-			this.plFx8.SuspendLayout();
 			this.plFx11.SuspendLayout();
+			this.plFx8.SuspendLayout();
+			this.plFx6.SuspendLayout();
+			this.plFx10.SuspendLayout();
+			this.plFx12.SuspendLayout();
+			this.plFx9.SuspendLayout();
+			this.plFx5.SuspendLayout();
+			this.plFx3.SuspendLayout();
+			this.plFx2.SuspendLayout();
+			this.groupBox3.SuspendLayout();
 			this.panel1.SuspendLayout();
-			this.panel2.SuspendLayout();
+			this.panel_Charts.SuspendLayout();
+			this.panel_NG.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -260,6 +264,259 @@
 			this.groupBox1.TabIndex = 353;
 			this.groupBox1.TabStop = false;
 			// 
+			// plFx11
+			// 
+			this.plFx11.BackColor = System.Drawing.Color.White;
+			this.plFx11.Controls.Add(this.label19);
+			this.plFx11.Location = new System.Drawing.Point(98, 154);
+			this.plFx11.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx11.Name = "plFx11";
+			this.plFx11.Size = new System.Drawing.Size(38, 24);
+			this.plFx11.TabIndex = 324;
+			// 
+			// label19
+			// 
+			this.label19.AutoSize = true;
+			this.label19.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label19.Location = new System.Drawing.Point(10, 4);
+			this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label19.Name = "label19";
+			this.label19.Size = new System.Drawing.Size(19, 15);
+			this.label19.TabIndex = 333;
+			this.label19.Text = "11";
+			// 
+			// label44
+			// 
+			this.label44.AutoSize = true;
+			this.label44.BackColor = System.Drawing.Color.White;
+			this.label44.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label44.Location = new System.Drawing.Point(179, 119);
+			this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label44.Name = "label44";
+			this.label44.Size = new System.Drawing.Size(13, 15);
+			this.label44.TabIndex = 333;
+			this.label44.Text = "7";
+			// 
+			// plFx8
+			// 
+			this.plFx8.BackColor = System.Drawing.Color.White;
+			this.plFx8.Controls.Add(this.label45);
+			this.plFx8.Location = new System.Drawing.Point(98, 115);
+			this.plFx8.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx8.Name = "plFx8";
+			this.plFx8.Size = new System.Drawing.Size(38, 24);
+			this.plFx8.TabIndex = 324;
+			// 
+			// label45
+			// 
+			this.label45.AutoSize = true;
+			this.label45.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label45.Location = new System.Drawing.Point(12, 4);
+			this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label45.Name = "label45";
+			this.label45.Size = new System.Drawing.Size(13, 15);
+			this.label45.TabIndex = 333;
+			this.label45.Text = "8";
+			// 
+			// plFx6
+			// 
+			this.plFx6.BackColor = System.Drawing.Color.White;
+			this.plFx6.Controls.Add(this.label43);
+			this.plFx6.Location = new System.Drawing.Point(27, 75);
+			this.plFx6.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx6.Name = "plFx6";
+			this.plFx6.Size = new System.Drawing.Size(38, 24);
+			this.plFx6.TabIndex = 324;
+			// 
+			// label43
+			// 
+			this.label43.AutoSize = true;
+			this.label43.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label43.Location = new System.Drawing.Point(10, 5);
+			this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label43.Name = "label43";
+			this.label43.Size = new System.Drawing.Size(13, 15);
+			this.label43.TabIndex = 333;
+			this.label43.Text = "6";
+			// 
+			// plFx7
+			// 
+			this.plFx7.BackColor = System.Drawing.Color.White;
+			this.plFx7.Location = new System.Drawing.Point(167, 114);
+			this.plFx7.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx7.Name = "plFx7";
+			this.plFx7.Size = new System.Drawing.Size(38, 24);
+			this.plFx7.TabIndex = 324;
+			// 
+			// plFx10
+			// 
+			this.plFx10.BackColor = System.Drawing.Color.White;
+			this.plFx10.Controls.Add(this.label47);
+			this.plFx10.Location = new System.Drawing.Point(167, 153);
+			this.plFx10.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx10.Name = "plFx10";
+			this.plFx10.Size = new System.Drawing.Size(38, 26);
+			this.plFx10.TabIndex = 324;
+			// 
+			// label47
+			// 
+			this.label47.AutoSize = true;
+			this.label47.BackColor = System.Drawing.Color.White;
+			this.label47.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label47.Location = new System.Drawing.Point(9, 5);
+			this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label47.Name = "label47";
+			this.label47.Size = new System.Drawing.Size(19, 15);
+			this.label47.TabIndex = 333;
+			this.label47.Text = "10";
+			// 
+			// plFx12
+			// 
+			this.plFx12.BackColor = System.Drawing.Color.White;
+			this.plFx12.Controls.Add(this.label25);
+			this.plFx12.Location = new System.Drawing.Point(27, 154);
+			this.plFx12.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx12.Name = "plFx12";
+			this.plFx12.Size = new System.Drawing.Size(38, 24);
+			this.plFx12.TabIndex = 324;
+			// 
+			// label25
+			// 
+			this.label25.AutoSize = true;
+			this.label25.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label25.Location = new System.Drawing.Point(9, 4);
+			this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label25.Name = "label25";
+			this.label25.Size = new System.Drawing.Size(19, 15);
+			this.label25.TabIndex = 333;
+			this.label25.Text = "12";
+			// 
+			// label38
+			// 
+			this.label38.AutoSize = true;
+			this.label38.BackColor = System.Drawing.Color.White;
+			this.label38.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label38.Location = new System.Drawing.Point(179, 37);
+			this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label38.Name = "label38";
+			this.label38.Size = new System.Drawing.Size(13, 15);
+			this.label38.TabIndex = 333;
+			this.label38.Text = "1";
+			// 
+			// plFx9
+			// 
+			this.plFx9.BackColor = System.Drawing.Color.White;
+			this.plFx9.Controls.Add(this.label46);
+			this.plFx9.Location = new System.Drawing.Point(27, 115);
+			this.plFx9.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx9.Name = "plFx9";
+			this.plFx9.Size = new System.Drawing.Size(38, 24);
+			this.plFx9.TabIndex = 324;
+			// 
+			// label46
+			// 
+			this.label46.AutoSize = true;
+			this.label46.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label46.Location = new System.Drawing.Point(12, 3);
+			this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label46.Name = "label46";
+			this.label46.Size = new System.Drawing.Size(13, 15);
+			this.label46.TabIndex = 333;
+			this.label46.Text = "9";
+			// 
+			// label41
+			// 
+			this.label41.AutoSize = true;
+			this.label41.BackColor = System.Drawing.Color.White;
+			this.label41.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label41.Location = new System.Drawing.Point(179, 78);
+			this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label41.Name = "label41";
+			this.label41.Size = new System.Drawing.Size(13, 15);
+			this.label41.TabIndex = 333;
+			this.label41.Text = "4";
+			// 
+			// plFx5
+			// 
+			this.plFx5.BackColor = System.Drawing.Color.White;
+			this.plFx5.Controls.Add(this.label42);
+			this.plFx5.Location = new System.Drawing.Point(98, 75);
+			this.plFx5.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx5.Name = "plFx5";
+			this.plFx5.Size = new System.Drawing.Size(38, 24);
+			this.plFx5.TabIndex = 324;
+			// 
+			// label42
+			// 
+			this.label42.AutoSize = true;
+			this.label42.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label42.Location = new System.Drawing.Point(11, 3);
+			this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label42.Name = "label42";
+			this.label42.Size = new System.Drawing.Size(13, 15);
+			this.label42.TabIndex = 333;
+			this.label42.Text = "5";
+			// 
+			// plFx4
+			// 
+			this.plFx4.BackColor = System.Drawing.Color.White;
+			this.plFx4.Location = new System.Drawing.Point(167, 74);
+			this.plFx4.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx4.Name = "plFx4";
+			this.plFx4.Size = new System.Drawing.Size(38, 24);
+			this.plFx4.TabIndex = 324;
+			// 
+			// plFx3
+			// 
+			this.plFx3.BackColor = System.Drawing.Color.White;
+			this.plFx3.Controls.Add(this.label40);
+			this.plFx3.Location = new System.Drawing.Point(27, 34);
+			this.plFx3.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx3.Name = "plFx3";
+			this.plFx3.Size = new System.Drawing.Size(38, 24);
+			this.plFx3.TabIndex = 324;
+			// 
+			// label40
+			// 
+			this.label40.AutoSize = true;
+			this.label40.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label40.Location = new System.Drawing.Point(10, 2);
+			this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label40.Name = "label40";
+			this.label40.Size = new System.Drawing.Size(13, 15);
+			this.label40.TabIndex = 333;
+			this.label40.Text = "3";
+			// 
+			// plFx2
+			// 
+			this.plFx2.BackColor = System.Drawing.Color.White;
+			this.plFx2.Controls.Add(this.label39);
+			this.plFx2.Location = new System.Drawing.Point(98, 34);
+			this.plFx2.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx2.Name = "plFx2";
+			this.plFx2.Size = new System.Drawing.Size(38, 24);
+			this.plFx2.TabIndex = 324;
+			// 
+			// label39
+			// 
+			this.label39.AutoSize = true;
+			this.label39.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label39.Location = new System.Drawing.Point(11, 2);
+			this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label39.Name = "label39";
+			this.label39.Size = new System.Drawing.Size(13, 15);
+			this.label39.TabIndex = 333;
+			this.label39.Text = "2";
+			// 
+			// plFx1
+			// 
+			this.plFx1.BackColor = System.Drawing.Color.White;
+			this.plFx1.Location = new System.Drawing.Point(167, 33);
+			this.plFx1.Margin = new System.Windows.Forms.Padding(2);
+			this.plFx1.Name = "plFx1";
+			this.plFx1.Size = new System.Drawing.Size(38, 24);
+			this.plFx1.TabIndex = 324;
+			// 
 			// groupBox3
 			// 
 			this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(243)))), ((int)(((byte)(247)))));
@@ -288,319 +545,166 @@
 			this.groupBox3.TabIndex = 354;
 			this.groupBox3.TabStop = false;
 			// 
-			// lblStatus
+			// plTray4
 			// 
-			this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-			this.lblStatus.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.lblStatus.Location = new System.Drawing.Point(698, 39);
-			this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.lblStatus.Name = "lblStatus";
-			this.lblStatus.Size = new System.Drawing.Size(232, 71);
-			this.lblStatus.TabIndex = 355;
-			this.lblStatus.Text = "待复位";
-			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.plTray4.BackColor = System.Drawing.Color.White;
+			this.plTray4.Location = new System.Drawing.Point(156, 152);
+			this.plTray4.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray4.Name = "plTray4";
+			this.plTray4.Size = new System.Drawing.Size(38, 24);
+			this.plTray4.TabIndex = 324;
 			// 
-			// plFx2
+			// plTray8
 			// 
-			this.plFx2.BackColor = System.Drawing.Color.White;
-			this.plFx2.Controls.Add(this.label39);
-			this.plFx2.Location = new System.Drawing.Point(98, 34);
-			this.plFx2.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx2.Name = "plFx2";
-			this.plFx2.Size = new System.Drawing.Size(38, 24);
-			this.plFx2.TabIndex = 324;
+			this.plTray8.BackColor = System.Drawing.Color.White;
+			this.plTray8.Location = new System.Drawing.Point(156, 113);
+			this.plTray8.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray8.Name = "plTray8";
+			this.plTray8.Size = new System.Drawing.Size(38, 24);
+			this.plTray8.TabIndex = 324;
 			// 
-			// label47
+			// plTray12
 			// 
-			this.label47.AutoSize = true;
-			this.label47.BackColor = System.Drawing.Color.White;
-			this.label47.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label47.Location = new System.Drawing.Point(9, 5);
-			this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label47.Name = "label47";
-			this.label47.Size = new System.Drawing.Size(19, 15);
-			this.label47.TabIndex = 333;
-			this.label47.Text = "10";
+			this.plTray12.BackColor = System.Drawing.Color.White;
+			this.plTray12.Location = new System.Drawing.Point(156, 72);
+			this.plTray12.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray12.Name = "plTray12";
+			this.plTray12.Size = new System.Drawing.Size(38, 24);
+			this.plTray12.TabIndex = 324;
 			// 
-			// plFx10
+			// plTray16
 			// 
-			this.plFx10.BackColor = System.Drawing.Color.White;
-			this.plFx10.Controls.Add(this.label47);
-			this.plFx10.Location = new System.Drawing.Point(167, 153);
-			this.plFx10.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx10.Name = "plFx10";
-			this.plFx10.Size = new System.Drawing.Size(38, 26);
-			this.plFx10.TabIndex = 324;
+			this.plTray16.BackColor = System.Drawing.Color.White;
+			this.plTray16.Location = new System.Drawing.Point(156, 31);
+			this.plTray16.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray16.Name = "plTray16";
+			this.plTray16.Size = new System.Drawing.Size(38, 24);
+			this.plTray16.TabIndex = 324;
 			// 
-			// plFx7
+			// plTray3
 			// 
-			this.plFx7.BackColor = System.Drawing.Color.White;
-			this.plFx7.Location = new System.Drawing.Point(167, 114);
-			this.plFx7.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx7.Name = "plFx7";
-			this.plFx7.Size = new System.Drawing.Size(38, 24);
-			this.plFx7.TabIndex = 324;
+			this.plTray3.BackColor = System.Drawing.Color.White;
+			this.plTray3.Location = new System.Drawing.Point(110, 152);
+			this.plTray3.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray3.Name = "plTray3";
+			this.plTray3.Size = new System.Drawing.Size(38, 24);
+			this.plTray3.TabIndex = 324;
 			// 
-			// label43
+			// plTray7
 			// 
-			this.label43.AutoSize = true;
-			this.label43.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label43.Location = new System.Drawing.Point(10, 5);
-			this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label43.Name = "label43";
-			this.label43.Size = new System.Drawing.Size(13, 15);
-			this.label43.TabIndex = 333;
-			this.label43.Text = "6";
+			this.plTray7.BackColor = System.Drawing.Color.White;
+			this.plTray7.Location = new System.Drawing.Point(110, 113);
+			this.plTray7.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray7.Name = "plTray7";
+			this.plTray7.Size = new System.Drawing.Size(38, 24);
+			this.plTray7.TabIndex = 324;
 			// 
-			// plFx6
+			// plTray11
 			// 
-			this.plFx6.BackColor = System.Drawing.Color.White;
-			this.plFx6.Controls.Add(this.label43);
-			this.plFx6.Location = new System.Drawing.Point(27, 75);
-			this.plFx6.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx6.Name = "plFx6";
-			this.plFx6.Size = new System.Drawing.Size(38, 24);
-			this.plFx6.TabIndex = 324;
+			this.plTray11.BackColor = System.Drawing.Color.White;
+			this.plTray11.Location = new System.Drawing.Point(110, 72);
+			this.plTray11.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray11.Name = "plTray11";
+			this.plTray11.Size = new System.Drawing.Size(38, 24);
+			this.plTray11.TabIndex = 324;
 			// 
-			// label40
+			// plTray15
 			// 
-			this.label40.AutoSize = true;
-			this.label40.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label40.Location = new System.Drawing.Point(10, 2);
-			this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label40.Name = "label40";
-			this.label40.Size = new System.Drawing.Size(13, 15);
-			this.label40.TabIndex = 333;
-			this.label40.Text = "3";
+			this.plTray15.BackColor = System.Drawing.Color.White;
+			this.plTray15.Location = new System.Drawing.Point(110, 31);
+			this.plTray15.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray15.Name = "plTray15";
+			this.plTray15.Size = new System.Drawing.Size(38, 24);
+			this.plTray15.TabIndex = 324;
 			// 
-			// plFx3
+			// plTray2
 			// 
-			this.plFx3.BackColor = System.Drawing.Color.White;
-			this.plFx3.Controls.Add(this.label40);
-			this.plFx3.Location = new System.Drawing.Point(27, 34);
-			this.plFx3.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx3.Name = "plFx3";
-			this.plFx3.Size = new System.Drawing.Size(38, 24);
-			this.plFx3.TabIndex = 324;
+			this.plTray2.BackColor = System.Drawing.Color.White;
+			this.plTray2.Location = new System.Drawing.Point(64, 152);
+			this.plTray2.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray2.Name = "plTray2";
+			this.plTray2.Size = new System.Drawing.Size(38, 24);
+			this.plTray2.TabIndex = 324;
 			// 
-			// plFx4
+			// plTray6
 			// 
-			this.plFx4.BackColor = System.Drawing.Color.White;
-			this.plFx4.Location = new System.Drawing.Point(167, 74);
-			this.plFx4.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx4.Name = "plFx4";
-			this.plFx4.Size = new System.Drawing.Size(38, 24);
-			this.plFx4.TabIndex = 324;
+			this.plTray6.BackColor = System.Drawing.Color.White;
+			this.plTray6.Location = new System.Drawing.Point(64, 113);
+			this.plTray6.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray6.Name = "plTray6";
+			this.plTray6.Size = new System.Drawing.Size(38, 24);
+			this.plTray6.TabIndex = 324;
 			// 
-			// label42
+			// plTray10
 			// 
-			this.label42.AutoSize = true;
-			this.label42.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label42.Location = new System.Drawing.Point(11, 3);
-			this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label42.Name = "label42";
-			this.label42.Size = new System.Drawing.Size(13, 15);
-			this.label42.TabIndex = 333;
-			this.label42.Text = "5";
+			this.plTray10.BackColor = System.Drawing.Color.White;
+			this.plTray10.Location = new System.Drawing.Point(64, 72);
+			this.plTray10.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray10.Name = "plTray10";
+			this.plTray10.Size = new System.Drawing.Size(38, 24);
+			this.plTray10.TabIndex = 324;
 			// 
-			// plFx5
+			// plTray14
 			// 
-			this.plFx5.BackColor = System.Drawing.Color.White;
-			this.plFx5.Controls.Add(this.label42);
-			this.plFx5.Location = new System.Drawing.Point(98, 75);
-			this.plFx5.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx5.Name = "plFx5";
-			this.plFx5.Size = new System.Drawing.Size(38, 24);
-			this.plFx5.TabIndex = 324;
+			this.plTray14.BackColor = System.Drawing.Color.White;
+			this.plTray14.Location = new System.Drawing.Point(64, 31);
+			this.plTray14.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray14.Name = "plTray14";
+			this.plTray14.Size = new System.Drawing.Size(38, 24);
+			this.plTray14.TabIndex = 324;
 			// 
-			// label41
+			// plTray1
 			// 
-			this.label41.AutoSize = true;
-			this.label41.BackColor = System.Drawing.Color.White;
-			this.label41.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label41.Location = new System.Drawing.Point(179, 78);
-			this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label41.Name = "label41";
-			this.label41.Size = new System.Drawing.Size(13, 15);
-			this.label41.TabIndex = 333;
-			this.label41.Text = "4";
+			this.plTray1.BackColor = System.Drawing.Color.White;
+			this.plTray1.Location = new System.Drawing.Point(17, 152);
+			this.plTray1.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray1.Name = "plTray1";
+			this.plTray1.Size = new System.Drawing.Size(38, 24);
+			this.plTray1.TabIndex = 324;
 			// 
-			// label46
+			// plTray5
 			// 
-			this.label46.AutoSize = true;
-			this.label46.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label46.Location = new System.Drawing.Point(12, 3);
-			this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label46.Name = "label46";
-			this.label46.Size = new System.Drawing.Size(13, 15);
-			this.label46.TabIndex = 333;
-			this.label46.Text = "9";
+			this.plTray5.BackColor = System.Drawing.Color.White;
+			this.plTray5.Location = new System.Drawing.Point(17, 113);
+			this.plTray5.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray5.Name = "plTray5";
+			this.plTray5.Size = new System.Drawing.Size(38, 24);
+			this.plTray5.TabIndex = 324;
 			// 
-			// plFx9
+			// plTray9
 			// 
-			this.plFx9.BackColor = System.Drawing.Color.White;
-			this.plFx9.Controls.Add(this.label46);
-			this.plFx9.Location = new System.Drawing.Point(27, 115);
-			this.plFx9.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx9.Name = "plFx9";
-			this.plFx9.Size = new System.Drawing.Size(38, 24);
-			this.plFx9.TabIndex = 324;
+			this.plTray9.BackColor = System.Drawing.Color.White;
+			this.plTray9.Location = new System.Drawing.Point(17, 72);
+			this.plTray9.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray9.Name = "plTray9";
+			this.plTray9.Size = new System.Drawing.Size(38, 24);
+			this.plTray9.TabIndex = 324;
 			// 
-			// label38
+			// plTray13
 			// 
-			this.label38.AutoSize = true;
-			this.label38.BackColor = System.Drawing.Color.White;
-			this.label38.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label38.Location = new System.Drawing.Point(179, 37);
-			this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label38.Name = "label38";
-			this.label38.Size = new System.Drawing.Size(13, 15);
-			this.label38.TabIndex = 333;
-			this.label38.Text = "1";
+			this.plTray13.BackColor = System.Drawing.Color.White;
+			this.plTray13.Location = new System.Drawing.Point(17, 31);
+			this.plTray13.Margin = new System.Windows.Forms.Padding(2);
+			this.plTray13.Name = "plTray13";
+			this.plTray13.Size = new System.Drawing.Size(38, 24);
+			this.plTray13.TabIndex = 324;
 			// 
-			// label25
+			// label_Status
 			// 
-			this.label25.AutoSize = true;
-			this.label25.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label25.Location = new System.Drawing.Point(9, 4);
-			this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label25.Name = "label25";
-			this.label25.Size = new System.Drawing.Size(19, 15);
-			this.label25.TabIndex = 333;
-			this.label25.Text = "12";
-			// 
-			// plFx12
-			// 
-			this.plFx12.BackColor = System.Drawing.Color.White;
-			this.plFx12.Controls.Add(this.label25);
-			this.plFx12.Location = new System.Drawing.Point(27, 154);
-			this.plFx12.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx12.Name = "plFx12";
-			this.plFx12.Size = new System.Drawing.Size(38, 24);
-			this.plFx12.TabIndex = 324;
-			// 
-			// label45
-			// 
-			this.label45.AutoSize = true;
-			this.label45.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label45.Location = new System.Drawing.Point(12, 4);
-			this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label45.Name = "label45";
-			this.label45.Size = new System.Drawing.Size(13, 15);
-			this.label45.TabIndex = 333;
-			this.label45.Text = "8";
-			// 
-			// plFx8
-			// 
-			this.plFx8.BackColor = System.Drawing.Color.White;
-			this.plFx8.Controls.Add(this.label45);
-			this.plFx8.Location = new System.Drawing.Point(98, 115);
-			this.plFx8.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx8.Name = "plFx8";
-			this.plFx8.Size = new System.Drawing.Size(38, 24);
-			this.plFx8.TabIndex = 324;
-			// 
-			// label44
-			// 
-			this.label44.AutoSize = true;
-			this.label44.BackColor = System.Drawing.Color.White;
-			this.label44.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label44.Location = new System.Drawing.Point(179, 119);
-			this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label44.Name = "label44";
-			this.label44.Size = new System.Drawing.Size(13, 15);
-			this.label44.TabIndex = 333;
-			this.label44.Text = "7";
-			// 
-			// label19
-			// 
-			this.label19.AutoSize = true;
-			this.label19.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label19.Location = new System.Drawing.Point(10, 4);
-			this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label19.Name = "label19";
-			this.label19.Size = new System.Drawing.Size(19, 15);
-			this.label19.TabIndex = 333;
-			this.label19.Text = "11";
-			// 
-			// plFx11
-			// 
-			this.plFx11.BackColor = System.Drawing.Color.White;
-			this.plFx11.Controls.Add(this.label19);
-			this.plFx11.Location = new System.Drawing.Point(98, 154);
-			this.plFx11.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx11.Name = "plFx11";
-			this.plFx11.Size = new System.Drawing.Size(38, 24);
-			this.plFx11.TabIndex = 324;
+			this.label_Status.BackColor = System.Drawing.Color.Transparent;
+			this.label_Status.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label_Status.Location = new System.Drawing.Point(698, 39);
+			this.label_Status.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label_Status.Name = "label_Status";
+			this.label_Status.Size = new System.Drawing.Size(232, 71);
+			this.label_Status.TabIndex = 355;
+			this.label_Status.Text = "待复位";
+			this.label_Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// notifyIcon1
 			// 
 			this.notifyIcon1.Text = "notifyIcon1";
 			this.notifyIcon1.Visible = true;
-			// 
-			// bterrorCODE
-			// 
-			this.bterrorCODE.BackColor = System.Drawing.Color.Transparent;
-			this.bterrorCODE.FlatAppearance.BorderSize = 0;
-			this.bterrorCODE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.bterrorCODE.Font = new System.Drawing.Font("微软雅黑", 14.25F);
-			this.bterrorCODE.Image = global::Project.Properties.Resources.bigbk_red;
-			this.bterrorCODE.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.bterrorCODE.Location = new System.Drawing.Point(40, 40);
-			this.bterrorCODE.Margin = new System.Windows.Forms.Padding(2);
-			this.bterrorCODE.Name = "bterrorCODE";
-			this.bterrorCODE.Size = new System.Drawing.Size(123, 64);
-			this.bterrorCODE.TabIndex = 454;
-			this.bterrorCODE.Text = "Error Code";
-			this.bterrorCODE.UseVisualStyleBackColor = false;
-			// 
-			// alramTime
-			// 
-			this.alramTime.BackColor = System.Drawing.Color.Transparent;
-			this.alramTime.FlatAppearance.BorderSize = 0;
-			this.alramTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.alramTime.Font = new System.Drawing.Font("微软雅黑", 14.25F);
-			this.alramTime.Image = global::Project.Properties.Resources.bigbk_red;
-			this.alramTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.alramTime.Location = new System.Drawing.Point(172, 40);
-			this.alramTime.Margin = new System.Windows.Forms.Padding(2);
-			this.alramTime.Name = "alramTime";
-			this.alramTime.Size = new System.Drawing.Size(123, 64);
-			this.alramTime.TabIndex = 455;
-			this.alramTime.Text = "Alarm Time";
-			this.alramTime.UseVisualStyleBackColor = false;
-			// 
-			// uphCount
-			// 
-			this.uphCount.BackColor = System.Drawing.Color.Transparent;
-			this.uphCount.FlatAppearance.BorderSize = 0;
-			this.uphCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.uphCount.Font = new System.Drawing.Font("微软雅黑", 14.25F);
-			this.uphCount.Image = ((System.Drawing.Image)(resources.GetObject("uphCount.Image")));
-			this.uphCount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.uphCount.Location = new System.Drawing.Point(305, 40);
-			this.uphCount.Margin = new System.Windows.Forms.Padding(2);
-			this.uphCount.Name = "uphCount";
-			this.uphCount.Size = new System.Drawing.Size(123, 64);
-			this.uphCount.TabIndex = 453;
-			this.uphCount.Text = "CT";
-			this.uphCount.UseVisualStyleBackColor = false;
-			// 
-			// btTossingCount
-			// 
-			this.btTossingCount.BackColor = System.Drawing.Color.Transparent;
-			this.btTossingCount.FlatAppearance.BorderSize = 0;
-			this.btTossingCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btTossingCount.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.btTossingCount.Image = ((System.Drawing.Image)(resources.GetObject("btTossingCount.Image")));
-			this.btTossingCount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-			this.btTossingCount.Location = new System.Drawing.Point(439, 40);
-			this.btTossingCount.Margin = new System.Windows.Forms.Padding(2);
-			this.btTossingCount.Name = "btTossingCount";
-			this.btTossingCount.Size = new System.Drawing.Size(123, 64);
-			this.btTossingCount.TabIndex = 456;
-			this.btTossingCount.Text = "Tossing Count";
-			this.btTossingCount.UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
@@ -627,7 +731,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(218)))), ((int)(((byte)(151)))));
-			this.panel1.Controls.Add(this.btnQtyClear);
+			this.panel1.Controls.Add(this.button_Clear);
 			this.panel1.Controls.Add(this.cbClearBktTrayFinish);
 			this.panel1.Controls.Add(this.cbUpBktTrayFinish);
 			this.panel1.Location = new System.Drawing.Point(949, 35);
@@ -635,36 +739,51 @@
 			this.panel1.Size = new System.Drawing.Size(210, 72);
 			this.panel1.TabIndex = 457;
 			// 
-			// panel2
+			// button_Clear
 			// 
-			this.panel2.Controls.Add(this.txtTotal);
-			this.panel2.Controls.Add(this.txtNgTotal);
-			this.panel2.Location = new System.Drawing.Point(37, 125);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(627, 224);
-			this.panel2.TabIndex = 458;
+			this.button_Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button_Clear.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.button_Clear.Image = ((System.Drawing.Image)(resources.GetObject("button_Clear.Image")));
+			this.button_Clear.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button_Clear.Location = new System.Drawing.Point(13, 15);
+			this.button_Clear.Margin = new System.Windows.Forms.Padding(2);
+			this.button_Clear.Name = "button_Clear";
+			this.button_Clear.Size = new System.Drawing.Size(93, 45);
+			this.button_Clear.TabIndex = 5;
+			this.button_Clear.Text = "数量清零";
+			this.button_Clear.UseVisualStyleBackColor = true;
+			this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
 			// 
-			// plTray14
+			// cbClearBktTrayFinish
 			// 
-			this.plTray14.BackColor = System.Drawing.Color.White;
-			this.plTray14.Location = new System.Drawing.Point(64, 31);
-			this.plTray14.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray14.Name = "plTray14";
-			this.plTray14.Size = new System.Drawing.Size(38, 24);
-			this.plTray14.TabIndex = 324;
+			this.cbClearBktTrayFinish.AutoSize = true;
+			this.cbClearBktTrayFinish.Location = new System.Drawing.Point(123, 16);
+			this.cbClearBktTrayFinish.Margin = new System.Windows.Forms.Padding(2);
+			this.cbClearBktTrayFinish.Name = "cbClearBktTrayFinish";
+			this.cbClearBktTrayFinish.Size = new System.Drawing.Size(72, 16);
+			this.cbClearBktTrayFinish.TabIndex = 4;
+			this.cbClearBktTrayFinish.Text = "清料完成";
+			this.cbClearBktTrayFinish.UseVisualStyleBackColor = true;
 			// 
-			// txtNgTotal
+			// cbUpBktTrayFinish
 			// 
-			this.txtNgTotal.BackColor = System.Drawing.SystemColors.Control;
-			this.txtNgTotal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.txtNgTotal.Location = new System.Drawing.Point(4, 37);
-			this.txtNgTotal.Margin = new System.Windows.Forms.Padding(2);
-			this.txtNgTotal.Multiline = true;
-			this.txtNgTotal.Name = "txtNgTotal";
-			this.txtNgTotal.ReadOnly = true;
-			this.txtNgTotal.Size = new System.Drawing.Size(230, 26);
-			this.txtNgTotal.TabIndex = 339;
-			this.txtNgTotal.Text = "不良总数：       ";
+			this.cbUpBktTrayFinish.AutoSize = true;
+			this.cbUpBktTrayFinish.Location = new System.Drawing.Point(123, 41);
+			this.cbUpBktTrayFinish.Margin = new System.Windows.Forms.Padding(2);
+			this.cbUpBktTrayFinish.Name = "cbUpBktTrayFinish";
+			this.cbUpBktTrayFinish.Size = new System.Drawing.Size(72, 16);
+			this.cbUpBktTrayFinish.TabIndex = 3;
+			this.cbUpBktTrayFinish.Text = "上料完成";
+			this.cbUpBktTrayFinish.UseVisualStyleBackColor = true;
+			// 
+			// panel_Charts
+			// 
+			this.panel_Charts.Controls.Add(this.txtTotal);
+			this.panel_Charts.Controls.Add(this.txtNgTotal);
+			this.panel_Charts.Location = new System.Drawing.Point(37, 125);
+			this.panel_Charts.Name = "panel_Charts";
+			this.panel_Charts.Size = new System.Drawing.Size(266, 224);
+			this.panel_Charts.TabIndex = 458;
 			// 
 			// txtTotal
 			// 
@@ -679,210 +798,32 @@
 			this.txtTotal.TabIndex = 339;
 			this.txtTotal.Text = "生产总数：       ";
 			// 
-			// btnQtyClear
+			// txtNgTotal
 			// 
-			this.btnQtyClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnQtyClear.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.btnQtyClear.Image = ((System.Drawing.Image)(resources.GetObject("btnQtyClear.Image")));
-			this.btnQtyClear.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnQtyClear.Location = new System.Drawing.Point(13, 15);
-			this.btnQtyClear.Margin = new System.Windows.Forms.Padding(2);
-			this.btnQtyClear.Name = "btnQtyClear";
-			this.btnQtyClear.Size = new System.Drawing.Size(93, 45);
-			this.btnQtyClear.TabIndex = 5;
-			this.btnQtyClear.Text = "数量清零";
-			this.btnQtyClear.UseVisualStyleBackColor = true;
+			this.txtNgTotal.BackColor = System.Drawing.SystemColors.Control;
+			this.txtNgTotal.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.txtNgTotal.Location = new System.Drawing.Point(4, 37);
+			this.txtNgTotal.Margin = new System.Windows.Forms.Padding(2);
+			this.txtNgTotal.Multiline = true;
+			this.txtNgTotal.Name = "txtNgTotal";
+			this.txtNgTotal.ReadOnly = true;
+			this.txtNgTotal.Size = new System.Drawing.Size(230, 26);
+			this.txtNgTotal.TabIndex = 339;
+			this.txtNgTotal.Text = "不良总数：       ";
 			// 
 			// FormStatus
 			// 
 			this.FormStatus.Enabled = true;
 			// 
-			// cbUpBktTrayFinish
+			// groupBox_RunMessage
 			// 
-			this.cbUpBktTrayFinish.AutoSize = true;
-			this.cbUpBktTrayFinish.Location = new System.Drawing.Point(123, 41);
-			this.cbUpBktTrayFinish.Margin = new System.Windows.Forms.Padding(2);
-			this.cbUpBktTrayFinish.Name = "cbUpBktTrayFinish";
-			this.cbUpBktTrayFinish.Size = new System.Drawing.Size(72, 16);
-			this.cbUpBktTrayFinish.TabIndex = 3;
-			this.cbUpBktTrayFinish.Text = "上料完成";
-			this.cbUpBktTrayFinish.UseVisualStyleBackColor = true;
-			// 
-			// cbClearBktTrayFinish
-			// 
-			this.cbClearBktTrayFinish.AutoSize = true;
-			this.cbClearBktTrayFinish.Location = new System.Drawing.Point(123, 16);
-			this.cbClearBktTrayFinish.Margin = new System.Windows.Forms.Padding(2);
-			this.cbClearBktTrayFinish.Name = "cbClearBktTrayFinish";
-			this.cbClearBktTrayFinish.Size = new System.Drawing.Size(72, 16);
-			this.cbClearBktTrayFinish.TabIndex = 4;
-			this.cbClearBktTrayFinish.Text = "清料完成";
-			this.cbClearBktTrayFinish.UseVisualStyleBackColor = true;
-			// 
-			// plTray13
-			// 
-			this.plTray13.BackColor = System.Drawing.Color.White;
-			this.plTray13.Location = new System.Drawing.Point(17, 31);
-			this.plTray13.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray13.Name = "plTray13";
-			this.plTray13.Size = new System.Drawing.Size(38, 24);
-			this.plTray13.TabIndex = 324;
-			// 
-			// plTray9
-			// 
-			this.plTray9.BackColor = System.Drawing.Color.White;
-			this.plTray9.Location = new System.Drawing.Point(17, 72);
-			this.plTray9.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray9.Name = "plTray9";
-			this.plTray9.Size = new System.Drawing.Size(38, 24);
-			this.plTray9.TabIndex = 324;
-			// 
-			// plTray5
-			// 
-			this.plTray5.BackColor = System.Drawing.Color.White;
-			this.plTray5.Location = new System.Drawing.Point(17, 113);
-			this.plTray5.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray5.Name = "plTray5";
-			this.plTray5.Size = new System.Drawing.Size(38, 24);
-			this.plTray5.TabIndex = 324;
-			// 
-			// plTray1
-			// 
-			this.plTray1.BackColor = System.Drawing.Color.White;
-			this.plTray1.Location = new System.Drawing.Point(17, 152);
-			this.plTray1.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray1.Name = "plTray1";
-			this.plTray1.Size = new System.Drawing.Size(38, 24);
-			this.plTray1.TabIndex = 324;
-			// 
-			// plTray10
-			// 
-			this.plTray10.BackColor = System.Drawing.Color.White;
-			this.plTray10.Location = new System.Drawing.Point(64, 72);
-			this.plTray10.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray10.Name = "plTray10";
-			this.plTray10.Size = new System.Drawing.Size(38, 24);
-			this.plTray10.TabIndex = 324;
-			// 
-			// plFx1
-			// 
-			this.plFx1.BackColor = System.Drawing.Color.White;
-			this.plFx1.Location = new System.Drawing.Point(167, 33);
-			this.plFx1.Margin = new System.Windows.Forms.Padding(2);
-			this.plFx1.Name = "plFx1";
-			this.plFx1.Size = new System.Drawing.Size(38, 24);
-			this.plFx1.TabIndex = 324;
-			// 
-			// plTray6
-			// 
-			this.plTray6.BackColor = System.Drawing.Color.White;
-			this.plTray6.Location = new System.Drawing.Point(64, 113);
-			this.plTray6.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray6.Name = "plTray6";
-			this.plTray6.Size = new System.Drawing.Size(38, 24);
-			this.plTray6.TabIndex = 324;
-			// 
-			// plTray2
-			// 
-			this.plTray2.BackColor = System.Drawing.Color.White;
-			this.plTray2.Location = new System.Drawing.Point(64, 152);
-			this.plTray2.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray2.Name = "plTray2";
-			this.plTray2.Size = new System.Drawing.Size(38, 24);
-			this.plTray2.TabIndex = 324;
-			// 
-			// plTray15
-			// 
-			this.plTray15.BackColor = System.Drawing.Color.White;
-			this.plTray15.Location = new System.Drawing.Point(110, 31);
-			this.plTray15.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray15.Name = "plTray15";
-			this.plTray15.Size = new System.Drawing.Size(38, 24);
-			this.plTray15.TabIndex = 324;
-			// 
-			// plTray11
-			// 
-			this.plTray11.BackColor = System.Drawing.Color.White;
-			this.plTray11.Location = new System.Drawing.Point(110, 72);
-			this.plTray11.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray11.Name = "plTray11";
-			this.plTray11.Size = new System.Drawing.Size(38, 24);
-			this.plTray11.TabIndex = 324;
-			// 
-			// plTray7
-			// 
-			this.plTray7.BackColor = System.Drawing.Color.White;
-			this.plTray7.Location = new System.Drawing.Point(110, 113);
-			this.plTray7.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray7.Name = "plTray7";
-			this.plTray7.Size = new System.Drawing.Size(38, 24);
-			this.plTray7.TabIndex = 324;
-			// 
-			// plTray3
-			// 
-			this.plTray3.BackColor = System.Drawing.Color.White;
-			this.plTray3.Location = new System.Drawing.Point(110, 152);
-			this.plTray3.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray3.Name = "plTray3";
-			this.plTray3.Size = new System.Drawing.Size(38, 24);
-			this.plTray3.TabIndex = 324;
-			// 
-			// plTray16
-			// 
-			this.plTray16.BackColor = System.Drawing.Color.White;
-			this.plTray16.Location = new System.Drawing.Point(156, 31);
-			this.plTray16.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray16.Name = "plTray16";
-			this.plTray16.Size = new System.Drawing.Size(38, 24);
-			this.plTray16.TabIndex = 324;
-			// 
-			// plTray12
-			// 
-			this.plTray12.BackColor = System.Drawing.Color.White;
-			this.plTray12.Location = new System.Drawing.Point(156, 72);
-			this.plTray12.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray12.Name = "plTray12";
-			this.plTray12.Size = new System.Drawing.Size(38, 24);
-			this.plTray12.TabIndex = 324;
-			// 
-			// plTray8
-			// 
-			this.plTray8.BackColor = System.Drawing.Color.White;
-			this.plTray8.Location = new System.Drawing.Point(156, 113);
-			this.plTray8.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray8.Name = "plTray8";
-			this.plTray8.Size = new System.Drawing.Size(38, 24);
-			this.plTray8.TabIndex = 324;
-			// 
-			// plTray4
-			// 
-			this.plTray4.BackColor = System.Drawing.Color.White;
-			this.plTray4.Location = new System.Drawing.Point(156, 152);
-			this.plTray4.Margin = new System.Windows.Forms.Padding(2);
-			this.plTray4.Name = "plTray4";
-			this.plTray4.Size = new System.Drawing.Size(38, 24);
-			this.plTray4.TabIndex = 324;
-			// 
-			// label39
-			// 
-			this.label39.AutoSize = true;
-			this.label39.Font = new System.Drawing.Font("微软雅黑", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label39.Location = new System.Drawing.Point(11, 2);
-			this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label39.Name = "label39";
-			this.label39.Size = new System.Drawing.Size(13, 15);
-			this.label39.TabIndex = 333;
-			this.label39.Text = "2";
-			// 
-			// groupBox2
-			// 
-			this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.groupBox2.Location = new System.Drawing.Point(695, 371);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(465, 341);
-			this.groupBox2.TabIndex = 459;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Run Message";
+			this.groupBox_RunMessage.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.groupBox_RunMessage.Location = new System.Drawing.Point(309, 125);
+			this.groupBox_RunMessage.Name = "groupBox_RunMessage";
+			this.groupBox_RunMessage.Size = new System.Drawing.Size(344, 222);
+			this.groupBox_RunMessage.TabIndex = 459;
+			this.groupBox_RunMessage.TabStop = false;
+			this.groupBox_RunMessage.Text = "Run Message";
 			// 
 			// label5
 			// 
@@ -2228,12 +2169,101 @@
 			this.shapeContainer1.TabIndex = 460;
 			this.shapeContainer1.TabStop = false;
 			// 
+			// btTossingCount
+			// 
+			this.btTossingCount.BackColor = System.Drawing.Color.Transparent;
+			this.btTossingCount.FlatAppearance.BorderSize = 0;
+			this.btTossingCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btTossingCount.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.btTossingCount.Image = ((System.Drawing.Image)(resources.GetObject("btTossingCount.Image")));
+			this.btTossingCount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.btTossingCount.Location = new System.Drawing.Point(439, 40);
+			this.btTossingCount.Margin = new System.Windows.Forms.Padding(2);
+			this.btTossingCount.Name = "btTossingCount";
+			this.btTossingCount.Size = new System.Drawing.Size(123, 64);
+			this.btTossingCount.TabIndex = 456;
+			this.btTossingCount.Text = "Tossing Count";
+			this.btTossingCount.UseVisualStyleBackColor = false;
+			// 
+			// uphCount
+			// 
+			this.uphCount.BackColor = System.Drawing.Color.Transparent;
+			this.uphCount.FlatAppearance.BorderSize = 0;
+			this.uphCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.uphCount.Font = new System.Drawing.Font("微软雅黑", 14.25F);
+			this.uphCount.Image = ((System.Drawing.Image)(resources.GetObject("uphCount.Image")));
+			this.uphCount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.uphCount.Location = new System.Drawing.Point(305, 40);
+			this.uphCount.Margin = new System.Windows.Forms.Padding(2);
+			this.uphCount.Name = "uphCount";
+			this.uphCount.Size = new System.Drawing.Size(123, 64);
+			this.uphCount.TabIndex = 453;
+			this.uphCount.Text = "CT";
+			this.uphCount.UseVisualStyleBackColor = false;
+			// 
+			// alramTime
+			// 
+			this.alramTime.BackColor = System.Drawing.Color.Transparent;
+			this.alramTime.FlatAppearance.BorderSize = 0;
+			this.alramTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.alramTime.Font = new System.Drawing.Font("微软雅黑", 14.25F);
+			this.alramTime.Image = global::Project.Properties.Resources.bigbk_red;
+			this.alramTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.alramTime.Location = new System.Drawing.Point(172, 40);
+			this.alramTime.Margin = new System.Windows.Forms.Padding(2);
+			this.alramTime.Name = "alramTime";
+			this.alramTime.Size = new System.Drawing.Size(123, 64);
+			this.alramTime.TabIndex = 455;
+			this.alramTime.Text = "Alarm Time";
+			this.alramTime.UseVisualStyleBackColor = false;
+			// 
+			// bterrorCODE
+			// 
+			this.bterrorCODE.BackColor = System.Drawing.Color.Transparent;
+			this.bterrorCODE.FlatAppearance.BorderSize = 0;
+			this.bterrorCODE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.bterrorCODE.Font = new System.Drawing.Font("微软雅黑", 14.25F);
+			this.bterrorCODE.Image = global::Project.Properties.Resources.bigbk_red;
+			this.bterrorCODE.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.bterrorCODE.Location = new System.Drawing.Point(40, 40);
+			this.bterrorCODE.Margin = new System.Windows.Forms.Padding(2);
+			this.bterrorCODE.Name = "bterrorCODE";
+			this.bterrorCODE.Size = new System.Drawing.Size(123, 64);
+			this.bterrorCODE.TabIndex = 454;
+			this.bterrorCODE.Text = "Error Code";
+			this.bterrorCODE.UseVisualStyleBackColor = false;
+			// 
+			// panel_NG
+			// 
+			this.panel_NG.BackColor = System.Drawing.SystemColors.Control;
+			this.panel_NG.Controls.Add(this.label26);
+			this.panel_NG.Location = new System.Drawing.Point(697, 352);
+			this.panel_NG.Name = "panel_NG";
+			this.panel_NG.Size = new System.Drawing.Size(465, 385);
+			this.panel_NG.TabIndex = 461;
+			// 
+			// label26
+			// 
+			this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+			this.label26.Font = new System.Drawing.Font("幼圆", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.label26.Location = new System.Drawing.Point(0, 21);
+			this.label26.Name = "label26";
+			this.label26.Size = new System.Drawing.Size(370, 21);
+			this.label26.TabIndex = 19;
+			this.label26.Text = "NG率显示";
+			this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// timer_MainUI
+			// 
+			this.timer_MainUI.Tick += new System.EventHandler(this.timer_MainUI_Tick);
+			// 
 			// MainUI
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1198, 749);
-			this.Controls.Add(this.groupBox2);
+			this.Controls.Add(this.panel_NG);
+			this.Controls.Add(this.groupBox_RunMessage);
 			this.Controls.Add(this.lblA_12);
 			this.Controls.Add(this.lblA_11);
 			this.Controls.Add(this.lblY_2_12);
@@ -2250,7 +2280,7 @@
 			this.Controls.Add(this.lblReslut11);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.panel2);
+			this.Controls.Add(this.panel_Charts);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -2347,38 +2377,40 @@
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.lblStatus);
+			this.Controls.Add(this.label_Status);
 			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.shapeContainer1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "MainUI";
 			this.Text = "MainUI";
+			this.Load += new System.EventHandler(this.MainUI_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			this.groupBox3.ResumeLayout(false);
-			this.plFx2.ResumeLayout(false);
-			this.plFx2.PerformLayout();
-			this.plFx10.ResumeLayout(false);
-			this.plFx10.PerformLayout();
-			this.plFx6.ResumeLayout(false);
-			this.plFx6.PerformLayout();
-			this.plFx3.ResumeLayout(false);
-			this.plFx3.PerformLayout();
-			this.plFx5.ResumeLayout(false);
-			this.plFx5.PerformLayout();
-			this.plFx9.ResumeLayout(false);
-			this.plFx9.PerformLayout();
-			this.plFx12.ResumeLayout(false);
-			this.plFx12.PerformLayout();
-			this.plFx8.ResumeLayout(false);
-			this.plFx8.PerformLayout();
 			this.plFx11.ResumeLayout(false);
 			this.plFx11.PerformLayout();
+			this.plFx8.ResumeLayout(false);
+			this.plFx8.PerformLayout();
+			this.plFx6.ResumeLayout(false);
+			this.plFx6.PerformLayout();
+			this.plFx10.ResumeLayout(false);
+			this.plFx10.PerformLayout();
+			this.plFx12.ResumeLayout(false);
+			this.plFx12.PerformLayout();
+			this.plFx9.ResumeLayout(false);
+			this.plFx9.PerformLayout();
+			this.plFx5.ResumeLayout(false);
+			this.plFx5.PerformLayout();
+			this.plFx3.ResumeLayout(false);
+			this.plFx3.PerformLayout();
+			this.plFx2.ResumeLayout(false);
+			this.plFx2.PerformLayout();
+			this.groupBox3.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			this.panel2.ResumeLayout(false);
-			this.panel2.PerformLayout();
+			this.panel_Charts.ResumeLayout(false);
+			this.panel_Charts.PerformLayout();
+			this.panel_NG.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -2428,7 +2460,7 @@
 		private System.Windows.Forms.Panel plTray5;
 		private System.Windows.Forms.Panel plTray9;
 		private System.Windows.Forms.Panel plTray13;
-		private System.Windows.Forms.Label lblStatus;
+		private System.Windows.Forms.Label label_Status;
 		private System.Windows.Forms.NotifyIcon notifyIcon1;
 		private System.Windows.Forms.Button bterrorCODE;
 		private System.Windows.Forms.Button alramTime;
@@ -2437,14 +2469,14 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Button btnQtyClear;
+		private System.Windows.Forms.Button button_Clear;
 		public System.Windows.Forms.CheckBox cbClearBktTrayFinish;
 		public System.Windows.Forms.CheckBox cbUpBktTrayFinish;
-		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.Panel panel_Charts;
 		private System.Windows.Forms.TextBox txtTotal;
 		private System.Windows.Forms.TextBox txtNgTotal;
 		private System.Windows.Forms.Timer FormStatus;
-		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.GroupBox groupBox_RunMessage;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
@@ -2574,5 +2606,8 @@
 		private Microsoft.VisualBasic.PowerPacks.LineShape lineShape23;
 		private Microsoft.VisualBasic.PowerPacks.LineShape lineShape24;
 		private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+		private System.Windows.Forms.Panel panel_NG;
+		private System.Windows.Forms.Label label26;
+		private System.Windows.Forms.Timer timer_MainUI;
 	}
 }

@@ -38,6 +38,11 @@ namespace Project
 			return false;
 		}
 
+		/// <summary>
+		/// 初始化卡
+		/// </summary>
+		/// <param name="card"></param>
+		/// <returns></returns>
 		public static short initCard(int[] card)
 		{
 			short ret = 0;

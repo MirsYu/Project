@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace Project.UIForm
+namespace Project
 {
 	public partial class WaitUI : Form
 	{

@@ -1,4 +1,4 @@
-﻿namespace Project.UIControl
+﻿namespace Project
 {
 	partial class NetSocketControl
 	{

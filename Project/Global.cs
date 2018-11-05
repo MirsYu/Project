@@ -33,7 +33,7 @@ namespace Project
 			public const string SAVE_DATA_PATH = "D:\\WorkcellMaskdata";
 			public const string SAVE_DATA_PATH_ERROR = "D:\\WorkcellMaskdata\\Error";
 			public static string Save_Folder_Name = "";
-			public const string DTS = "strongscrew";
+			public const string DTS = "bakcdoor";
 
 			//TCP通讯
 			public const string TEST_IP_1 = "127.0.0.1";
