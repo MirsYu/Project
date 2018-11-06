@@ -71,6 +71,7 @@
 			this.MenuItem_Save.Name = "MenuItem_Save";
 			this.MenuItem_Save.Size = new System.Drawing.Size(180, 22);
 			this.MenuItem_Save.Text = "保存所有";
+			this.MenuItem_Save.Click += new System.EventHandler(this.MenuItem_Save_Click);
 			// 
 			// PointAllShowControl
 			// 
@@ -79,6 +80,8 @@
 			this.Controls.Add(this.CBpointMessage);
 			this.Name = "PointAllShowControl";
 			this.Size = new System.Drawing.Size(571, 383);
+			this.Load += new System.EventHandler(this.PointAllShowControl_Load);
+			this.SizeChanged += new System.EventHandler(this.PointAllShowControl_SizeChanged);
 			this.CBpointMessage.ResumeLayout(false);
 			this.contextMenuStrip_Main.ResumeLayout(false);
 			this.ResumeLayout(false);

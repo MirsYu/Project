@@ -82,6 +82,7 @@
 			this.button_axisSafe.TabIndex = 27;
 			this.button_axisSafe.Text = "轴防呆";
 			this.button_axisSafe.UseVisualStyleBackColor = true;
+			this.button_axisSafe.Click += new System.EventHandler(this.button_axisSafe_Click);
 			// 
 			// comboBox2
 			// 
@@ -106,6 +107,7 @@
 			this.comboBox_delectAdd.Size = new System.Drawing.Size(48, 20);
 			this.comboBox_delectAdd.TabIndex = 25;
 			this.comboBox_delectAdd.Text = "插入";
+			this.comboBox_delectAdd.SelectedIndexChanged += new System.EventHandler(this.comboBox_delectAdd_SelectedIndexChanged);
 			// 
 			// checkBox_AxisStop
 			// 
@@ -153,6 +155,8 @@
 			this.textBox_name.Name = "textBox_name";
 			this.textBox_name.Size = new System.Drawing.Size(152, 21);
 			this.textBox_name.TabIndex = 20;
+			this.textBox_name.Enter += new System.EventHandler(this.textBox_name_Enter);
+			this.textBox_name.Leave += new System.EventHandler(this.textBox_name_Leave);
 			// 
 			// butIoSet
 			// 
@@ -163,6 +167,7 @@
 			this.butIoSet.TabIndex = 19;
 			this.butIoSet.Text = "配置IO";
 			this.butIoSet.UseVisualStyleBackColor = true;
+			this.butIoSet.Click += new System.EventHandler(this.butIoSet_Click);
 			// 
 			// button_save
 			// 
@@ -173,6 +178,7 @@
 			this.button_save.TabIndex = 18;
 			this.button_save.Text = "保存";
 			this.button_save.UseVisualStyleBackColor = true;
+			this.button_save.Click += new System.EventHandler(this.button_save_Click);
 			// 
 			// button_Exe
 			// 
@@ -183,6 +189,9 @@
 			this.button_Exe.TabIndex = 17;
 			this.button_Exe.Text = "运动";
 			this.button_Exe.UseVisualStyleBackColor = true;
+			this.button_Exe.Click += new System.EventHandler(this.button_Exe_Click);
+			this.button_Exe.Enter += new System.EventHandler(this.button_Exe_Enter);
+			this.button_Exe.Leave += new System.EventHandler(this.button_Exe_Leave);
 			// 
 			// PointValueControl
 			// 
@@ -205,6 +214,7 @@
 			this.Controls.Add(this.button_Exe);
 			this.Name = "PointValueControl";
 			this.Size = new System.Drawing.Size(1513, 27);
+			this.Load += new System.EventHandler(this.PointValueControl_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

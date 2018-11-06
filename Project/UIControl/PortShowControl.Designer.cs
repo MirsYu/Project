@@ -37,6 +37,7 @@
 			this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.Name = "PortShowControl";
 			this.Size = new System.Drawing.Size(488, 36);
+			this.Load += new System.EventHandler(this.PortShowControl_Load);
 			this.ResumeLayout(false);
 
 		}

@@ -55,7 +55,7 @@ namespace Project
 		//串口打开，关闭
 		public void ctrlOpenCom()
 		{
-			if (btnSPopen.Text == "打开串口")
+			if (button_Open.Text == "打开串口")
 			{
 				try
 				{
@@ -102,7 +102,7 @@ namespace Project
 			else// close port
 			{
 
-				btnSPopen.Text = "打开串口";
+				button_Open.Text = "打开串口";
 				if (SerialPort_Prefab.IsOpen)
 				{
 					Closing = true;
@@ -120,10 +120,10 @@ namespace Project
 				cmbDataBits.Enabled = bSetCtrl;
 				cmbParity.Enabled = bSetCtrl;
 				cmbStopBits.Enabled = bSetCtrl;
-				btnSend.Enabled = !bSetCtrl;
-				btnClear.Enabled = !bSetCtrl;
+				button_Send.Enabled = !bSetCtrl;
+				button_Clear.Enabled = !bSetCtrl;
 				lblPortInd.BackColor = Color.Red;
-				btnSPopen.Text = "打开串口";
+				button_Open.Text = "打开串口";
 
 				//this.Text = strCtrlName ;
 
@@ -136,15 +136,15 @@ namespace Project
 				cmbDataBits.Enabled = bSetCtrl;
 				cmbParity.Enabled = bSetCtrl;
 				cmbStopBits.Enabled = bSetCtrl;
-				btnSend.Enabled = !bSetCtrl;
-				btnClear.Enabled = !bSetCtrl;
+				button_Send.Enabled = !bSetCtrl;
+				button_Clear.Enabled = !bSetCtrl;
 				lblPortInd.BackColor = Color.Green;
-				btnSPopen.Text = "关闭串口";
+				button_Open.Text = "关闭串口";
 
 			}
 		}
 		//open serial
-		private void btnSPopen_Click(object sender, EventArgs e)
+		private void button_Open_Click(object sender, EventArgs e)
 		{
 			SavePara();
 			ctrlOpenCom();
@@ -180,7 +180,7 @@ namespace Project
 			if (errRet == cmbStopBits.Text)
 				cmbStopBits.SelectedIndex = 0;
 		}
-		private void CTLSerialPort_Load(object sender, EventArgs e)
+		private void _SerialPortControl_Load(object sender, EventArgs e)
 		{
 			LoadPara();
 			if (tag_PortParameter != null)
@@ -224,7 +224,7 @@ namespace Project
 			return true;
 		}
 		//Send button
-		private void btnSendPort1_Click(object sender, EventArgs e)
+		private void button_Send_Click(object sender, EventArgs e)
 		{
 			string strSend = txtSendPort1.Text;
 			this.ctrlSend(strSend);
@@ -263,7 +263,7 @@ namespace Project
 				Listening = false;
 			}
 		}
-		private void btnClear_Click(object sender, EventArgs e)
+		private void button_Clear_Click(object sender, EventArgs e)
 		{
 			txtRecPort1.Clear();
 		}

@@ -11,9 +11,9 @@ namespace Project
 {
 	public partial class IOAllShowControl : UserControl
 	{
-		private IOSetPanelControl ioSet1;
-		private IOAssign ioAssign1;
-		private OutIOAssign outIOAssign1;
+		private IODebugSetPanelControl ioSet1;
+		private IOInputAssignControl ioAssign1;
+		private IOOutputAssignControl outIOAssign1;
 		public IOAllShowControl()
 		{
 			InitializeComponent();
@@ -31,7 +31,7 @@ namespace Project
 		}
 		public void LoadUI()
 		{
-			this.ioSet1 = new IOSet();
+			this.ioSet1 = new IODebugSetPanelControl();
 			this.ioSet1.Location = new System.Drawing.Point(3, 3);
 			this.ioSet1.Name = "ioSet1";
 			this.ioSet1.Size = new System.Drawing.Size(980, 500);
@@ -39,19 +39,19 @@ namespace Project
 			this.tabPage2.Controls.Add(this.ioSet1);
 			this.tabPage3.Controls.Add(this.ioAssign1);
 			this.tabPage4.Controls.Add(this.outIOAssign1);
-			this.ioAssign1 = new StrongProject.IOAssign();
+			this.ioAssign1 = new IOInputAssignControl();
 			this.ioAssign1.Location = new System.Drawing.Point(3, 12);
 			this.ioAssign1.Name = "ioAssign1";
 			this.ioAssign1.Size = new System.Drawing.Size(835, 446);
 			this.ioAssign1.TabIndex = 0;
-			this.outIOAssign1 = new StrongProject.OutIOAssign();
+			this.outIOAssign1 = new IOOutputAssignControl();
 			this.outIOAssign1.Location = new System.Drawing.Point(0, 3);
 			this.outIOAssign1.Name = "outIOAssign1";
 			this.outIOAssign1.Size = new System.Drawing.Size(1032, 500);
 			this.outIOAssign1.TabIndex = 0;
 
 
-			this.ioAssign1 = new StrongProject.IOAssign();
+			this.ioAssign1 = new IOInputAssignControl();
 			this.ioAssign1.Location = new System.Drawing.Point(0, 3);
 			this.ioAssign1.Name = "IOAssign1";
 			this.ioAssign1.Size = new System.Drawing.Size(1032, 500);
@@ -85,7 +85,7 @@ namespace Project
 						continue;
 					}
 					listObject.Add(ioP);
-					IOinputStatus ioinput = new IOinputStatus(ioP);
+					IOInputStatusControl ioinput = new IOInputStatusControl(ioP);
 					ioinput.Location = new Point(i % 4 * 160, i / 4 * 30);
 					panel_IO.Controls.Add(ioinput);
 					i++;
@@ -97,7 +97,7 @@ namespace Project
 						continue;
 					}
 					listObject.Add(ioP);
-					IOoutputStatus ioinput = new IOoutputStatus(ioP, null);
+					IOOutputStatusControl ioinput = new IOOutputStatusControl(ioP, null);
 					string car = ioP.CardNum.ToString();
 
 
@@ -113,7 +113,7 @@ namespace Project
 		}
 		public string GetCarId()
 		{
-			switch (comboBox_motiontype.SelectedIndex)
+			switch (comboBox_Motiontype.SelectedIndex)
 			{
 				case 0:
 					return "-1";
@@ -171,7 +171,7 @@ namespace Project
 			return "-1";
 
 		}
-		private void button1_Click(object sender, EventArgs e)
+		private void button_InputSelect_Click(object sender, EventArgs e)
 		{
 			int i = 0;
 			int j = 0;
@@ -183,7 +183,7 @@ namespace Project
 				foreach (IOParameter ioP in sm.arrInputIo)
 				{
 
-					IOinputStatus ioinput = new IOinputStatus(ioP);
+					IOInputStatusControl ioinput = new IOInputStatusControl(ioP);
 					string car = ioP.CardNum.ToString();
 					string scar = GetCarId();
 
@@ -201,7 +201,7 @@ namespace Project
 			}
 		}
 
-		private void button2_Click(object sender, EventArgs e)
+		private void button_OutputSelect_Click(object sender, EventArgs e)
 		{
 			int i = 0;
 			int j = 0;
@@ -214,7 +214,7 @@ namespace Project
 				foreach (IOParameter ioP in sm.arrOutputIo)
 				{
 
-					IOoutputStatus ioinput = new IOoutputStatus(ioP, null);
+					IOOutputStatusControl ioinput = new IOOutputStatusControl(ioP, null);
 					string car = ioP.CardNum.ToString();
 					string scar = GetCarId();
 
@@ -231,7 +231,7 @@ namespace Project
 			}
 		}
 
-		private void button_save_Click(object sender, EventArgs e)
+		private void button_Save_Click(object sender, EventArgs e)
 		{
 			ioSet1.save();
 		}

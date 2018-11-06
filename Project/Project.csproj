@@ -96,6 +96,8 @@
     <Compile Include="Configs\Config.cs" />
     <Compile Include="Configs\PrivateSave.cs" />
     <Compile Include="Configs\SolderConfig.cs" />
+    <Compile Include="Configs\StationPattern.cs" />
+    <Compile Include="ConsoleOut.cs" />
     <Compile Include="File\CFile.cs" />
     <Compile Include="Flow\Rest.cs" />
     <Compile Include="Global.cs" />
@@ -152,17 +154,47 @@
     <Compile Include="UIControl\IOAllShowControl.Designer.cs">
       <DependentUpon>IOAllShowControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIControl\IOInputAssignControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOInputAssignControl.Designer.cs">
+      <DependentUpon>IOInputAssignControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\IOInputSetControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIControl\IOInputSetControl.Designer.cs">
       <DependentUpon>IOInputSetControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIControl\IOInputStatusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOInputStatusControl.Designer.cs">
+      <DependentUpon>IOInputStatusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\IOOutputAssignControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOOutputAssignControl.Designer.cs">
+      <DependentUpon>IOOutputAssignControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\IOOutputStatusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\IOOutputStatusControl.Designer.cs">
+      <DependentUpon>IOOutputStatusControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\IOWaitSingleSetControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UIControl\IOWaitSingleSetControl.Designer.cs">
       <DependentUpon>IOWaitSingleSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\MoveDisControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\MoveDisControl.Designer.cs">
+      <DependentUpon>MoveDisControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UIControl\Panel\IODebugSetPanelControl.cs">
       <SubType>UserControl</SubType>
@@ -290,6 +322,12 @@
     <Compile Include="UIForm\ChangePasswordUI.Designer.cs">
       <DependentUpon>ChangePasswordUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIForm\FlowManageUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForm\FlowManageUI.Designer.cs">
+      <DependentUpon>FlowManageUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIForm\FormAdaptive.cs" />
     <Compile Include="UIForm\GoHomeParameterUI.cs">
       <SubType>Form</SubType>
@@ -358,11 +396,26 @@
     <EmbeddedResource Include="UIControl\IOAllShowControl.resx">
       <DependentUpon>IOAllShowControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOInputAssignControl.resx">
+      <DependentUpon>IOInputAssignControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\IOInputSetControl.resx">
       <DependentUpon>IOInputSetControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOInputStatusControl.resx">
+      <DependentUpon>IOInputStatusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOOutputAssignControl.resx">
+      <DependentUpon>IOOutputAssignControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\IOOutputStatusControl.resx">
+      <DependentUpon>IOOutputStatusControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\IOWaitSingleSetControl.resx">
       <DependentUpon>IOWaitSingleSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\MoveDisControl.resx">
+      <DependentUpon>MoveDisControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIControl\Panel\IODebugSetPanelControl.resx">
       <DependentUpon>IODebugSetPanelControl.cs</DependentUpon>
@@ -423,6 +476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\ChangePasswordUI.resx">
       <DependentUpon>ChangePasswordUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForm\FlowManageUI.resx">
+      <DependentUpon>FlowManageUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIForm\GoHomeParameterUI.resx">
       <DependentUpon>GoHomeParameterUI.cs</DependentUpon>

@@ -115,6 +115,7 @@
 			this.button_Connect.TabIndex = 43;
 			this.button_Connect.Text = "连接";
 			this.button_Connect.UseVisualStyleBackColor = true;
+			this.button_Connect.Click += new System.EventHandler(this.button_Connect_Click);
 			// 
 			// textBox2
 			// 
@@ -132,6 +133,7 @@
 			this.button_Send.TabIndex = 41;
 			this.button_Send.Text = "发送";
 			this.button_Send.UseVisualStyleBackColor = true;
+			this.button_Send.Click += new System.EventHandler(this.button_Send_Click);
 			// 
 			// txtName
 			// 
@@ -165,6 +167,7 @@
 			this.button_Save.TabIndex = 37;
 			this.button_Save.Text = "修改";
 			this.button_Save.UseVisualStyleBackColor = true;
+			this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
 			// 
 			// label_port
 			// 
@@ -205,6 +208,7 @@
 			this.Controls.Add(this.SocketSetting);
 			this.Name = "NetSocketControl";
 			this.Size = new System.Drawing.Size(488, 287);
+			this.Load += new System.EventHandler(this.NetSocketControl_Load);
 			this.SocketSetting.ResumeLayout(false);
 			this.SocketSetting.PerformLayout();
 			this.ResumeLayout(false);

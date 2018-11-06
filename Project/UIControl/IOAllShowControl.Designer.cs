@@ -36,12 +36,12 @@
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.label1 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.button_InputSelect = new System.Windows.Forms.Button();
+			this.button_OutputSelect = new System.Windows.Forms.Button();
 			this.button_IOSet = new System.Windows.Forms.Button();
 			this.comboBox_Stat = new System.Windows.Forms.ComboBox();
-			this.button_save = new System.Windows.Forms.Button();
-			this.comboBox_motiontype = new System.Windows.Forms.ComboBox();
+			this.button_Save = new System.Windows.Forms.Button();
+			this.comboBox_Motiontype = new System.Windows.Forms.ComboBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.SuspendLayout();
@@ -85,6 +85,7 @@
 			this.panel_out.Name = "panel_out";
 			this.panel_out.Size = new System.Drawing.Size(280, 450);
 			this.panel_out.TabIndex = 5;
+			this.panel_out.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_out_Paint);
 			// 
 			// tabPage2
 			// 
@@ -123,23 +124,25 @@
 			this.label1.TabIndex = 21;
 			this.label1.Text = "卡号";
 			// 
-			// button1
+			// button_InputSelect
 			// 
-			this.button1.Location = new System.Drawing.Point(147, 7);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 20;
-			this.button1.Text = "IN查询";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button_InputSelect.Location = new System.Drawing.Point(147, 7);
+			this.button_InputSelect.Name = "button_InputSelect";
+			this.button_InputSelect.Size = new System.Drawing.Size(75, 23);
+			this.button_InputSelect.TabIndex = 20;
+			this.button_InputSelect.Text = "IN查询";
+			this.button_InputSelect.UseVisualStyleBackColor = true;
+			this.button_InputSelect.Click += new System.EventHandler(this.button_InputSelect_Click);
 			// 
-			// button2
+			// button_OutputSelect
 			// 
-			this.button2.Location = new System.Drawing.Point(228, 7);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 22;
-			this.button2.Text = "Out查询";
-			this.button2.UseVisualStyleBackColor = true;
+			this.button_OutputSelect.Location = new System.Drawing.Point(228, 7);
+			this.button_OutputSelect.Name = "button_OutputSelect";
+			this.button_OutputSelect.Size = new System.Drawing.Size(75, 23);
+			this.button_OutputSelect.TabIndex = 22;
+			this.button_OutputSelect.Text = "Out查询";
+			this.button_OutputSelect.UseVisualStyleBackColor = true;
+			this.button_OutputSelect.Click += new System.EventHandler(this.button_OutputSelect_Click);
 			// 
 			// button_IOSet
 			// 
@@ -149,6 +152,7 @@
 			this.button_IOSet.TabIndex = 27;
 			this.button_IOSet.Text = "IOSet";
 			this.button_IOSet.UseVisualStyleBackColor = true;
+			this.button_IOSet.Click += new System.EventHandler(this.button_IOSet_Click);
 			// 
 			// comboBox_Stat
 			// 
@@ -157,22 +161,24 @@
 			this.comboBox_Stat.Name = "comboBox_Stat";
 			this.comboBox_Stat.Size = new System.Drawing.Size(121, 20);
 			this.comboBox_Stat.TabIndex = 26;
+			this.comboBox_Stat.SelectedIndexChanged += new System.EventHandler(this.comboBox_Stat_SelectedIndexChanged);
 			// 
-			// button_save
+			// button_Save
 			// 
-			this.button_save.Location = new System.Drawing.Point(309, 6);
-			this.button_save.Name = "button_save";
-			this.button_save.Size = new System.Drawing.Size(75, 23);
-			this.button_save.TabIndex = 25;
-			this.button_save.Text = "保存";
-			this.button_save.UseVisualStyleBackColor = true;
+			this.button_Save.Location = new System.Drawing.Point(309, 6);
+			this.button_Save.Name = "button_Save";
+			this.button_Save.Size = new System.Drawing.Size(75, 23);
+			this.button_Save.TabIndex = 25;
+			this.button_Save.Text = "保存";
+			this.button_Save.UseVisualStyleBackColor = true;
+			this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
 			// 
-			// comboBox_motiontype
+			// comboBox_Motiontype
 			// 
-			this.comboBox_motiontype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBox_motiontype.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.comboBox_motiontype.FormattingEnabled = true;
-			this.comboBox_motiontype.Items.AddRange(new object[] {
+			this.comboBox_Motiontype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBox_Motiontype.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.comboBox_Motiontype.FormattingEnabled = true;
+			this.comboBox_Motiontype.Items.AddRange(new object[] {
             "无",
             "1卡",
             "2卡",
@@ -187,11 +193,11 @@
             "扩8",
             "扩9",
             "扩10"});
-			this.comboBox_motiontype.Location = new System.Drawing.Point(95, 7);
-			this.comboBox_motiontype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.comboBox_motiontype.Name = "comboBox_motiontype";
-			this.comboBox_motiontype.Size = new System.Drawing.Size(46, 20);
-			this.comboBox_motiontype.TabIndex = 24;
+			this.comboBox_Motiontype.Location = new System.Drawing.Point(95, 7);
+			this.comboBox_Motiontype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.comboBox_Motiontype.Name = "comboBox_Motiontype";
+			this.comboBox_Motiontype.Size = new System.Drawing.Size(46, 20);
+			this.comboBox_Motiontype.TabIndex = 24;
 			// 
 			// IOAllShowControl
 			// 
@@ -199,14 +205,15 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.button2);
+			this.Controls.Add(this.button_InputSelect);
+			this.Controls.Add(this.button_OutputSelect);
 			this.Controls.Add(this.button_IOSet);
 			this.Controls.Add(this.comboBox_Stat);
-			this.Controls.Add(this.button_save);
-			this.Controls.Add(this.comboBox_motiontype);
+			this.Controls.Add(this.button_Save);
+			this.Controls.Add(this.comboBox_Motiontype);
 			this.Name = "IOAllShowControl";
 			this.Size = new System.Drawing.Size(1003, 543);
+			this.Load += new System.EventHandler(this.IoAllShow_Load);
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.ResumeLayout(false);
@@ -224,11 +231,11 @@
 		private System.Windows.Forms.TabPage tabPage3;
 		private System.Windows.Forms.TabPage tabPage4;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button_InputSelect;
+		private System.Windows.Forms.Button button_OutputSelect;
 		private System.Windows.Forms.Button button_IOSet;
 		private System.Windows.Forms.ComboBox comboBox_Stat;
-		private System.Windows.Forms.Button button_save;
-		private System.Windows.Forms.ComboBox comboBox_motiontype;
+		private System.Windows.Forms.Button button_Save;
+		private System.Windows.Forms.ComboBox comboBox_Motiontype;
 	}
 }

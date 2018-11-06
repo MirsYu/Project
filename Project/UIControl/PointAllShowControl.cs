@@ -344,12 +344,12 @@ namespace Project
 		}
 
 
-		private void UserControl_ShowAllPoint_Load(object sender, EventArgs e)
+		private void PointAllShowControl_Load(object sender, EventArgs e)
 		{
 			Show();
 		}
 
-		private void 运动ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Save_Click(object sender, EventArgs e)
 		{
 			if (Global.CConst.UserLevel == Global.CConst.USER_SUPERADMIN || Global.CConst.UserLevel == Global.CConst.USER_ADMINISTOR)
 			{
@@ -379,7 +379,7 @@ namespace Project
 			}
 		}
 
-		private void UserControl_ShowAllPoint_SizeChanged(object sender, EventArgs e)
+		private void PointAllShowControl_SizeChanged(object sender, EventArgs e)
 		{
 
 			CBpointMessage.Size = new Size(this.Size.Width, this.Size.Height - 100); ;

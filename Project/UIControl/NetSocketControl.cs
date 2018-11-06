@@ -29,7 +29,7 @@ namespace Project
 			InitializeComponent();
 
 		}
-		private void UserControl_NetSocket_Load(object sender, EventArgs e)
+		private void NetSocketControl_Load(object sender, EventArgs e)
 		{
 			textBox_Ip.Text = tag_IPAdrr.tag_ip;
 			textBox_port.Text = tag_IPAdrr.tag_port.ToString();
@@ -70,13 +70,6 @@ namespace Project
 			{
 				textBox2.Text = textBox2.Text + outStr;
 			}
-		}
-		private void SetText(string text)
-		{
-			// InvokeRequired required compares the thread ID of the 
-			// calling thread to the thread ID of the creating thread. 
-			// If these threads are different, it returns true. 
-
 		}
 		private void button_Send_Click(object sender, EventArgs e)
 		{

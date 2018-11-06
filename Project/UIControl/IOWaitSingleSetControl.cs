@@ -64,7 +64,7 @@ namespace Project
 			}
 		}
 
-		private void checkBox1_CheckedChanged(object sender, EventArgs e)
+		private void checkBox_en_CheckedChanged(object sender, EventArgs e)
 		{
 			try
 			{

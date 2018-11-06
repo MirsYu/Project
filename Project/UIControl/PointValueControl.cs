@@ -530,7 +530,7 @@ namespace Project
 			return ret;
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void button_Exe_Click(object sender, EventArgs e)
 		{
 			if (!Work.IsMove(0))
 			{
@@ -557,7 +557,7 @@ namespace Project
 			this.BackColor = Color.White;
 		}
 
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		private void comboBox_delectAdd_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			switch (comboBox_delectAdd.SelectedIndex)
 			{

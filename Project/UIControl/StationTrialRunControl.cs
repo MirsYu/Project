@@ -40,7 +40,7 @@ namespace Project
 			InitializeComponent();
 		}
 
-		private void stepTrialRun_Load(object sender, EventArgs e)
+		private void StationTrialRunControl_Load(object sender, EventArgs e)
 		{
 			button_LineCheck.Text = tag_titleName;
 			StationModule sm = StationManage.FindStation(tag_workBase.tag_stationName);

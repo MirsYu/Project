@@ -24,7 +24,7 @@ namespace Project
 			WorkBase wb = (WorkBase)tb.Tag;
 			wb.tag_sn = tb.Text;
 		}
-		public void UserControl_SN_Load(object sender, EventArgs e)
+		public void ModeSelectControl_Load(object sender, EventArgs e)
 		{
 			if (tag_Work == null)
 			{

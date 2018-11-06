@@ -16,7 +16,8 @@ namespace Project
 			{
 				BinaryFormatter formatter = new BinaryFormatter();
 				Stream stream = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
-				formatter.Serialize(stream, o);
+				if(stream.Length != 0)
+					formatter.Serialize(stream, o);
 				stream.Flush();
 				stream.Close();
 			}
@@ -40,16 +41,21 @@ namespace Project
 
 		public static T DeSerialize<T>(string filePath)
 		{
+
 			try
 			{
-				BinaryFormatter formatter = new BinaryFormatter();
 				Stream destream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
-				T o = (T)formatter.Deserialize(destream);
+				T o = default(T);
+				BinaryFormatter formatter = new BinaryFormatter();
+				if (destream.Length!=0)
+					o = (T)formatter.Deserialize(destream);
 				destream.Flush();
 				destream.Close();
 				return o;
 			}
-			catch (Exception) { }
+			catch (Exception) {
+
+			}
 			return default(T);
 		}
 

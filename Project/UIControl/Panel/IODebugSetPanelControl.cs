@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Project.UIControl.Panel
+namespace Project
 {
 	public partial class IODebugSetPanelControl : UserControl
 	{

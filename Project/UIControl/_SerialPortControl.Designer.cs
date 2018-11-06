@@ -30,7 +30,7 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.SerialPort_Prefab = new System.IO.Ports.SerialPort(this.components);
-			this.btnSend = new System.Windows.Forms.Button();
+			this.button_Send = new System.Windows.Forms.Button();
 			this.lblPortInd = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
 			this.cmbBaudRate = new System.Windows.Forms.ComboBox();
 			this.cmbDataBits = new System.Windows.Forms.ComboBox();
 			this.cmbParity = new System.Windows.Forms.ComboBox();
-			this.btnClear = new System.Windows.Forms.Button();
+			this.button_Clear = new System.Windows.Forms.Button();
 			this.txtRecPort1 = new System.Windows.Forms.TextBox();
 			this.txtSendPort1 = new System.Windows.Forms.TextBox();
 			this.label21 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
 			this.checkBox_enable = new System.Windows.Forms.CheckBox();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.cmbStopBits = new System.Windows.Forms.ComboBox();
-			this.btnSPopen = new System.Windows.Forms.Button();
+			this.button_Open = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -61,15 +61,16 @@
 			// 
 			this.SerialPort_Prefab.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort_Prefab_DataReceived);
 			// 
-			// btnSend
+			// button_Send
 			// 
-			this.btnSend.Enabled = false;
-			this.btnSend.Location = new System.Drawing.Point(200, 79);
-			this.btnSend.Name = "btnSend";
-			this.btnSend.Size = new System.Drawing.Size(95, 25);
-			this.btnSend.TabIndex = 19;
-			this.btnSend.Text = "send";
-			this.btnSend.UseVisualStyleBackColor = true;
+			this.button_Send.Enabled = false;
+			this.button_Send.Location = new System.Drawing.Point(200, 79);
+			this.button_Send.Name = "button_Send";
+			this.button_Send.Size = new System.Drawing.Size(95, 25);
+			this.button_Send.TabIndex = 19;
+			this.button_Send.Text = "send";
+			this.button_Send.UseVisualStyleBackColor = true;
+			this.button_Send.Click += new System.EventHandler(this.button_Send_Click);
 			// 
 			// lblPortInd
 			// 
@@ -169,15 +170,16 @@
 			this.cmbParity.Size = new System.Drawing.Size(60, 20);
 			this.cmbParity.TabIndex = 23;
 			// 
-			// btnClear
+			// button_Clear
 			// 
-			this.btnClear.Enabled = false;
-			this.btnClear.Location = new System.Drawing.Point(125, 194);
-			this.btnClear.Name = "btnClear";
-			this.btnClear.Size = new System.Drawing.Size(82, 25);
-			this.btnClear.TabIndex = 26;
-			this.btnClear.Text = "clear";
-			this.btnClear.UseVisualStyleBackColor = true;
+			this.button_Clear.Enabled = false;
+			this.button_Clear.Location = new System.Drawing.Point(125, 194);
+			this.button_Clear.Name = "button_Clear";
+			this.button_Clear.Size = new System.Drawing.Size(82, 25);
+			this.button_Clear.TabIndex = 26;
+			this.button_Clear.Text = "clear";
+			this.button_Clear.UseVisualStyleBackColor = true;
+			this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
 			// 
 			// txtRecPort1
 			// 
@@ -277,15 +279,16 @@
 			this.cmbStopBits.Size = new System.Drawing.Size(60, 20);
 			this.cmbStopBits.TabIndex = 21;
 			// 
-			// btnSPopen
+			// button_Open
 			// 
-			this.btnSPopen.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.btnSPopen.Location = new System.Drawing.Point(37, 194);
-			this.btnSPopen.Name = "btnSPopen";
-			this.btnSPopen.Size = new System.Drawing.Size(82, 25);
-			this.btnSPopen.TabIndex = 12;
-			this.btnSPopen.Text = "打开串口";
-			this.btnSPopen.UseVisualStyleBackColor = true;
+			this.button_Open.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.button_Open.Location = new System.Drawing.Point(37, 194);
+			this.button_Open.Name = "button_Open";
+			this.button_Open.Size = new System.Drawing.Size(82, 25);
+			this.button_Open.TabIndex = 12;
+			this.button_Open.Text = "打开串口";
+			this.button_Open.UseVisualStyleBackColor = true;
+			this.button_Open.Click += new System.EventHandler(this.button_Open_Click);
 			// 
 			// groupBox1
 			// 
@@ -293,14 +296,14 @@
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.checkBox_enable);
 			this.groupBox1.Controls.Add(this.panel1);
-			this.groupBox1.Controls.Add(this.btnClear);
+			this.groupBox1.Controls.Add(this.button_Clear);
 			this.groupBox1.Controls.Add(this.txtRecPort1);
 			this.groupBox1.Controls.Add(this.txtSendPort1);
-			this.groupBox1.Controls.Add(this.btnSend);
+			this.groupBox1.Controls.Add(this.button_Send);
 			this.groupBox1.Controls.Add(this.lblPortInd);
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Controls.Add(this.btnSPopen);
+			this.groupBox1.Controls.Add(this.button_Open);
 			this.groupBox1.Location = new System.Drawing.Point(3, 3);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(311, 236);
@@ -315,6 +318,7 @@
 			this.Controls.Add(this.groupBox1);
 			this.Name = "_SerialPortControl";
 			this.Size = new System.Drawing.Size(319, 244);
+			this.Load += new System.EventHandler(this._SerialPortControl_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.groupBox1.ResumeLayout(false);
@@ -326,7 +330,7 @@
 		#endregion
 
 		private System.IO.Ports.SerialPort SerialPort_Prefab;
-		private System.Windows.Forms.Button btnSend;
+		private System.Windows.Forms.Button button_Send;
 		private System.Windows.Forms.Label lblPortInd;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
@@ -336,7 +340,7 @@
 		private System.Windows.Forms.ComboBox cmbBaudRate;
 		private System.Windows.Forms.ComboBox cmbDataBits;
 		private System.Windows.Forms.ComboBox cmbParity;
-		private System.Windows.Forms.Button btnClear;
+		private System.Windows.Forms.Button button_Clear;
 		private System.Windows.Forms.TextBox txtRecPort1;
 		private System.Windows.Forms.TextBox txtSendPort1;
 		private System.Windows.Forms.Label label21;
@@ -347,7 +351,7 @@
 		private System.Windows.Forms.CheckBox checkBox_enable;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.ComboBox cmbStopBits;
-		private System.Windows.Forms.Button btnSPopen;
+		private System.Windows.Forms.Button button_Open;
 		private System.Windows.Forms.GroupBox groupBox1;
 	}
 }

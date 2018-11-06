@@ -224,22 +224,7 @@ namespace Project
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			try
-			{
 
-				if (tag_OutIo.tag_IniO1 == null)
-				{
-					tag_OutIo.tag_IniO1 = new InIOParameterPoint();
-				}
-				tag_OutIo.tag_IniO1.tag_IOName = listBox2.SelectedItem.ToString();
-				if (comboBox_Stat.SelectedItem != null)
-					tag_OutIo.tag_IniO1.tag_name = comboBox_Stat.SelectedItem.ToString();
-				ucl_InIo1.show(tag_OutIo.tag_IniO1);
-			}
-			catch
-			{
-
-			}
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -305,7 +290,7 @@ namespace Project
 
 		}
 
-		private void 添加ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Add_Click(object sender, EventArgs e)
 		{
 
 			tag_PointModule.tag_OutIo = new OutIOParameterPoint();
@@ -315,7 +300,7 @@ namespace Project
 			Tree_Load(null, null);
 		}
 
-		private void 重命名ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Rename_Click(object sender, EventArgs e)
 		{
 			treeView_IO.LabelEdit = true;
 			treeView_IO.SelectedNode.BeginEdit();
@@ -346,7 +331,7 @@ namespace Project
 
 		}
 
-		private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Del_Click(object sender, EventArgs e)
 		{
 			try
 			{

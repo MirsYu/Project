@@ -89,9 +89,13 @@
 			this.tabPage_Log = new System.Windows.Forms.TabPage();
 			this.textBox_Log = new System.Windows.Forms.TextBox();
 			this.tabPage_Flow = new System.Windows.Forms.TabPage();
-			this.textBox_FlowInfo = new System.Windows.Forms.TextBox();
 			this.comboBox_FlowName = new System.Windows.Forms.ComboBox();
 			this.treeView_FlowStruct = new System.Windows.Forms.TreeView();
+			this.button5 = new System.Windows.Forms.Button();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.tabCtrlDebug.SuspendLayout();
 			this.TabPagManual.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.PointDistance)).BeginInit();
@@ -99,6 +103,10 @@
 			this.AXISgroupBox.SuspendLayout();
 			this.tabPage_Log.SuspendLayout();
 			this.tabPage_Flow.SuspendLayout();
+			this.groupBox2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabCtrlDebug
@@ -608,7 +616,9 @@
 			// 
 			// tabPage_Flow
 			// 
-			this.tabPage_Flow.Controls.Add(this.textBox_FlowInfo);
+			this.tabPage_Flow.Controls.Add(this.button5);
+			this.tabPage_Flow.Controls.Add(this.groupBox2);
+			this.tabPage_Flow.Controls.Add(this.groupBox1);
 			this.tabPage_Flow.Controls.Add(this.comboBox_FlowName);
 			this.tabPage_Flow.Controls.Add(this.treeView_FlowStruct);
 			this.tabPage_Flow.Location = new System.Drawing.Point(4, 22);
@@ -617,14 +627,6 @@
 			this.tabPage_Flow.TabIndex = 8;
 			this.tabPage_Flow.Text = "流程配置系统_测试";
 			this.tabPage_Flow.UseVisualStyleBackColor = true;
-			// 
-			// textBox_FlowInfo
-			// 
-			this.textBox_FlowInfo.Location = new System.Drawing.Point(536, 65);
-			this.textBox_FlowInfo.Multiline = true;
-			this.textBox_FlowInfo.Name = "textBox_FlowInfo";
-			this.textBox_FlowInfo.Size = new System.Drawing.Size(379, 457);
-			this.textBox_FlowInfo.TabIndex = 2;
 			// 
 			// comboBox_FlowName
 			// 
@@ -659,6 +661,55 @@
 			this.treeView_FlowStruct.TabIndex = 0;
 			this.treeView_FlowStruct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView_FlowStruct_MouseDown);
 			// 
+			// button5
+			// 
+			this.button5.Location = new System.Drawing.Point(367, 418);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(75, 23);
+			this.button5.TabIndex = 8;
+			this.button5.Text = "保存";
+			this.button5.UseVisualStyleBackColor = true;
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.dataGridView2);
+			this.groupBox2.Location = new System.Drawing.Point(367, 219);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(581, 161);
+			this.groupBox2.TabIndex = 7;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "IO信息";
+			// 
+			// dataGridView2
+			// 
+			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView2.Location = new System.Drawing.Point(3, 17);
+			this.dataGridView2.Name = "dataGridView2";
+			this.dataGridView2.RowTemplate.Height = 23;
+			this.dataGridView2.Size = new System.Drawing.Size(575, 141);
+			this.dataGridView2.TabIndex = 2;
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.dataGridView1);
+			this.groupBox1.Location = new System.Drawing.Point(367, 19);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(581, 197);
+			this.groupBox1.TabIndex = 6;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "轴信息";
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView1.Location = new System.Drawing.Point(3, 17);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.RowTemplate.Height = 23;
+			this.dataGridView1.Size = new System.Drawing.Size(575, 177);
+			this.dataGridView1.TabIndex = 2;
+			// 
 			// DebugUI
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -680,7 +731,10 @@
 			this.tabPage_Log.ResumeLayout(false);
 			this.tabPage_Log.PerformLayout();
 			this.tabPage_Flow.ResumeLayout(false);
-			this.tabPage_Flow.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			this.groupBox1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -736,6 +790,10 @@
 		private System.Windows.Forms.TabPage tabPage_Flow;
 		private System.Windows.Forms.ComboBox comboBox_FlowName;
 		private System.Windows.Forms.TreeView treeView_FlowStruct;
-		private System.Windows.Forms.TextBox textBox_FlowInfo;
+		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.DataGridView dataGridView2;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.DataGridView dataGridView1;
 	}
 }

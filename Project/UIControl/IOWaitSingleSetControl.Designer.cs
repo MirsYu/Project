@@ -41,6 +41,7 @@
 			this.textBox_WaitTime.Size = new System.Drawing.Size(54, 21);
 			this.textBox_WaitTime.TabIndex = 14;
 			this.textBox_WaitTime.Text = "0";
+			this.textBox_WaitTime.TextChanged += new System.EventHandler(this.tbxTime_TextChanged);
 			// 
 			// comboBox_IO
 			// 
@@ -53,6 +54,7 @@
 			this.comboBox_IO.Size = new System.Drawing.Size(73, 20);
 			this.comboBox_IO.TabIndex = 13;
 			this.comboBox_IO.Text = "高电平";
+			this.comboBox_IO.SelectedValueChanged += new System.EventHandler(this.comboBox_IO_SelectedIndexChanged);
 			// 
 			// checkBox_en
 			// 
@@ -63,6 +65,7 @@
 			this.checkBox_en.TabIndex = 12;
 			this.checkBox_en.Text = "启用";
 			this.checkBox_en.UseVisualStyleBackColor = true;
+			this.checkBox_en.CheckedChanged += new System.EventHandler(this.checkBox_en_CheckedChanged);
 			// 
 			// label_name
 			// 

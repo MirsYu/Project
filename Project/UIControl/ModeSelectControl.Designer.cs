@@ -43,6 +43,11 @@
 			this.checkBox_SnEm.TabIndex = 3;
 			this.checkBox_SnEm.Text = "SN可以为空";
 			this.checkBox_SnEm.UseVisualStyleBackColor = true;
+			this.checkBox_SnEm.CheckedChanged += new System.EventHandler(this.checkBox_SnEm_CheckedChanged);
+			// 
+			// timer1
+			// 
+			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
 			// checkBox_PDCA
 			// 
@@ -53,6 +58,7 @@
 			this.checkBox_PDCA.TabIndex = 2;
 			this.checkBox_PDCA.Text = "PDCA";
 			this.checkBox_PDCA.UseVisualStyleBackColor = true;
+			this.checkBox_PDCA.CheckedChanged += new System.EventHandler(this.checkBox_PDCA_CheckedChanged);
 			// 
 			// ModeSelectControl
 			// 
@@ -62,6 +68,7 @@
 			this.Controls.Add(this.checkBox_PDCA);
 			this.Name = "ModeSelectControl";
 			this.Size = new System.Drawing.Size(142, 22);
+			this.Load += new System.EventHandler(this.ModeSelectControl_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

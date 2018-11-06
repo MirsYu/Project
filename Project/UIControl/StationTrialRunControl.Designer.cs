@@ -42,6 +42,7 @@
 			this.checkBox2.TabIndex = 13;
 			this.checkBox2.Text = "本工位屏蔽";
 			this.checkBox2.UseVisualStyleBackColor = true;
+			this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
 			// 
 			// checkBox1
 			// 
@@ -52,6 +53,7 @@
 			this.checkBox1.TabIndex = 12;
 			this.checkBox1.Text = "本工位暂停";
 			this.checkBox1.UseVisualStyleBackColor = true;
+			this.checkBox1.Click += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
 			// button_LineCheck
 			// 
@@ -62,6 +64,7 @@
 			this.button_LineCheck.TabIndex = 11;
 			this.button_LineCheck.Text = "皮带线1";
 			this.button_LineCheck.UseVisualStyleBackColor = false;
+			this.button_LineCheck.Click += new System.EventHandler(this.button_LineCheck_Click);
 			// 
 			// StationTrialRunControl
 			// 
@@ -72,6 +75,7 @@
 			this.Controls.Add(this.button_LineCheck);
 			this.Name = "StationTrialRunControl";
 			this.Size = new System.Drawing.Size(290, 27);
+			this.Load += new System.EventHandler(this.StationTrialRunControl_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

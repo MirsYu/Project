@@ -54,7 +54,7 @@ namespace Project
 			}
 
 		}
-		private void UserControl_portShow_Load(object sender, EventArgs e)
+		private void PortShowControl_Load(object sender, EventArgs e)
 		{
 
 			int i = 0;
@@ -124,7 +124,7 @@ namespace Project
 			if (tag_Work == null || tag_Work.tag_JSerialPort == null)
 				return;
 
-			UserControl_portShow_Load(null, null);
+			PortShowControl_Load(null, null);
 
 
 

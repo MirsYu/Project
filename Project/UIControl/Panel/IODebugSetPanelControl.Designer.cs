@@ -1,4 +1,4 @@
-﻿namespace Project.UIControl.Panel
+﻿namespace Project
 {
 	partial class IODebugSetPanelControl
 	{

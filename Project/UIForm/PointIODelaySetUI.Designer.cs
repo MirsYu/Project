@@ -33,9 +33,9 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PointIODelaySetUI));
 			this.label4 = new System.Windows.Forms.Label();
 			this.checkBox_andCheck = new System.Windows.Forms.CheckBox();
-			this.重命名ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.MenuItem_Rename = new System.Windows.Forms.ToolStripMenuItem();
+			this.MenuItem_Add = new System.Windows.Forms.ToolStripMenuItem();
+			this.MenuItem_Del = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.label3 = new System.Windows.Forms.Label();
 			this.treeView_IO = new System.Windows.Forms.TreeView();
@@ -70,31 +70,35 @@
 			this.checkBox_andCheck.TabIndex = 39;
 			this.checkBox_andCheck.Text = "并行执行";
 			this.checkBox_andCheck.UseVisualStyleBackColor = true;
+			this.checkBox_andCheck.CheckedChanged += new System.EventHandler(this.checkBox_andCheck_CheckedChanged);
 			// 
-			// 重命名ToolStripMenuItem
+			// MenuItem_Rename
 			// 
-			this.重命名ToolStripMenuItem.Name = "重命名ToolStripMenuItem";
-			this.重命名ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-			this.重命名ToolStripMenuItem.Text = "重命名";
+			this.MenuItem_Rename.Name = "MenuItem_Rename";
+			this.MenuItem_Rename.Size = new System.Drawing.Size(112, 22);
+			this.MenuItem_Rename.Text = "重命名";
+			this.MenuItem_Rename.Click += new System.EventHandler(this.MenuItem_Rename_Click);
 			// 
-			// 添加ToolStripMenuItem
+			// MenuItem_Add
 			// 
-			this.添加ToolStripMenuItem.Name = "添加ToolStripMenuItem";
-			this.添加ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-			this.添加ToolStripMenuItem.Text = "添加";
+			this.MenuItem_Add.Name = "MenuItem_Add";
+			this.MenuItem_Add.Size = new System.Drawing.Size(112, 22);
+			this.MenuItem_Add.Text = "添加";
+			this.MenuItem_Add.Click += new System.EventHandler(this.MenuItem_Add_Click);
 			// 
-			// 删除ToolStripMenuItem
+			// MenuItem_Del
 			// 
-			this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-			this.删除ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-			this.删除ToolStripMenuItem.Text = "删除";
+			this.MenuItem_Del.Name = "MenuItem_Del";
+			this.MenuItem_Del.Size = new System.Drawing.Size(112, 22);
+			this.MenuItem_Del.Text = "删除";
+			this.MenuItem_Del.Click += new System.EventHandler(this.MenuItem_Del_Click);
 			// 
 			// contextMenuStrip1
 			// 
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.删除ToolStripMenuItem,
-			this.添加ToolStripMenuItem,
-			this.重命名ToolStripMenuItem});
+            this.MenuItem_Del,
+            this.MenuItem_Add,
+            this.MenuItem_Rename});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(113, 70);
 			// 
@@ -115,9 +119,11 @@
 			treeNode1.Name = "节点0";
 			treeNode1.Text = "根";
 			this.treeView_IO.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-			treeNode1});
+            treeNode1});
 			this.treeView_IO.Size = new System.Drawing.Size(223, 419);
 			this.treeView_IO.TabIndex = 38;
+			this.treeView_IO.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeView_IO_AfterLabelEdit);
+			this.treeView_IO.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_IO_NodeMouseDoubleClick);
 			// 
 			// label2
 			// 
@@ -136,6 +142,7 @@
 			this.button2.TabIndex = 36;
 			this.button2.Text = "配置为安全IO";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// label1
 			// 
@@ -154,6 +161,7 @@
 			this.button4_AddIn.TabIndex = 34;
 			this.button4_AddIn.Text = "添加到工位";
 			this.button4_AddIn.UseVisualStyleBackColor = true;
+			this.button4_AddIn.Click += new System.EventHandler(this.button4_AddIn_Click);
 			// 
 			// comboBox_Stat
 			// 
@@ -162,6 +170,7 @@
 			this.comboBox_Stat.Name = "comboBox_Stat";
 			this.comboBox_Stat.Size = new System.Drawing.Size(157, 20);
 			this.comboBox_Stat.TabIndex = 33;
+			this.comboBox_Stat.SelectedIndexChanged += new System.EventHandler(this.comboBox_Stat_SelectedIndexChanged);
 			// 
 			// button3
 			// 
@@ -171,6 +180,7 @@
 			this.button3.TabIndex = 32;
 			this.button3.Text = "配置为IO1";
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// listBox2
 			// 
@@ -189,6 +199,7 @@
 			this.button1.TabIndex = 30;
 			this.button1.Text = "配置为输出IO2";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// button_Add
 			// 
@@ -198,6 +209,7 @@
 			this.button_Add.TabIndex = 29;
 			this.button_Add.Text = "配置为输出IO1";
 			this.button_Add.UseVisualStyleBackColor = true;
+			this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
 			// 
 			// listBox1
 			// 
@@ -208,7 +220,7 @@
 			this.listBox1.Size = new System.Drawing.Size(292, 340);
 			this.listBox1.TabIndex = 28;
 			// 
-			// PointIODelaySetControl
+			// PointIODelaySetUI
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +240,7 @@
 			this.Controls.Add(this.button_Add);
 			this.Controls.Add(this.listBox1);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Name = "PointIODelaySetControl";
+			this.Name = "PointIODelaySetUI";
 			this.Text = "PointIODelaySetControl";
 			this.contextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
@@ -240,9 +252,9 @@
 
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.CheckBox checkBox_andCheck;
-		private System.Windows.Forms.ToolStripMenuItem 重命名ToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem 添加ToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem MenuItem_Rename;
+		private System.Windows.Forms.ToolStripMenuItem MenuItem_Add;
+		private System.Windows.Forms.ToolStripMenuItem MenuItem_Del;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TreeView treeView_IO;
