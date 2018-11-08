@@ -39,6 +39,7 @@
 			// 
 			// groupBox_PortMain
 			// 
+			this.groupBox_PortMain.ContextMenuStrip = this.contextMenuStrip_PortMain;
 			this.groupBox_PortMain.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox_PortMain.Location = new System.Drawing.Point(0, 0);
 			this.groupBox_PortMain.Name = "groupBox_PortMain";
@@ -53,25 +54,28 @@
             this.MenuItem_Add,
             this.MenuItem_Save});
 			this.contextMenuStrip_PortMain.Name = "contextMenuStrip1";
-			this.contextMenuStrip_PortMain.Size = new System.Drawing.Size(181, 92);
+			this.contextMenuStrip_PortMain.Size = new System.Drawing.Size(125, 70);
 			// 
 			// MenuItem_Del
 			// 
 			this.MenuItem_Del.Name = "MenuItem_Del";
-			this.MenuItem_Del.Size = new System.Drawing.Size(180, 22);
+			this.MenuItem_Del.Size = new System.Drawing.Size(124, 22);
 			this.MenuItem_Del.Text = "删除一个";
+			this.MenuItem_Del.Click += new System.EventHandler(this.MenuItem_Del_Click);
 			// 
 			// MenuItem_Add
 			// 
 			this.MenuItem_Add.Name = "MenuItem_Add";
-			this.MenuItem_Add.Size = new System.Drawing.Size(180, 22);
+			this.MenuItem_Add.Size = new System.Drawing.Size(124, 22);
 			this.MenuItem_Add.Text = "添加一个";
+			this.MenuItem_Add.Click += new System.EventHandler(this.MenuItem_Add_Click);
 			// 
 			// MenuItem_Save
 			// 
 			this.MenuItem_Save.Name = "MenuItem_Save";
-			this.MenuItem_Save.Size = new System.Drawing.Size(180, 22);
+			this.MenuItem_Save.Size = new System.Drawing.Size(124, 22);
 			this.MenuItem_Save.Text = "保存";
+			this.MenuItem_Save.Click += new System.EventHandler(this.MenuItem_Save_Click);
 			// 
 			// PortSetPanelControl
 			// 
@@ -80,6 +84,8 @@
 			this.Controls.Add(this.groupBox_PortMain);
 			this.Name = "PortSetPanelControl";
 			this.Size = new System.Drawing.Size(678, 447);
+			this.Load += new System.EventHandler(this.PortSetPanelControl_Load);
+			this.SizeChanged += new System.EventHandler(this.PortSetPanelControl_SizeChanged);
 			this.contextMenuStrip_PortMain.ResumeLayout(false);
 			this.ResumeLayout(false);
 

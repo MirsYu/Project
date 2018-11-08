@@ -56,6 +56,7 @@
 			this.Controls.Add(this.panel_IO);
 			this.Name = "IODebugSetPanelControl";
 			this.Size = new System.Drawing.Size(984, 461);
+			this.Load += new System.EventHandler(this.IODebugSetPanelControl_Load);
 			this.ResumeLayout(false);
 
 		}

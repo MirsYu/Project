@@ -14,6 +14,7 @@ namespace Project
 		public WebControl()
 		{
 			InitializeComponent();
+			this.webBrowser_NG.ScriptErrorsSuppressed = true;
 		}
 
 		public void RefreshURL(string URL)

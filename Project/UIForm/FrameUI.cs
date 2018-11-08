@@ -16,7 +16,7 @@ namespace Project
 		public Work tag_Work = new Work();
 		public MainUI mainUI;
 		public DebugUI debugUI;
-		public AlarmUI alarmUI = new AlarmUI();
+		public AlarmUI alarmUI;
 		public PortShowControl portShowControl = new PortShowControl();
 		public ModeSelectControl modeSelectControl = new ModeSelectControl();
 		#endregion
@@ -41,6 +41,7 @@ namespace Project
 			debugUI = new DebugUI(this, tag_Work);
 			debugUI.TopLevel = false;
 			debugUI.Parent = this.PanelForm;
+			alarmUI = new AlarmUI();
 			alarmUI.TopLevel = false;
 			alarmUI.Parent = this.PanelForm;
 			formAdaptive.RecordOldSizeScale(this.PanelForm);
@@ -48,13 +49,13 @@ namespace Project
 			label_Version.Text = "版本号:" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
 			portShowControl.tag_Work = tag_Work;
-			portShowControl.Location = new Point(label_User.Location.X + label_User.Size.Width + 150, label_User.Location.Y);
-			portShowControl.Size = new Size((label_Day.Location.X - portShowControl.Location.X - 10) / 2, portShowControl.Size.Height);
+			portShowControl.Location = new Point(label_User.Location.X + label_User.Size.Width - 20 , label_User.Location.Y -8);
+			portShowControl.Size = new Size((label_Version.Location.X - portShowControl.Location.X - 10) / 5, panel_MainInfo.Size.Height - 5);
 			panel_MainInfo.Controls.Add(portShowControl);
 
 			modeSelectControl.tag_Work = tag_Work;
-			modeSelectControl.Location = new Point(label_User.Location.X + label_User.Size.Width + 150, label_User.Location.Y);
-			modeSelectControl.Size = new Size((label_Day.Location.X - modeSelectControl.Location.X - 10) / 2, modeSelectControl.Size.Height);
+			modeSelectControl.Location = new Point(portShowControl.Location.X + portShowControl.Size.Width -40, portShowControl.Location.Y);
+			modeSelectControl.Size = new Size((label_Version.Location.X - modeSelectControl.Location.X - 10) / 4, panel_MainInfo.Size.Height-5);
 			panel_MainInfo.Controls.Add(modeSelectControl);
 
 			ShowSubWindow(Global.CConst.FRM_MAIN);
@@ -98,7 +99,7 @@ namespace Project
 			this.mainUI.Hide();
 			this.debugUI.Hide();
 			this.alarmUI.Hide();
-			this.MenuMain.Image = Properties.Resources.Home;
+			this.MenuMain.Image = Properties.Resources.Home1;
 			this.MenuManual.Image = Properties.Resources.Set;
 			this.MenuAlarm.Image = Properties.Resources.Alarm;
 			switch (wndIndex)
@@ -108,18 +109,27 @@ namespace Project
 					this.mainUI.Show();
 					Global.CConst.Form_Var = Global.CConst.FRM_MAIN;
 					this.MenuMain.Image = Properties.Resources.Home_sel;
+					MenuMain.BackColor = Color.FromArgb(174, 218, 151);
+					MenuManual.BackColor = Color.Transparent;
+					MenuAlarm.BackColor = Color.Transparent;
 					break;
 				case Global.CConst.FRM_DEBUG:
 					this.debugUI.Location = new Point(3, 0);
 					this.debugUI.Show();
 					Global.CConst.Form_Var = Global.CConst.FRM_DEBUG;
 					this.MenuManual.Image = Properties.Resources.Set__sel;
+					MenuManual.BackColor = Color.FromArgb(174, 218, 151);
+					MenuMain.BackColor = Color.Transparent;
+					MenuAlarm.BackColor = Color.Transparent;
 					break;
 				case Global.CConst.FORM_ALARM:
 					this.alarmUI.Location = new Point(3, 0);
 					this.alarmUI.Show();
 					Global.CConst.Form_Var = Global.CConst.FORM_ALARM;
 					this.MenuAlarm.Image = Properties.Resources.Alarm_sel;
+					MenuAlarm.BackColor = Color.FromArgb(174, 218, 151);
+					MenuMain.BackColor = Color.Transparent;
+					MenuManual.BackColor = Color.Transparent;
 					break;
 				default:
 					break;

@@ -39,17 +39,20 @@ namespace Project
 			if (frameUI != null)
 				this.Size = new Size(frameUI.Size.Width, frameUI.Size.Height - 50);
 
-			webControl_NG.RefreshURL("http://127.0.0.1:8080/HTML/NG.html");
+			webControl_NG.RefreshURL("http://www.mirsyu.xyz/HTML/NG.html");
 			panel_NG.Controls.Add(webControl_NG);
-			webControl_NG.Dock = DockStyle.Fill;
+			webControl_NG.Location = new Point(0, 0);
+			webControl_NG.Size = webControl_NG.Parent.Size;
 
-			webControl_Charts.RefreshURL("http://127.0.0.1:8080/HTML/Charts.html");
+			webControl_Charts.RefreshURL("http://www.mirsyu.xyz/HTML/Charts.html");
 			panel_Charts.Controls.Add(webControl_Charts);
-			webControl_Charts.Dock = DockStyle.Fill;
+			webControl_Charts.Location = new Point(0, 0);
+			webControl_Charts.Size = webControl_Charts.Parent.Size;
 
-			logOutControl.Controls.Add(groupBox_RunMessage);
-			logOutControl.Dock = DockStyle.Fill;
 
+			groupBox_RunInfo.Controls.Add(logOutControl);
+			logOutControl.Location = new Point(5, 20);
+			logOutControl.Size = new Size(groupBox_RunInfo.Size.Width-10, groupBox_RunInfo.Size.Height - 25);
 		}
 
 		private void MainUI_Load(object sender, EventArgs e)

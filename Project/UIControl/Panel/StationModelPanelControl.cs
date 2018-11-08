@@ -17,7 +17,7 @@ namespace Project
 			InitializeComponent();
 		}
 
-		private void UCL_StationMotion_Load(object sender, EventArgs e)
+		private void StationModelPanelControl_Load(object sender, EventArgs e)
 		{
 			int offsetH = 0;
 			StationTrialRunControl _stepTrialRun = null;

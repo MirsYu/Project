@@ -17,7 +17,7 @@ namespace Project
 			InitializeComponent();
 		}
 
-		private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Del_Click(object sender, EventArgs e)
 		{
 			if (Global.CConst.UserLevel != Global.CConst.USER_SUPERADMIN)
 			{
@@ -31,10 +31,10 @@ namespace Project
 			int count = tag_Work._Config.tag_IPConfigList.Count;
 			if (count > 0)
 				tag_Work._Config.tag_IPConfigList.RemoveAt(count - 1);
-			UserControl_socketList_Load(null, null);
+			SocketListPanelControl_Load(null, null);
 		}
 
-		private void 添加ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Add_Click(object sender, EventArgs e)
 		{
 			if (Global.CConst.UserLevel != Global.CConst.USER_SUPERADMIN)
 			{
@@ -47,10 +47,10 @@ namespace Project
 			}
 
 			tag_Work._Config.tag_IPConfigList.Add(new IPConfig()); 
-			UserControl_socketList_Load(null, null);
+			SocketListPanelControl_Load(null, null);
 		}
 
-		private void 保存ToolStripMenuItem_Click_1(object sender, EventArgs e)
+		private void MenuItem_Save_Click(object sender, EventArgs e)
 		{
 
 			if (MessageBoxLog.Show("确定要保存？", "确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
@@ -60,7 +60,7 @@ namespace Project
 			tag_Work._Config.Save();
 		}
 
-		private void UserControl_socketList_Load(object sender, EventArgs e)
+		private void SocketListPanelControl_Load(object sender, EventArgs e)
 		{
 			int i = 0;
 			if (tag_Work == null)

@@ -37,9 +37,11 @@
 			this.webBrowser_NG.Location = new System.Drawing.Point(0, 0);
 			this.webBrowser_NG.MinimumSize = new System.Drawing.Size(20, 20);
 			this.webBrowser_NG.Name = "webBrowser_NG";
+			this.webBrowser_NG.ScrollBarsEnabled = false;
 			this.webBrowser_NG.Size = new System.Drawing.Size(521, 388);
 			this.webBrowser_NG.TabIndex = 0;
 			this.webBrowser_NG.Url = new System.Uri("http://127.0.0.1:8080/HTML", System.UriKind.Absolute);
+			this.webBrowser_NG.WebBrowserShortcutsEnabled = false;
 			// 
 			// WebControl
 			// 

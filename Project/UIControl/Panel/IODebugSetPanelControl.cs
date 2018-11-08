@@ -39,7 +39,7 @@ namespace Project
 			}
 			return false;
 		}
-		private void IOSet_Load(object sender, EventArgs e)
+		private void IODebugSetPanelControl_Load(object sender, EventArgs e)
 		{
 
 

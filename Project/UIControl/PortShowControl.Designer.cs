@@ -36,7 +36,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.Name = "PortShowControl";
-			this.Size = new System.Drawing.Size(488, 36);
+			this.Size = new System.Drawing.Size(340, 23);
 			this.Load += new System.EventHandler(this.PortShowControl_Load);
 			this.ResumeLayout(false);
 

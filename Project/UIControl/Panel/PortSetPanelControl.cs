@@ -17,7 +17,7 @@ namespace Project
 			InitializeComponent();
 		}
 
-		private void UserControl_portPerameter_Load(object sender, EventArgs e)
+		private void PortSetPanelControl_Load(object sender, EventArgs e)
 		{
 			int i = 0;
 			if (tag_Work == null)
@@ -32,7 +32,7 @@ namespace Project
 			}
 		}
 
-		private void 添加一个ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Add_Click(object sender, EventArgs e)
 		{
 			int i = 0;
 			if (Global.CConst.UserLevel != Global.CConst.USER_SUPERADMIN)
@@ -46,10 +46,10 @@ namespace Project
 			}
 
 			tag_Work._Config.tag_PortParameterList.Add(new PortParameter());
-			UserControl_portPerameter_Load(null, null);
+			PortSetPanelControl_Load(null, null);
 		}
 
-		private void 删除一个ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Del_Click(object sender, EventArgs e)
 		{
 			if (Global.CConst.UserLevel != Global.CConst.USER_SUPERADMIN)
 			{
@@ -64,10 +64,10 @@ namespace Project
 			int count = tag_Work._Config.tag_PortParameterList.Count;
 			if (count > 0)
 				tag_Work._Config.tag_PortParameterList.RemoveAt(count - 1);
-			UserControl_portPerameter_Load(null, null);
+			PortSetPanelControl_Load(null, null);
 		}
 
-		private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void MenuItem_Save_Click(object sender, EventArgs e)
 		{
 			int i = 0;
 			if (MessageBoxLog.Show("确定要保存？", "确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
@@ -77,10 +77,9 @@ namespace Project
 			tag_Work._Config.Save();
 		}
 
-		private void UserControl_portPerameter_SizeChanged(object sender, EventArgs e)
+		private void PortSetPanelControl_SizeChanged(object sender, EventArgs e)
 		{
-			groupBox_PortMain.Location = new Point(1, 1);
-			groupBox_PortMain.Size = new Size(this.Size.Width - 2, this.Size.Height - 2);
+
 		}
 	}
 }

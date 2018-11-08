@@ -43,31 +43,37 @@
             this.MenuItem_Add,
             this.MenuItem_Save});
 			this.contextMenuStrip_SockPanelMain.Name = "contextMenuStrip1";
-			this.contextMenuStrip_SockPanelMain.Size = new System.Drawing.Size(181, 92);
+			this.contextMenuStrip_SockPanelMain.Size = new System.Drawing.Size(101, 70);
 			// 
 			// MenuItem_Del
 			// 
 			this.MenuItem_Del.Name = "MenuItem_Del";
-			this.MenuItem_Del.Size = new System.Drawing.Size(180, 22);
+			this.MenuItem_Del.Size = new System.Drawing.Size(100, 22);
 			this.MenuItem_Del.Text = "删除";
+			this.MenuItem_Del.Click += new System.EventHandler(this.MenuItem_Del_Click);
 			// 
 			// MenuItem_Add
 			// 
 			this.MenuItem_Add.Name = "MenuItem_Add";
-			this.MenuItem_Add.Size = new System.Drawing.Size(180, 22);
+			this.MenuItem_Add.Size = new System.Drawing.Size(100, 22);
 			this.MenuItem_Add.Text = "添加";
+			this.MenuItem_Add.Click += new System.EventHandler(this.MenuItem_Add_Click);
 			// 
 			// MenuItem_Save
 			// 
 			this.MenuItem_Save.Name = "MenuItem_Save";
-			this.MenuItem_Save.Size = new System.Drawing.Size(180, 22);
+			this.MenuItem_Save.Size = new System.Drawing.Size(100, 22);
 			this.MenuItem_Save.Text = "保存";
+			this.MenuItem_Save.Click += new System.EventHandler(this.MenuItem_Save_Click);
 			// 
 			// SocketListPanelControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ContextMenuStrip = this.contextMenuStrip_SockPanelMain;
 			this.Name = "SocketListPanelControl";
+			this.Size = new System.Drawing.Size(400, 302);
+			this.Load += new System.EventHandler(this.SocketListPanelControl_Load);
 			this.contextMenuStrip_SockPanelMain.ResumeLayout(false);
 			this.ResumeLayout(false);
 

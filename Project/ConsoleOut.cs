@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace Project
@@ -11,7 +12,6 @@ namespace Project
 	public class ConsoleOut: TextWriter
 	{
 		TextBox textBox;
-		DataGridView dataGrid;
 		delegate void WriteFunc(string value);
 		WriteFunc write;
 		WriteFunc writeLine;

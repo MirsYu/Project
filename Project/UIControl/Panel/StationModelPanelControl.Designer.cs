@@ -28,8 +28,16 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			components = new System.ComponentModel.Container();
+			this.SuspendLayout();
+			// 
+			// StationModelPanelControl
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Name = "StationModelPanelControl";
+			this.Load += new System.EventHandler(this.StationModelPanelControl_Load);
+			this.ResumeLayout(false);
+
 		}
 
 		#endregion

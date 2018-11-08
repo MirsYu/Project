@@ -75,7 +75,7 @@
 			this.pnlTitle.Controls.Add(this.MenuMain);
 			this.pnlTitle.Location = new System.Drawing.Point(3, 3);
 			this.pnlTitle.Name = "pnlTitle";
-			this.pnlTitle.Size = new System.Drawing.Size(1208, 84);
+			this.pnlTitle.Size = new System.Drawing.Size(1252, 84);
 			this.pnlTitle.TabIndex = 1;
 			// 
 			// MenuPathPictrue
@@ -302,7 +302,7 @@
 			this.PanelForm.Font = new System.Drawing.Font("幼圆", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
 			this.PanelForm.Location = new System.Drawing.Point(3, 90);
 			this.PanelForm.Name = "PanelForm";
-			this.PanelForm.Size = new System.Drawing.Size(1209, 593);
+			this.PanelForm.Size = new System.Drawing.Size(1253, 632);
 			this.PanelForm.TabIndex = 4;
 			// 
 			// timer_Main
@@ -319,9 +319,9 @@
 			this.panel_MainInfo.Controls.Add(this.label_User);
 			this.panel_MainInfo.Controls.Add(this.label_Version);
 			this.panel_MainInfo.Controls.Add(this.label_Day);
-			this.panel_MainInfo.Location = new System.Drawing.Point(3, 680);
+			this.panel_MainInfo.Location = new System.Drawing.Point(3, 728);
 			this.panel_MainInfo.Name = "panel_MainInfo";
-			this.panel_MainInfo.Size = new System.Drawing.Size(1209, 23);
+			this.panel_MainInfo.Size = new System.Drawing.Size(1253, 29);
 			this.panel_MainInfo.TabIndex = 3;
 			// 
 			// label_User
@@ -330,7 +330,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label_User.AutoSize = true;
 			this.label_User.Font = new System.Drawing.Font("幼圆", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label_User.Location = new System.Drawing.Point(3, 6);
+			this.label_User.Location = new System.Drawing.Point(3, 9);
 			this.label_User.Name = "label_User";
 			this.label_User.Size = new System.Drawing.Size(113, 12);
 			this.label_User.TabIndex = 1;
@@ -342,19 +342,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label_Version.AutoSize = true;
 			this.label_Version.Font = new System.Drawing.Font("幼圆", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label_Version.Location = new System.Drawing.Point(511, 6);
+			this.label_Version.Location = new System.Drawing.Point(920, 9);
 			this.label_Version.Name = "label_Version";
 			this.label_Version.Size = new System.Drawing.Size(101, 12);
 			this.label_Version.TabIndex = 0;
 			this.label_Version.Text = "版本号:Ver_1.0.0";
-			this.label_Version.Visible = false;
 			// 
 			// label_Day
 			// 
 			this.label_Day.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.label_Day.AutoSize = true;
 			this.label_Day.Font = new System.Drawing.Font("幼圆", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.label_Day.Location = new System.Drawing.Point(1016, 6);
+			this.label_Day.Location = new System.Drawing.Point(1060, 9);
 			this.label_Day.Name = "label_Day";
 			this.label_Day.Size = new System.Drawing.Size(185, 12);
 			this.label_Day.TabIndex = 0;
@@ -364,7 +363,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1220, 708);
+			this.ClientSize = new System.Drawing.Size(1264, 762);
 			this.Controls.Add(this.panel_MainInfo);
 			this.Controls.Add(this.PanelForm);
 			this.Controls.Add(this.pnlTitle);

@@ -42,6 +42,7 @@ namespace Project
 			tag_ShowLogTimer.Tick += new EventHandler(LogOutControl_Show);
 			tag_ShowLogTimer.Interval = 1000;
 			tag_ShowLogTimer.Start();
+			Console.SetOut(new ConsoleOut(textBox_Log));
 		}
 
 		public void dataGridViewShow(List<Log> log, DataGridView daview)

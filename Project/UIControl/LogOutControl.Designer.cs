@@ -37,17 +37,22 @@
 			this.dataGridView_Step = new System.Windows.Forms.DataGridView();
 			this.时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.textBox_Log = new System.Windows.Forms.TextBox();
 			this.tabControl_msg.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Alarm)).BeginInit();
 			this.tabPage4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Step)).BeginInit();
+			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabControl_msg
 			// 
 			this.tabControl_msg.Controls.Add(this.tabPage1);
 			this.tabControl_msg.Controls.Add(this.tabPage4);
+			this.tabControl_msg.Controls.Add(this.tabPage2);
+			this.tabControl_msg.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabControl_msg.Location = new System.Drawing.Point(0, 0);
 			this.tabControl_msg.Margin = new System.Windows.Forms.Padding(0);
 			this.tabControl_msg.Name = "tabControl_msg";
@@ -74,26 +79,27 @@
 			this.dataGridView_Alarm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.s,
             this.Column1});
-			this.dataGridView_Alarm.Location = new System.Drawing.Point(2, 2);
+			this.dataGridView_Alarm.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView_Alarm.Location = new System.Drawing.Point(3, 3);
 			this.dataGridView_Alarm.Name = "dataGridView_Alarm";
 			this.dataGridView_Alarm.RowHeadersVisible = false;
 			this.dataGridView_Alarm.RowTemplate.Height = 23;
-			this.dataGridView_Alarm.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.dataGridView_Alarm.Size = new System.Drawing.Size(480, 233);
+			this.dataGridView_Alarm.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.dataGridView_Alarm.Size = new System.Drawing.Size(482, 237);
 			this.dataGridView_Alarm.TabIndex = 3;
 			// 
 			// s
 			// 
+			this.s.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.s.HeaderText = "时间";
 			this.s.Name = "s";
-			this.s.Width = 95;
 			// 
 			// Column1
 			// 
+			this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.Column1.FillWeight = 400F;
 			this.Column1.HeaderText = "信息";
 			this.Column1.Name = "Column1";
-			this.Column1.Width = 400;
 			// 
 			// tabPage4
 			// 
@@ -114,39 +120,62 @@
 			this.dataGridView_Step.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.时间,
             this.Column5});
-			this.dataGridView_Step.Location = new System.Drawing.Point(2, 2);
+			this.dataGridView_Step.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dataGridView_Step.Location = new System.Drawing.Point(3, 3);
 			this.dataGridView_Step.Name = "dataGridView_Step";
 			this.dataGridView_Step.RowHeadersVisible = false;
 			this.dataGridView_Step.RowTemplate.Height = 23;
-			this.dataGridView_Step.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.dataGridView_Step.Size = new System.Drawing.Size(480, 233);
+			this.dataGridView_Step.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+			this.dataGridView_Step.Size = new System.Drawing.Size(482, 237);
 			this.dataGridView_Step.TabIndex = 6;
 			// 
 			// 时间
 			// 
+			this.时间.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.时间.HeaderText = "时间";
 			this.时间.Name = "时间";
-			this.时间.Width = 95;
 			// 
 			// Column5
 			// 
+			this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.Column5.HeaderText = "信息";
 			this.Column5.Name = "Column5";
-			this.Column5.Width = 400;
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Controls.Add(this.textBox_Log);
+			this.tabPage2.Location = new System.Drawing.Point(4, 22);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Size = new System.Drawing.Size(488, 243);
+			this.tabPage2.TabIndex = 4;
+			this.tabPage2.Text = "Log";
+			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// textBox_Log
+			// 
+			this.textBox_Log.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.textBox_Log.Location = new System.Drawing.Point(0, 0);
+			this.textBox_Log.Multiline = true;
+			this.textBox_Log.Name = "textBox_Log";
+			this.textBox_Log.Size = new System.Drawing.Size(488, 243);
+			this.textBox_Log.TabIndex = 0;
 			// 
 			// LogOutControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.Controls.Add(this.tabControl_msg);
 			this.Name = "LogOutControl";
-			this.Size = new System.Drawing.Size(497, 271);
+			this.Size = new System.Drawing.Size(496, 269);
 			this.Load += new System.EventHandler(this.LogOutControl_Load);
 			this.tabControl_msg.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Alarm)).EndInit();
 			this.tabPage4.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Step)).EndInit();
+			this.tabPage2.ResumeLayout(false);
+			this.tabPage2.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -156,11 +185,13 @@
 		private System.Windows.Forms.TabControl tabControl_msg;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.DataGridView dataGridView_Alarm;
-		private System.Windows.Forms.DataGridViewTextBoxColumn s;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.TabPage tabPage4;
 		private System.Windows.Forms.DataGridView dataGridView_Step;
+		private System.Windows.Forms.DataGridViewTextBoxColumn s;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn 时间;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+		private System.Windows.Forms.TabPage tabPage2;
+		private System.Windows.Forms.TextBox textBox_Log;
 	}
 }

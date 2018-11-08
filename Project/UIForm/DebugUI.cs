@@ -45,8 +45,6 @@ namespace Project
 		const string LOW_SPEED = "低速";
 		const string HIGHT_SPEED = "高速";
 
-
-
 		/// <summary>
 		/// 父节点
 		/// </summary>
@@ -83,9 +81,9 @@ namespace Project
 			iOAllShowControl.Location = new Point(0, 0);
 			iOAllShowControl.Size = new Size(tabPage_automatic.Size.Width, tabPage_automatic.Size.Height - 10);
 			pointAllShowControl.tag_Work = worker;
-			pointAllShowControl.Location = new Point(0, CBStnChioce.Location.Y + CBStnChioce.Size.Height + 10);
-			pointAllShowControl.Size = new Size(pointAllShowControl.Size.Width - 100, tabCtrlDebug.Size.Height + 30);
-			Console.SetOut(new ConsoleOut(textBox_Log));
+			pointAllShowControl.Location = new Point(CBStnChioce.Location.X, checkBox1.Location.Y + 20);
+			pointAllShowControl.Size = new Size(checkBox1.Location.X - CBStnChioce.Location.X - 10, this.Size.Height - CBStnChioce.Location.Y - CBStnChioce.Size.Height);
+
 		}
 
 		public DebugUI(FrameUI frm, Work _work)
@@ -93,6 +91,7 @@ namespace Project
 			frameUI = frm;
 			worker = _work;
 			InitializeComponent();
+			this.Dock = DockStyle.Fill;
 			UiInit();
 			sationModelPanelControl.tag_Work = worker;
 			debugOffsetControl.tag_work = worker;

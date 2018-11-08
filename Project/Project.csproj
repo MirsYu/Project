@@ -420,6 +420,9 @@
     <EmbeddedResource Include="UIControl\Panel\IODebugSetPanelControl.resx">
       <DependentUpon>IODebugSetPanelControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIControl\Panel\StationModelPanelControl.resx">
+      <DependentUpon>StationModelPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\PointAllShowControl.resx">
       <DependentUpon>PointAllShowControl.cs</DependentUpon>
     </EmbeddedResource>
